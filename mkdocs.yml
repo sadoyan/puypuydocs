@@ -1,0 +1,81 @@
+site_name: Cloud scale intelligent monitoring & analytics platform
+
+
+theme:
+  name: null
+  custom_dir: mkdocs-material/material
+  include_search_page: true
+  search_index_only: true
+  language: en
+  palette:
+#    primary: blue grey
+    accent: green
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon : '/assets/images/home_white.png'
+  logo: 'images/logowhite.png'
+  feature:
+    tabs: false
+
+extra_css :
+  -  'stylesheets/bootstrap.css'
+  -  'stylesheets/extra.css'
+extra_javascript:
+  - 'javascripts/jquery.min.js'
+  - 'javascripts/bootstrap.min.js'
+
+repo_url: https://github.com/sadoyan/puypuy
+site_url: https://www.oddeye.co/documentation/
+
+nav:
+  - 'System Checks': 'agent/system.md'
+  - 'Nvidia GPU': 'agent/nvidia.md'
+  - 'Docker Containers': 'agent/docker.md'
+  - 'WEB Servers':
+    - 'Apache': 'agent/ws/apache.md'
+    - 'NginX': 'agent/ws/nginx.md'
+    - 'PHP-FPM': 'agent/ws/php.md'
+    - 'Tomcat': 'agent/ws/tomcat.md'
+    - 'Jetty': 'agent/ws/jetty.md'
+    - 'Lighttpd': 'agent/ws/lighty.md'
+    - 'HTTP API': 'agent/ws/rest.md'
+  - 'Load Balancers':
+    - 'HAProxy': 'agent/lb/haproxy.md'
+    - 'Envoy': 'agent/lb/envoy.md'
+    - 'Traefik': 'agent/lb/traefik.md'
+  - 'Varnish': 'agent/varnish.md'
+  - 'Cassandra': 'agent/cassandra.md'
+  - 'Ceph': 'agent/ceph.md'
+  - 'LizardFS': 'agent/lizardfs.md'
+  - 'CouchBase, CouchDB': 'agent/couch.md'
+  - 'ElasticSearch': 'agent/elastic.md'
+  - 'Solr': 'agent/solr.md'
+  - 'Hadoop': 'agent/hadoop.md'
+  - 'HBase': 'agent/hbase.md'
+  - 'Java JMX': 'agent/jmx.md'
+  - 'Jolokia': 'agent/jolokia.md'
+  - 'Kafka': 'agent/kafka.md'
+  - 'Hashicorp': 'agent/hashicorp.md'
+  - 'Etcd': 'agent/etcd.md'
+  - 'Coredns': 'agent/coredns.md'
+  - 'Mesos': 'agent/mesos.md'
+  - 'Marathon': 'agent/marathon.md'
+  - 'MySQL': 'agent/mysql.md'
+  - 'RabbitMQ': 'agent/rabbitmq.md'
+  - 'ActiveMQ': 'agent/activemq.md'
+  - 'Redis, Memcached': 'agent/rrs.md'
+  - 'Riak': 'agent/riak.md'
+  - 'FoundationDB': 'agent/fdb.md'
+  - 'Apache Storm': 'agent/storm.md'
+  - 'Apache Spark': 'agent/spark.md'
+  - 'Zookeeper': 'agent/zookeeper.md'
+  - 'SNMP': 'agent/snmp.md'
+  - 'Kubernetes': 'agent/k8s.md'
+  - 'Scylla': 'agent/scylla.md'
+  - 'Nagios/Icinga': 'agent/nagios.md'
+  - 'Custom Checks': 'agent/custom.md'
+markdown_extensions :
+  -  codehilite    
+plugins:
+    - search

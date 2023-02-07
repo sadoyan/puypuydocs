@@ -1,0 +1,94 @@
+{#-
+This file was automatically generated - do not edit
+-#}
+{% extends "base.html" %}
+
+{% block header %}
+<header class="md-header" data-md-component="header">
+    <nav class="md-header-nav xl-grid">
+        <div class="md-flex">
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="https://www.oddeye.co/" title="www.oddeye.co" class="md-header-nav__button md-logo">         
+                    <img src="{{ config.theme.logo | url }}" width="65">            
+                </a>        
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" title="Home" class="home">
+                    {% if config.theme.favicon %}            
+<!--                    <img src="{{ config.theme.favicon }}" width="35" height="30">              -->
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 640 640" class="icon">
+                        <path d="M640 409.027l-320-248.391-320 248.392v-101.274l320-248.391 320 248.393zM560 400v240h-160v-160h-160v160h-160v-240l240-180z"></path>
+                    </svg>
+                    {% endif %}
+                </a>
+            </div>
+            {% if config.repo_url %}
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <div class="md-header-nav__source">
+                    {% include "partials/source.html" %}
+                </div>
+            </div>
+            {% endif %}  
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch">
+                <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">                                       
+                    <span class="md-header-nav__topic">
+                       {{ config.site_name }}
+                    </span>
+                    <span class="md-header-nav__topic">
+                        {{ page.title }}
+                    </span>                   
+                </div>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+                {% if "search" in config["plugins"] %}
+                <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+                {% include "partials/search.html" %}
+                {% endif %}
+            </div>      
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="try-now" href="https://app.oddeye.co/OddeyeCoconut/signup/" title="Try For Free">                   
+                    
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 512 512" class="icon-try">
+                        <path d="M122.832 0c-56.864 103.016-66.445 260.152 156.93 254.912v-126.912l192 192-192 192v-124.186c-267.48 6.971-297.286-236.107-156.93-387.814z"></path>
+                    </svg>
+                    <span>Try For Free!</span>
+                </a>
+            </div>      
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="login-now" href="https://app.oddeye.co/OddeyeCoconut/login/" title="Login">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 512 512" class="icon">                        
+                        <path d="M358.4 256l-153.6-128v76.8h-179.2v102.4h179.2v76.8l153.6-128zM435.2 435.2h-204.8v51.2h204.8c28.16 0 51.2-23.040 51.2-51.2v-358.4c0-28.16-23.040-51.2-51.2-51.2h-204.8v51.2h204.8v358.4z"></path>
+                    </svg>
+                </a>
+            </div>      
+        </div>
+    </nav>
+</header>
+{% endblock %}
+
+{% block content %}
+<!--                {% if page.edit_url %}
+                  <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">&#xE3C9;</a>
+                {% endif %}-->
+    {% if not "\x3ch1" in page.content %}
+     <h1></h1>
+    {% endif %}     
+{{ page.content }}
+{% block source %}
+{% if page and page.meta and page.meta.source %}
+<h2 id="__source">{{ lang.t("meta.source") }}</h2>
+{% set repo = config.repo_url %}
+{% if repo | last == "/" %}
+{% set repo = repo[:-1] %}
+{% endif %}
+{% set path = page.meta.path | default([""]) %}
+{% set file = page.meta.source %}
+<a href="{{ [repo, path, file] | join('/') }}" title="{{ file }}" class="md-source-file">
+    {{ file }}
+</a>
+{% endif %}
+{% endblock %}
+{% endblock %}
