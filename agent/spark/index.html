@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://sadoyan.github.io/puypuydocs/agent/spark/">
+        <link rel="canonical" href="https://www.oddeye.co/documentation/agent/spark/">
       
       
       
@@ -34,11 +34,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
-        <title>Apache Spark - Metrics collector tool.</title>
+        <title>Apache Spark - Cloud scale intelligent monitoring & analytics platform</title>
       
     
     
@@ -96,7 +96,12 @@
     <nav class="md-header-nav xl-grid">
         <div class="md-flex">
             <div class="md-flex__cell md-flex__cell--shrink">
-                <a href="https://sadoyan.github.io/puypuydocs/" title="Home" class="home">
+                <a href="https://www.oddeye.co/" title="www.oddeye.co" class="md-header-nav__button md-logo">         
+                    <img src="../../images/logowhite.png" width="65">            
+                </a>        
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="https://www.oddeye.co/documentation/" title="Home" class="home">
                                 
 <!--                    <img src="/assets/images/home_white.png" width="35" height="30">              -->
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 640 640" class="icon">
@@ -113,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -134,7 +139,7 @@
             <div class="md-flex__cell md-flex__cell--stretch">
                 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">                                       
                     <span class="md-header-nav__topic">
-                       Metrics collector tool.
+                       Cloud scale intelligent monitoring & analytics platform
                     </span>
                     <span class="md-header-nav__topic">
                         Apache Spark
@@ -170,8 +175,17 @@
                 
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="try-now" href="https://app.oddeye.co/OddeyeCoconut/signup/" title="Try For Free">                   
+                    
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 512 512" class="icon-try">
+                        <path d="M122.832 0c-56.864 103.016-66.445 260.152 156.93 254.912v-126.912l192 192-192 192v-124.186c-267.48 6.971-297.286-236.107-156.93-387.814z"></path>
+                    </svg>
+                    <span>Try For Free!</span>
+                </a>
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="login-now" href="https://app.oddeye.co/OddeyeCoconut/login/" title="Login">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 512 512" class="icon">                        
                         <path d="M358.4 256l-153.6-128v76.8h-179.2v102.4h179.2v76.8l153.6-128zM435.2 435.2h-204.8v51.2h204.8c28.16 0 51.2-23.040 51.2-51.2v-358.4c0-28.16-23.040-51.2-51.2-51.2h-204.8v51.2h204.8v358.4z"></path>
                     </svg>
                 </a>
@@ -194,12 +208,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
 <!--  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://sadoyan.github.io/puypuydocs/" title="Metrics collector tool." class="md-nav__button md-logo">
+    <a href="https://www.oddeye.co/documentation/" title="Cloud scale intelligent monitoring & analytics platform" class="md-nav__button md-logo">
       
         <img src="../../images/logowhite.png" width="48" height="48">
       
     </a>
-    Metrics collector tool.
+    Cloud scale intelligent monitoring & analytics platform
   </label>-->
   
     <div class="md-nav__source">
@@ -208,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -938,14 +952,14 @@
 <p>Apache Spark is a fast and general engine for large-scale data processing.</p>
 <p>In order to gather Spark workers statistics, we need to download and enable <strong>Jolokia JVM Agent</strong>    </p>
 <h3 id="jolokia"><strong>Jolokia</strong></h3>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> /usr/share/java/
-wget -O jolokia-agent.jar http://search.maven.org/remotecontent?filepath<span class="o">=</span>org/jolokia/jolokia-jvm/1.3.6/jolokia-jvm-1.3.6-agent.jar
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/usr/share/java/
+wget<span class="w"> </span>-O<span class="w"> </span>jolokia-agent.jar<span class="w"> </span>http://search.maven.org/remotecontent?filepath<span class="o">=</span>org/jolokia/jolokia-jvm/1.3.6/jolokia-jvm-1.3.6-agent.jar
 </code></pre></div>
 
 <h3 id="spark-master"><strong>Spark Master</strong></h3>
 <p>As far, as <strong>Jolokia JVM Agent</strong> is downloaded, we should configure <strong>Apache Spark</strong>, to use it as JavaAgent for workers and expose metrics via HTTP/Json.
 Edit <code>spark-env.sh</code>. It should be in <code>/usr/local/spark/conf</code>  and add following parameters : </p>
-<div class="codehilite"><pre><span></span><code><span class="k">export</span> <span class="n">SPARK_MASTER_OPTS</span><span class="o">=</span><span class="s2">&quot;$SPARK_MASTER_OPTS -javaagent:/usr/share/java/jolokia-agent.jar=config=/usr/local/spark/conf/jolokia-master.properties&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">SPARK_MASTER_OPTS</span><span class="o">=</span><span class="s2">&quot;$SPARK_MASTER_OPTS -javaagent:/usr/share/java/jolokia-agent.jar=config=/usr/local/spark/conf/jolokia-master.properties&quot;</span>
 </code></pre></div>
 
 <p>Now create <code>/usr/local/spark/conf/jolokia-master.properties</code> file with following content 
@@ -967,27 +981,27 @@ Edit <code>spark-env.sh</code>. It should be in <code>/usr/local/spark/conf</cod
 <p>Now we need to create <code>/usr/local/spark/conf/jolokia.policy</code> with following content : </p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;restrict&gt;</span>
-  <span class="nt">&lt;http&gt;</span>
-    <span class="nt">&lt;method&gt;</span>get<span class="nt">&lt;/method&gt;</span>
-    <span class="nt">&lt;method&gt;</span>post<span class="nt">&lt;/method&gt;</span>
-  <span class="nt">&lt;/http&gt;</span>
-  <span class="nt">&lt;commands&gt;</span>
-    <span class="nt">&lt;command&gt;</span>read<span class="nt">&lt;/command&gt;</span>
-    <span class="nt">&lt;command&gt;</span>list<span class="nt">&lt;/command&gt;</span>
-    <span class="nt">&lt;command&gt;</span>search<span class="nt">&lt;/command&gt;</span>
-  <span class="nt">&lt;/commands&gt;</span>
+<span class="w">  </span><span class="nt">&lt;http&gt;</span>
+<span class="w">    </span><span class="nt">&lt;method&gt;</span>get<span class="nt">&lt;/method&gt;</span>
+<span class="w">    </span><span class="nt">&lt;method&gt;</span>post<span class="nt">&lt;/method&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/http&gt;</span>
+<span class="w">  </span><span class="nt">&lt;commands&gt;</span>
+<span class="w">    </span><span class="nt">&lt;command&gt;</span>read<span class="nt">&lt;/command&gt;</span>
+<span class="w">    </span><span class="nt">&lt;command&gt;</span>list<span class="nt">&lt;/command&gt;</span>
+<span class="w">    </span><span class="nt">&lt;command&gt;</span>search<span class="nt">&lt;/command&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/commands&gt;</span>
 <span class="nt">&lt;/restrict&gt;</span>
 </code></pre></div>
 
 <p>Configure Agent with following in <code>conf/bigdata.ini</code> file : </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Spark-Master]</span>
-<span class="na">stats: http://127.0.0.1:7777/jolokia/read</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:7777/jolokia/read</span>
 </code></pre></div>
 
 <p>Restart Spark master. </p>
 <h3 id="spark-worker"><strong>Spark worker</strong></h3>
 <p>Edit <code>spark-env.sh</code>. It should be in <code>/usr/local/spark/conf</code>  and add following parameters : </p>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">SPARK_WORKER_OPTS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$SPARK_WORKER_OPTS</span><span class="s2"> -javaagent:/usr/share/java/jolokia-agent.jar=config=/usr/local/spark/conf/jolokia-worker.properties&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">SPARK_WORKER_OPTS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$SPARK_WORKER_OPTS</span><span class="s2"> -javaagent:/usr/share/java/jolokia-agent.jar=config=/usr/local/spark/conf/jolokia-worker.properties&quot;</span>
 </code></pre></div>
 
 <p>Now create <code>/usr/local/spark/conf/jolokia-worker.properties</code> file with following content 
@@ -1009,21 +1023,21 @@ Edit <code>spark-env.sh</code>. It should be in <code>/usr/local/spark/conf</cod
 <p>Create <code>/usr/local/spark/conf/jolokia.policy</code> with following content : </p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;restrict&gt;</span>
-  <span class="nt">&lt;http&gt;</span>
-    <span class="nt">&lt;method&gt;</span>get<span class="nt">&lt;/method&gt;</span>
-    <span class="nt">&lt;method&gt;</span>post<span class="nt">&lt;/method&gt;</span>
-  <span class="nt">&lt;/http&gt;</span>
-  <span class="nt">&lt;commands&gt;</span>
-    <span class="nt">&lt;command&gt;</span>read<span class="nt">&lt;/command&gt;</span>
-    <span class="nt">&lt;command&gt;</span>list<span class="nt">&lt;/command&gt;</span>
-    <span class="nt">&lt;command&gt;</span>search<span class="nt">&lt;/command&gt;</span>
-  <span class="nt">&lt;/commands&gt;</span>
+<span class="w">  </span><span class="nt">&lt;http&gt;</span>
+<span class="w">    </span><span class="nt">&lt;method&gt;</span>get<span class="nt">&lt;/method&gt;</span>
+<span class="w">    </span><span class="nt">&lt;method&gt;</span>post<span class="nt">&lt;/method&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/http&gt;</span>
+<span class="w">  </span><span class="nt">&lt;commands&gt;</span>
+<span class="w">    </span><span class="nt">&lt;command&gt;</span>read<span class="nt">&lt;/command&gt;</span>
+<span class="w">    </span><span class="nt">&lt;command&gt;</span>list<span class="nt">&lt;/command&gt;</span>
+<span class="w">    </span><span class="nt">&lt;command&gt;</span>search<span class="nt">&lt;/command&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/commands&gt;</span>
 <span class="nt">&lt;/restrict&gt;</span>
 </code></pre></div>
 
 <p>Configure Agent with following in <code>conf/bigdata.ini</code> file : </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Spark-Worker]</span>
-<span class="na">stats: http://127.0.0.1:7778/jolokia/read</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:7778/jolokia/read</span>
 </code></pre></div>
 
 <p>Restart Spark worker. </p>
@@ -1085,7 +1099,7 @@ Edit <code>spark-env.sh</code>. It should be in <code>/usr/local/spark/conf</cod
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

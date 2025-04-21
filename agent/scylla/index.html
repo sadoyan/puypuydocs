@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://sadoyan.github.io/puypuydocs/agent/scylla/">
+        <link rel="canonical" href="https://www.oddeye.co/documentation/agent/scylla/">
       
       
       
@@ -34,11 +34,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
-        <title>Scylla - Metrics collector tool.</title>
+        <title>Scylla - Cloud scale intelligent monitoring & analytics platform</title>
       
     
     
@@ -96,7 +96,12 @@
     <nav class="md-header-nav xl-grid">
         <div class="md-flex">
             <div class="md-flex__cell md-flex__cell--shrink">
-                <a href="https://sadoyan.github.io/puypuydocs/" title="Home" class="home">
+                <a href="https://www.oddeye.co/" title="www.oddeye.co" class="md-header-nav__button md-logo">         
+                    <img src="../../images/logowhite.png" width="65">            
+                </a>        
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="https://www.oddeye.co/documentation/" title="Home" class="home">
                                 
 <!--                    <img src="/assets/images/home_white.png" width="35" height="30">              -->
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 640 640" class="icon">
@@ -113,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -134,7 +139,7 @@
             <div class="md-flex__cell md-flex__cell--stretch">
                 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">                                       
                     <span class="md-header-nav__topic">
-                       Metrics collector tool.
+                       Cloud scale intelligent monitoring & analytics platform
                     </span>
                     <span class="md-header-nav__topic">
                         Scylla
@@ -170,8 +175,17 @@
                 
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="try-now" href="https://app.oddeye.co/OddeyeCoconut/signup/" title="Try For Free">                   
+                    
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 512 512" class="icon-try">
+                        <path d="M122.832 0c-56.864 103.016-66.445 260.152 156.93 254.912v-126.912l192 192-192 192v-124.186c-267.48 6.971-297.286-236.107-156.93-387.814z"></path>
+                    </svg>
+                    <span>Try For Free!</span>
+                </a>
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="login-now" href="https://app.oddeye.co/OddeyeCoconut/login/" title="Login">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 512 512" class="icon">                        
                         <path d="M358.4 256l-153.6-128v76.8h-179.2v102.4h179.2v76.8l153.6-128zM435.2 435.2h-204.8v51.2h204.8c28.16 0 51.2-23.040 51.2-51.2v-358.4c0-28.16-23.040-51.2-51.2-51.2h-204.8v51.2h204.8v358.4z"></path>
                     </svg>
                 </a>
@@ -194,12 +208,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
 <!--  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://sadoyan.github.io/puypuydocs/" title="Metrics collector tool." class="md-nav__button md-logo">
+    <a href="https://www.oddeye.co/documentation/" title="Cloud scale intelligent monitoring & analytics platform" class="md-nav__button md-logo">
       
         <img src="../../images/logowhite.png" width="48" height="48">
       
     </a>
-    Metrics collector tool.
+    Cloud scale intelligent monitoring & analytics platform
   </label>-->
   
     <div class="md-nav__source">
@@ -208,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -923,25 +937,25 @@
      <h1></h1>
          
 <p><img alt="Scylla" src="../../images/scylla.png" /></p>
-<p>Scylla is a massively scalable Open-Source NoSQL database. It's an implementation of Apache Cassandra using C++ instead of Java. <br />
+<p>Scylla is a massively scalable Open-Source NoSQL database. It's an implementation of Apache Cassandra using C++ instead of Java. 
 Developers of Scylla describe it as : Scylla is a drop-in replacement for Apache Cassandra and DynamoDB.
 Yet it also provides significant advantages over these other databases. Flip the cards to see similarities and differences. 
 Scylla ships with native metrics exported, which runs by default 9180 port. So there is no need for special configuration of Scylla.  </p>
 <p>Scylla config of OddEye agent is in <code>conf/bigdata.ini</code> file. If you run recommended Scylla installation, no need for making spacial configs for OddEye agent as well.  </p>
 <h4 id="install"><strong>Install</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_scylla.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_scylla.py<span class="w"> </span>./
 </code></pre></div>
 
 <h4 id="configure"><strong>Configure</strong></h4>
 <p>Default config should be suitable for the most of the installations. 
 If you are running Scylla's node_exporter other than default way, change the <code>stats</code> parameter to match your setup. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Scilla]</span>
-<span class="na">stats : http://127.0.0.1:9180/metrics</span>
+<span class="na">stats</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:9180/metrics</span>
 </code></pre></div>
 
 <h4 id="restart"><strong>Restart</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="cp">${</span><span class="n">OE_AGENT_HOME</span><span class="cp">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="cp">${</span><span class="n">OE_AGENT_HOME</span><span class="cp">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h4 id="provides"><strong>Provides</strong></h4>
@@ -1087,6 +1101,54 @@ If you are running Scylla's node_exporter other than default way, change the <co
 <td>counter</td>
 <td>None</td>
 </tr>
+<tr>
+<td>scylla_cql_inserts</td>
+<td>The total number of CQL INSERT requests</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cql_reads</td>
+<td>The total number of CQL SELECT requests.</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cql_deletes</td>
+<td>The total number of CQL DELETE requests.</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cql_updates</td>
+<td>The total number of CQL UPDATE requests</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cql_batches</td>
+<td>The total number of CQL BATCH requests</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cache_row_hits</td>
+<td>Total number of rows needed by reads and found in cache</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cache_row_misses</td>
+<td>Total number of rows needed by reads and missing in cache</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_transport_requests_served</td>
+<td>Counts a number of served requests.</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
 </tbody>
 </table>
 
@@ -1147,7 +1209,7 @@ If you are running Scylla's node_exporter other than default way, change the <co
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

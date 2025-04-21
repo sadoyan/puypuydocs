@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://sadoyan.github.io/puypuydocs/agent/ws/nginx/">
+        <link rel="canonical" href="https://www.oddeye.co/documentation/agent/ws/nginx/">
       
       
       
@@ -34,11 +34,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
-        <title>NginX - Metrics collector tool.</title>
+        <title>NginX - Cloud scale intelligent monitoring & analytics platform</title>
       
     
     
@@ -96,7 +96,12 @@
     <nav class="md-header-nav xl-grid">
         <div class="md-flex">
             <div class="md-flex__cell md-flex__cell--shrink">
-                <a href="https://sadoyan.github.io/puypuydocs/" title="Home" class="home">
+                <a href="https://www.oddeye.co/" title="www.oddeye.co" class="md-header-nav__button md-logo">         
+                    <img src="../../../images/logowhite.png" width="65">            
+                </a>        
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="https://www.oddeye.co/documentation/" title="Home" class="home">
                                 
 <!--                    <img src="/assets/images/home_white.png" width="35" height="30">              -->
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 640 640" class="icon">
@@ -113,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -134,7 +139,7 @@
             <div class="md-flex__cell md-flex__cell--stretch">
                 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">                                       
                     <span class="md-header-nav__topic">
-                       Metrics collector tool.
+                       Cloud scale intelligent monitoring & analytics platform
                     </span>
                     <span class="md-header-nav__topic">
                         NginX
@@ -170,8 +175,17 @@
                 
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="try-now" href="https://app.oddeye.co/OddeyeCoconut/signup/" title="Try For Free">                   
+                    
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 512 512" class="icon-try">
+                        <path d="M122.832 0c-56.864 103.016-66.445 260.152 156.93 254.912v-126.912l192 192-192 192v-124.186c-267.48 6.971-297.286-236.107-156.93-387.814z"></path>
+                    </svg>
+                    <span>Try For Free!</span>
+                </a>
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="login-now" href="https://app.oddeye.co/OddeyeCoconut/login/" title="Login">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 512 512" class="icon">                        
                         <path d="M358.4 256l-153.6-128v76.8h-179.2v102.4h179.2v76.8l153.6-128zM435.2 435.2h-204.8v51.2h204.8c28.16 0 51.2-23.040 51.2-51.2v-358.4c0-28.16-23.040-51.2-51.2-51.2h-204.8v51.2h204.8v358.4z"></path>
                     </svg>
                 </a>
@@ -194,12 +208,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
 <!--  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://sadoyan.github.io/puypuydocs/" title="Metrics collector tool." class="md-nav__button md-logo">
+    <a href="https://www.oddeye.co/documentation/" title="Cloud scale intelligent monitoring & analytics platform" class="md-nav__button md-logo">
       
         <img src="../../../images/logowhite.png" width="48" height="48">
       
     </a>
-    Metrics collector tool.
+    Cloud scale intelligent monitoring & analytics platform
   </label>-->
   
     <div class="md-nav__source">
@@ -208,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -926,27 +940,27 @@
          
 <p><img alt="Nginx" src="../../../images/nginx.png" /></p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_nginx.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_nginx.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Status page os Nginx is disabled by default. You can enable it by adding following to NginX config file and restarting daemon. Code below will do the trick: </p>
 <div class="codehilite"><pre><span></span><code><span class="na">location /nginx_status {</span>
-   <span class="na">stub_status on;</span>
-   <span class="na">allow 127.0.0.1;</span>
-   <span class="na">deny all;</span>
+<span class="w">   </span><span class="na">stub_status on;</span>
+<span class="w">   </span><span class="na">allow 127.0.0.1;</span>
+<span class="w">   </span><span class="na">deny all;</span>
 <span class="na">}</span>
 </code></pre></div>
 
 <p>We recommend to use separate Server directive status for dedicated port. </p>
-<div class="codehilite"><pre><span></span><code>server <span class="o">{</span>
-        listen <span class="m">127</span>.0.0.1:8088<span class="p">;</span>
-        root /var/www<span class="p">;</span>
-        index index.html <span class="p">;</span>
-        server_name localhost<span class="p">;</span>
-location /nginx_status <span class="o">{</span>
-   stub_status on<span class="p">;</span>
+<div class="codehilite"><pre><span></span><code>server<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="m">127</span>.0.0.1:8088<span class="p">;</span>
+<span class="w">        </span>root<span class="w"> </span>/var/www<span class="p">;</span>
+<span class="w">        </span>index<span class="w"> </span>index.html<span class="w"> </span><span class="p">;</span>
+<span class="w">        </span>server_name<span class="w"> </span>localhost<span class="p">;</span>
+location<span class="w"> </span>/nginx_status<span class="w"> </span><span class="o">{</span>
+<span class="w">   </span>stub_status<span class="w"> </span>on<span class="p">;</span>
 <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
@@ -954,16 +968,16 @@ location /nginx_status <span class="o">{</span>
 <p>This way your NginX server will bind to port 8088 on loop back interface. Its very easy and secure way to provide status. 
 After enabling NginX Status, You should add status page parameters to <code>{AGENT_HOME}/conf/webservers.ini</code>. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[NginX]</span>
-<span class="na">address: http://127.0.0.1:8888</span>
-<span class="na">stats: /nginx_status</span>
-<span class="na">auth: False</span>
-<span class="na">user: user</span>
-<span class="na">pass: password</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8888</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">/nginx_status</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">user</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">password</span>
 </code></pre></div>
 
 <p>Change auth enabled from False to True, if you have anabled authentication on  NginX status URL. Please do not delete user/pass/auth, just put some placeholders, if authentication is disabled. </p>
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1079,7 +1093,7 @@ After enabling NginX Status, You should add status page parameters to <code>{AGE
     
       <script src="../../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../../.."}})</script>
       
         <script src="../../../javascripts/jquery.min.js"></script>
       

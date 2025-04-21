@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://sadoyan.github.io/puypuydocs/barlus/">
+        <link rel="canonical" href="https://www.oddeye.co/documentation/barlus/">
       
       
       
@@ -34,11 +34,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
-        <title>Barlus - Metrics collector tool.</title>
+        <title>Barlus - Cloud scale intelligent monitoring & analytics platform</title>
       
     
     
@@ -96,7 +96,12 @@
     <nav class="md-header-nav xl-grid">
         <div class="md-flex">
             <div class="md-flex__cell md-flex__cell--shrink">
-                <a href="https://sadoyan.github.io/puypuydocs/" title="Home" class="home">
+                <a href="https://www.oddeye.co/" title="www.oddeye.co" class="md-header-nav__button md-logo">         
+                    <img src="../images/logowhite.png" width="65">            
+                </a>        
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="https://www.oddeye.co/documentation/" title="Home" class="home">
                                 
 <!--                    <img src="/assets/images/home_white.png" width="35" height="30">              -->
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 640 640" class="icon">
@@ -113,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -134,7 +139,7 @@
             <div class="md-flex__cell md-flex__cell--stretch">
                 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">                                       
                     <span class="md-header-nav__topic">
-                       Metrics collector tool.
+                       Cloud scale intelligent monitoring & analytics platform
                     </span>
                     <span class="md-header-nav__topic">
                         Barlus
@@ -170,8 +175,17 @@
                 
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="try-now" href="https://app.oddeye.co/OddeyeCoconut/signup/" title="Try For Free">                   
+                    
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 512 512" class="icon-try">
+                        <path d="M122.832 0c-56.864 103.016-66.445 260.152 156.93 254.912v-126.912l192 192-192 192v-124.186c-267.48 6.971-297.286-236.107-156.93-387.814z"></path>
+                    </svg>
+                    <span>Try For Free!</span>
+                </a>
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="login-now" href="https://app.oddeye.co/OddeyeCoconut/login/" title="Login">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 512 512" class="icon">                        
                         <path d="M358.4 256l-153.6-128v76.8h-179.2v102.4h179.2v76.8l153.6-128zM435.2 435.2h-204.8v51.2h204.8c28.16 0 51.2-23.040 51.2-51.2v-358.4c0-28.16-23.040-51.2-51.2-51.2h-204.8v51.2h204.8v358.4z"></path>
                     </svg>
                 </a>
@@ -194,12 +208,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
 <!--  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://sadoyan.github.io/puypuydocs/" title="Metrics collector tool." class="md-nav__button md-logo">
+    <a href="https://www.oddeye.co/documentation/" title="Cloud scale intelligent monitoring & analytics platform" class="md-nav__button md-logo">
       
         <img src="../images/logowhite.png" width="48" height="48">
       
     </a>
-    Metrics collector tool.
+    Cloud scale intelligent monitoring & analytics platform
   </label>-->
   
     <div class="md-nav__source">
@@ -208,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -891,39 +905,39 @@
 <p>REST API severs of OddEye. It talks Json so you can use any http client to push metrics to OddEye.
 To do this you need to have valid OddEye account with UUID. Below is sample curl command and Json file: </p>
 <h3 id="curl-example">Curl example</h3>
-<div class="codehilite"><pre><span></span><code><span class="err">curl -i -XPOST &#39;https://api.oddeye.co/oddeye-barlus/put/tsdb&#39; --data-binary &#39;UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;data={JsonData}&#39;</span>
+<div class="codehilite"><pre><span></span><code>curl -i -XPOST &#39;https://api.oddeye.co/oddeye-barlus/put/tsdb&#39; --data-binary &#39;UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;data={JsonData}&#39;
 </code></pre></div>
 
 <p>As <strong>OddEye</strong> stands for Open API you can generate your own checks, all you need is to pack in in Json and use HTTP POST method to send it to <strong>Api</strong></p>
 <h3 id="json-sample">Json Sample</h3>
-<div class="codehilite"><pre><span></span><code>      <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;rated_metric_name&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;reaction&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;cluster&quot;</span><span class="p">:</span> <span class="s2">&quot;testcluster&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;group&quot;</span><span class="p">:</span> <span class="s2">&quot;testing&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;host.domain.com&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;mytype&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1492526216</span><span class="p">,</span>
-            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Rate&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">12</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;notype_metric_name&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;reaction&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;cluster&quot;</span><span class="p">:</span> <span class="s2">&quot;testcluster&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;group&quot;</span><span class="p">:</span> <span class="s2">&quot;testing&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;host.domain.com&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;mytype&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1492526216</span><span class="p">,</span>
-            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;None&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">55</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
+<div class="codehilite"><pre><span></span><code><span class="w">      </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;metric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rated_metric_name&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;reaction&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;cluster&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testcluster&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testing&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;host.domain.com&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mytype&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1492526216</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rate&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;metric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;notype_metric_name&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;reaction&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;cluster&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testcluster&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testing&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;host.domain.com&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mytype&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1492526216</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
 </code></pre></div>
 
 <p>Metrics can be sent in separate Jsons as well as combined to one bigger Json.<br />
@@ -943,40 +957,40 @@ If everything is ok, you should get code 200 from server. </p>
 If these parameters does exists, OddEye will set to defaults values. 
 These are <code>reaction</code> and <code>type</code> params. </p>
 <p><code>reaction</code> is for setting up machine learning and alerting parameters: </p>
-<div class="codehilite"><pre><span></span><code><span class="nv">reaction</span> <span class="o">=</span> -3 <span class="c1"># (Disables dynamic alerting and learning on this check)</span>
-<span class="nv">reaction</span> <span class="o">=</span> -1 <span class="c1"># (Disables dynamic alerting if values are smaller than expected)</span>
-<span class="nv">reaction</span> <span class="o">=</span> -2 <span class="c1"># (Disables dynamic alerting if values are bigger than expected)</span>
-<span class="nv">reaction</span> <span class="o">=</span>  <span class="m">0</span> <span class="c1"># (Default : Enable dynamic alerting and learning on this check)</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">reaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-3<span class="w"> </span><span class="c1"># (Disables dynamic alerting and learning on this check)</span>
+<span class="nv">reaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1<span class="w"> </span><span class="c1"># (Disables dynamic alerting if values are smaller than expected)</span>
+<span class="nv">reaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-2<span class="w"> </span><span class="c1"># (Disables dynamic alerting if values are bigger than expected)</span>
+<span class="nv">reaction</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="c1"># (Default : Enable dynamic alerting and learning on this check)</span>
 </code></pre></div>
 
 <p><code>types</code> will help <strong>OddEye</strong> "understand" incoming metric types. 
 For example if <code>type</code> is set to <code>Counter</code> <strong>OddEye</strong> will tune counting of regression and reset it when new metric have lower value than previous one.
 This is usable when you are sending increasing counters like access to your application, which will be zeroed when application restarts.
 In this situation if parameter <code>Counter</code> is not set, <strong>OddEye</strong> will not know that zeroed value is expected, thus will set higher anomaly rate on it.</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">type</span> <span class="o">=</span> Rate <span class="o">(</span>For sending rated metrics<span class="o">)</span>
-<span class="nb">type</span> <span class="o">=</span> Percent <span class="o">(</span>For sending metrics which are <span class="m">1</span>-100 percents of something<span class="o">)</span>
-<span class="nb">type</span> <span class="o">=</span> Counter <span class="o">(</span>For sending metrics as increasing counters<span class="o">)</span>
-<span class="nb">type</span> <span class="o">=</span> None <span class="o">(</span>Default<span class="o">)</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Rate<span class="w"> </span><span class="o">(</span>For<span class="w"> </span>sending<span class="w"> </span>rated<span class="w"> </span>metrics<span class="o">)</span>
+<span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Percent<span class="w"> </span><span class="o">(</span>For<span class="w"> </span>sending<span class="w"> </span>metrics<span class="w"> </span>which<span class="w"> </span>are<span class="w"> </span><span class="m">1</span>-100<span class="w"> </span>percents<span class="w"> </span>of<span class="w"> </span>something<span class="o">)</span>
+<span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Counter<span class="w"> </span><span class="o">(</span>For<span class="w"> </span>sending<span class="w"> </span>metrics<span class="w"> </span>as<span class="w"> </span>increasing<span class="w"> </span>counters<span class="o">)</span>
+<span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>None<span class="w"> </span><span class="o">(</span>Default<span class="o">)</span>
 </code></pre></div>
 
 <p>In addition to this <strong>OddEye</strong> also accepts "Special" metrics for error handling and alert generation. 
 Following is "Special" json which tells <strong>OddEye</strong> that system Load-Average has <strong>Critial</strong> value and action from DevOps is required:</p>
-<div class="codehilite"><pre><span></span><code>    <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;ERROR: System Load average is at 123.25 percent of available  resources&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;Load-Average&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;reaction&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;cluster&quot;</span><span class="p">:</span> <span class="s2">&quot;testcluster&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;group&quot;</span><span class="p">:</span> <span class="s2">&quot;testing&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hobbit&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1497549387</span><span class="p">,</span>
-            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Special&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">0</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ERROR: System Load average is at 123.25 percent of available  resources&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;metric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Load-Average&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;reaction&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;cluster&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testcluster&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testing&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hobbit&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1497549387</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Special&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
 </code></pre></div>
 
 <p>If <code>status</code> is <strong>ERROR</strong> you will see message with <strong>Severe</strong> severity at top of monitoring page. 
@@ -986,20 +1000,20 @@ When status is changed <strong>OddEye</strong> will remove <strong>Severe</stron
 Agent will sends it automatically, but if you write you own agent, make sure that you generate <strong>Error</strong> message in exception block.
 This is not mandatory, but it will alert <strong>OddEye</strong> that monitorable application is not responding, so <strong>OddEye</strong> can generate appropriate message in Dashboard.  </p>
 <p>Sample error message looks like this:</p>
-<div class="codehilite"><pre><span></span><code>    <span class="p">[{</span>
-        <span class="err">&#39;status&#39;:</span> <span class="err">&#39;ERROR&#39;,</span>
-        <span class="err">&#39;reaction&#39;:</span> <span class="err">-2,</span>
-        <span class="err">&#39;value&#39;:</span> <span class="err">16,</span>
-        <span class="err">&#39;timestamp&#39;:</span> <span class="err">1497550147,</span>
-        <span class="err">&#39;tags&#39;:</span> <span class="err">{</span>
-            <span class="err">&#39;cluster&#39;:</span> <span class="err">&#39;testcluster&#39;,</span>
-            <span class="err">&#39;group&#39;:</span> <span class="err">&#39;testing&#39;,</span>
-            <span class="err">&#39;host&#39;:</span> <span class="err">&#39;hobbit&#39;</span>
-        <span class="p">},</span>
-        <span class="err">&#39;metric&#39;:</span> <span class="err">&#39;check_nginx&#39;</span><span class="p">,</span>
-        <span class="err">&#39;type&#39;:</span> <span class="err">&#39;Special&#39;</span><span class="p">,</span>
-        <span class="err">&#39;message&#39;:</span> <span class="err">&#39;</span><span class="mi">7</span><span class="p">,</span> <span class="err">Failed</span> <span class="err">to</span> <span class="err">connect</span> <span class="err">to</span> <span class="mf">127.0</span><span class="err">.</span><span class="mf">0.1</span> <span class="err">port</span> <span class="mi">80</span><span class="err">:</span> <span class="err">Connection</span> <span class="err">refused&#39;</span>
-    <span class="err">}</span><span class="p">]</span>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p">[{</span>
+<span class="w">        </span><span class="err">&#39;s</span><span class="kc">tatus</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;ERROR&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="err">&#39;reac</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span>
+<span class="w">        </span><span class="err">&#39;value&#39;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">        </span><span class="err">&#39;</span><span class="kc">t</span><span class="err">imes</span><span class="kc">ta</span><span class="err">mp&#39;</span><span class="p">:</span><span class="w"> </span><span class="mi">1497550147</span><span class="p">,</span>
+<span class="w">        </span><span class="err">&#39;</span><span class="kc">ta</span><span class="err">gs&#39;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="err">&#39;clus</span><span class="kc">ter</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">test</span><span class="err">clus</span><span class="kc">ter</span><span class="err">&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="err">&#39;group&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">test</span><span class="err">i</span><span class="kc">n</span><span class="err">g&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="err">&#39;hos</span><span class="kc">t</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;hobbi</span><span class="kc">t</span><span class="err">&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="err">&#39;me</span><span class="kc">tr</span><span class="err">ic&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;check_</span><span class="kc">n</span><span class="err">gi</span><span class="kc">n</span><span class="err">x&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="err">&#39;</span><span class="kc">t</span><span class="err">ype&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;Special&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="err">&#39;message&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="err">Failed</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">co</span><span class="kc">nne</span><span class="err">c</span><span class="kc">t</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="mf">127.0.0.1</span><span class="w"> </span><span class="err">por</span><span class="kc">t</span><span class="w"> </span><span class="mi">80</span><span class="p">:</span><span class="w"> </span><span class="err">Co</span><span class="kc">nne</span><span class="err">c</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">re</span><span class="kc">fuse</span><span class="err">d&#39;</span>
+<span class="w">    </span><span class="p">}]</span>
 </code></pre></div>
 
 <p>This message will tell <strong>OddEye</strong> that NginX server is not running so <strong>OddEye</strong> Dashboard will show <strong>Severe</strong> alert at the top of monitoring page. </p>
@@ -1026,7 +1040,7 @@ This is not mandatory, but it will alert <strong>OddEye</strong> that monitorabl
     
       <script src="../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:".."}})</script>
       
         <script src="../javascripts/jquery.min.js"></script>
       

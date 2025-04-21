@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://sadoyan.github.io/puypuydocs/articles/hbasecompactions/">
+        <link rel="canonical" href="https://www.oddeye.co/documentation/articles/hbasecompactions/">
       
       
       
@@ -34,11 +34,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
-        <title>Hbasecompactions - Metrics collector tool.</title>
+        <title>Hbasecompactions - Cloud scale intelligent monitoring & analytics platform</title>
       
     
     
@@ -96,7 +96,12 @@
     <nav class="md-header-nav xl-grid">
         <div class="md-flex">
             <div class="md-flex__cell md-flex__cell--shrink">
-                <a href="https://sadoyan.github.io/puypuydocs/" title="Home" class="home">
+                <a href="https://www.oddeye.co/" title="www.oddeye.co" class="md-header-nav__button md-logo">         
+                    <img src="../../images/logowhite.png" width="65">            
+                </a>        
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="https://www.oddeye.co/documentation/" title="Home" class="home">
                                 
 <!--                    <img src="/assets/images/home_white.png" width="35" height="30">              -->
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 640 640" class="icon">
@@ -113,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -134,7 +139,7 @@
             <div class="md-flex__cell md-flex__cell--stretch">
                 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">                                       
                     <span class="md-header-nav__topic">
-                       Metrics collector tool.
+                       Cloud scale intelligent monitoring & analytics platform
                     </span>
                     <span class="md-header-nav__topic">
                         Hbasecompactions
@@ -170,8 +175,17 @@
                 
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="try-now" href="https://app.oddeye.co/OddeyeCoconut/signup/" title="Try For Free">                   
+                    
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 512 512" class="icon-try">
+                        <path d="M122.832 0c-56.864 103.016-66.445 260.152 156.93 254.912v-126.912l192 192-192 192v-124.186c-267.48 6.971-297.286-236.107-156.93-387.814z"></path>
+                    </svg>
+                    <span>Try For Free!</span>
+                </a>
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="login-now" href="https://app.oddeye.co/OddeyeCoconut/login/" title="Login">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 512 512" class="icon">                        
                         <path d="M358.4 256l-153.6-128v76.8h-179.2v102.4h179.2v76.8l153.6-128zM435.2 435.2h-204.8v51.2h204.8c28.16 0 51.2-23.040 51.2-51.2v-358.4c0-28.16-23.040-51.2-51.2-51.2h-204.8v51.2h204.8v358.4z"></path>
                     </svg>
                 </a>
@@ -194,12 +208,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
 <!--  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://sadoyan.github.io/puypuydocs/" title="Metrics collector tool." class="md-nav__button md-logo">
+    <a href="https://www.oddeye.co/documentation/" title="Cloud scale intelligent monitoring & analytics platform" class="md-nav__button md-logo">
       
         <img src="../../images/logowhite.png" width="48" height="48">
       
     </a>
-    Metrics collector tool.
+    Cloud scale intelligent monitoring & analytics platform
   </label>-->
   
     <div class="md-nav__source">
@@ -208,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -899,15 +913,15 @@ It allows you to set peak and non peak hours of your cluster and configure compa
 <p>Below are some configuration parameters from hbase-site.xml which can help you to control speed and resource consumption for compactions. </p>
 <p>Here are some parameters that can help you with fine tuning of compactions: </p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;property&gt;</span>
-        <span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.max<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;value&gt;</span>10<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.max<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>10<span class="nt">&lt;/value&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 </code></pre></div>
 
 <p>Maximum number of StoreFiles to compact per minor compaction (default 10)</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;property&gt;</span>
-        <span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.min.size<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;value&gt;</span>134217728<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.min.size<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>134217728<span class="nt">&lt;/value&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 </code></pre></div>
 
@@ -915,39 +929,39 @@ It allows you to set peak and non peak hours of your cluster and configure compa
 <p>Also there are several very handy parameters which allows you to set up peak and off peak hours for your cluster and respectively limit bandwidth per interval.<br />
 Value of these settings should be hours passed since 00:00. So examples below configures Off-Peak start hour at 11:00 AM and end hour at 4:00 PM respectively.</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;property&gt;</span>
-        <span class="nt">&lt;name&gt;</span>hbase.offpeak.start.hour<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;value&gt;</span>11<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>hbase.offpeak.start.hour<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>11<span class="nt">&lt;/value&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 <span class="nt">&lt;property&gt;</span>
-        <span class="nt">&lt;name&gt;</span>hbase.offpeak.end.hour<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;value&gt;</span>16<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>hbase.offpeak.end.hour<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>16<span class="nt">&lt;/value&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 </code></pre></div>
 
 <p>Next is to configure proper compaction controller :</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;property&gt;&lt;name&gt;</span>hbase.hstore.compaction.throughput.controller<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController<span class="nt">&lt;/value&gt;</span>
+<span class="w">    </span><span class="nt">&lt;value&gt;</span>org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController<span class="nt">&lt;/value&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 </code></pre></div>
 
 <p>Now when we set up Peak and Off-Peak hours we can set bandwidth thresholds for these periods. </p>
 <h2 id="peak-hours">Peak hours</h2>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.throughput.higher.bound<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>20971520<span class="nt">&lt;/value&gt;</span>
-    <span class="nt">&lt;description&gt;</span>The default is 20 MB/sec<span class="nt">&lt;/description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.throughput.higher.bound<span class="nt">&lt;/name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;value&gt;</span>20971520<span class="nt">&lt;/value&gt;</span>
+<span class="w">    </span><span class="nt">&lt;description&gt;</span>The<span class="w"> </span>default<span class="w"> </span>is<span class="w"> </span>20<span class="w"> </span>MB/sec<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.throughput.lower.bound<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>10485760<span class="nt">&lt;/value&gt;</span>
-    <span class="nt">&lt;description&gt;</span>The default is 10 MB/sec<span class="nt">&lt;/description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.throughput.lower.bound<span class="nt">&lt;/name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;value&gt;</span>10485760<span class="nt">&lt;/value&gt;</span>
+<span class="w">    </span><span class="nt">&lt;description&gt;</span>The<span class="w"> </span>default<span class="w"> </span>is<span class="w"> </span>10<span class="w"> </span>MB/sec<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 </code></pre></div>
 
 <h2 id="off-peak-hours">Off Peak hours</h2>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.throughput.offpeak<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>9223372036854775807<span class="nt">&lt;/value&gt;</span>
+<span class="w">    </span><span class="nt">&lt;name&gt;</span>hbase.hstore.compaction.throughput.offpeak<span class="nt">&lt;/name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;value&gt;</span>9223372036854775807<span class="nt">&lt;/value&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 </code></pre></div>
 
@@ -975,7 +989,7 @@ Value of these settings should be hours passed since 00:00. So examples below co
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

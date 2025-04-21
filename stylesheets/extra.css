@@ -88,6 +88,10 @@ a.try-now {
 a.try-now:hover,
 a.md-source:hover,
 a.home:hover,
+a.login-now:hover {
+    opacity: 1;
+    color: #0e0e0e;
+}
 .md-search__icon[for=__search] {
     top: .2rem;
     left: .3rem;

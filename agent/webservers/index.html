@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://sadoyan.github.io/puypuydocs/agent/webservers/">
+        <link rel="canonical" href="https://www.oddeye.co/documentation/agent/webservers/">
       
       
       
@@ -34,11 +34,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
-        <title>Webservers - Metrics collector tool.</title>
+        <title>Webservers - Cloud scale intelligent monitoring & analytics platform</title>
       
     
     
@@ -96,7 +96,12 @@
     <nav class="md-header-nav xl-grid">
         <div class="md-flex">
             <div class="md-flex__cell md-flex__cell--shrink">
-                <a href="https://sadoyan.github.io/puypuydocs/" title="Home" class="home">
+                <a href="https://www.oddeye.co/" title="www.oddeye.co" class="md-header-nav__button md-logo">         
+                    <img src="../../images/logowhite.png" width="65">            
+                </a>        
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="https://www.oddeye.co/documentation/" title="Home" class="home">
                                 
 <!--                    <img src="/assets/images/home_white.png" width="35" height="30">              -->
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 640 640" class="icon">
@@ -113,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -134,7 +139,7 @@
             <div class="md-flex__cell md-flex__cell--stretch">
                 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">                                       
                     <span class="md-header-nav__topic">
-                       Metrics collector tool.
+                       Cloud scale intelligent monitoring & analytics platform
                     </span>
                     <span class="md-header-nav__topic">
                         Webservers
@@ -170,8 +175,17 @@
                 
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="try-now" href="https://app.oddeye.co/OddeyeCoconut/signup/" title="Try For Free">                   
+                    
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 512 512" class="icon-try">
+                        <path d="M122.832 0c-56.864 103.016-66.445 260.152 156.93 254.912v-126.912l192 192-192 192v-124.186c-267.48 6.971-297.286-236.107-156.93-387.814z"></path>
+                    </svg>
+                    <span>Try For Free!</span>
+                </a>
             </div>      
             <div class="md-flex__cell md-flex__cell--shrink">
+                <a class="login-now" href="https://app.oddeye.co/OddeyeCoconut/login/" title="Login">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 512 512" class="icon">                        
                         <path d="M358.4 256l-153.6-128v76.8h-179.2v102.4h179.2v76.8l153.6-128zM435.2 435.2h-204.8v51.2h204.8c28.16 0 51.2-23.040 51.2-51.2v-358.4c0-28.16-23.040-51.2-51.2-51.2h-204.8v51.2h204.8v358.4z"></path>
                     </svg>
                 </a>
@@ -194,12 +208,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
 <!--  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://sadoyan.github.io/puypuydocs/" title="Metrics collector tool." class="md-nav__button md-logo">
+    <a href="https://www.oddeye.co/documentation/" title="Cloud scale intelligent monitoring & analytics platform" class="md-nav__button md-logo">
       
         <img src="../../images/logowhite.png" width="48" height="48">
       
     </a>
-    Metrics collector tool.
+    Cloud scale intelligent monitoring & analytics platform
   </label>-->
   
     <div class="md-nav__source">
@@ -208,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -891,32 +905,32 @@
 <h3 id="apache"><strong>Apache</strong></h3>
 <p><strong>Install</strong></p>
 <p>In order to get statiscics from Apache2 web server, you should enable status module and define status URL. On Debian like system, you can do it by <code>a2enmod  status</code> or adding following to Apache main config file: </p>
-<div class="codehilite"><pre><span></span><code><span class="err">LoadModule status_module /path/to/apache/mod_status.so</span>
+<div class="codehilite"><pre><span></span><code>LoadModule status_module /path/to/apache/mod_status.so
 </code></pre></div>
 
 <p>After enabling status module you should configure status URL.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span> <span class="err">/server-status</span><span class="nt">&gt;</span>
-   SetHandler server-status
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span><span class="w"> </span><span class="err">/server-status</span><span class="nt">&gt;</span>
+<span class="w">   </span>SetHandler<span class="w"> </span>server-status
 <span class="nt">&lt;/Location&gt;</span>
 </code></pre></div>
 
 <p>Its STRONGLY recommended to limit access to this page ether by limiting by source IP, or enabling authentication on this page : </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span> <span class="err">/server-status</span><span class="nt">&gt;</span>
-   SetHandler server-status
-   Order deny,allow
-   Deny from all
-   Allow from 127.0.0.1 ::1
-   Allow from 192.0.1.0/24
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span><span class="w"> </span><span class="err">/server-status</span><span class="nt">&gt;</span>
+<span class="w">   </span>SetHandler<span class="w"> </span>server-status
+<span class="w">   </span>Order<span class="w"> </span>deny,allow
+<span class="w">   </span>Deny<span class="w"> </span>from<span class="w"> </span>all
+<span class="w">   </span>Allow<span class="w"> </span>from<span class="w"> </span>127.0.0.1<span class="w"> </span>::1
+<span class="w">   </span>Allow<span class="w"> </span>from<span class="w"> </span>192.0.1.0/24
 <span class="nt">&lt;/Location&gt;</span>
 </code></pre></div>
 
 <p>This will allow access to status page only from Localhost and 192.168.1.0/24 subnet. </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span> <span class="err">/server-status</span><span class="nt">&gt;</span>
-   SetHandler server-status
-   AuthUserFile /etc/apache2/USERLIST
-   AuthName &quot;restricted stuff&quot;
-   AuthType Basic
-   require valid-user
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span><span class="w"> </span><span class="err">/server-status</span><span class="nt">&gt;</span>
+<span class="w">   </span>SetHandler<span class="w"> </span>server-status
+<span class="w">   </span>AuthUserFile<span class="w"> </span>/etc/apache2/USERLIST
+<span class="w">   </span>AuthName<span class="w"> </span>&quot;restricted<span class="w"> </span>stuff&quot;
+<span class="w">   </span>AuthType<span class="w"> </span>Basic
+<span class="w">   </span>require<span class="w"> </span>valid-user
 <span class="nt">&lt;/Location&gt;</span>
 </code></pre></div>
 
@@ -926,17 +940,17 @@ In real life cluster installation HDFS NameNode doesn't use loopback interface, 
 At Agent side you should make config changes in order to tell Agent how to get statistics from Apache server. 
 Config file for Webservers is {AGENT_HOME}/conf/webservers.ini. and it should look like this </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Apache]</span>
-<span class="na">url: http://127.0.0.1:8080/server-status?auto</span>
-<span class="na">user: user</span>
-<span class="na">pass: password</span>
-<span class="na">auth: True</span>
+<span class="na">url</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8080/server-status?auto</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">user</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">password</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <p>If you have not configured Apache to require login for status page just set <code>auth: True</code> and write something as username and password. 
 Do not delete user/pass/auth sections, even if you do not use it. 
 Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_enabled/check_apache.py</code>. </p>
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -996,27 +1010,27 @@ Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_e
 </table>
 <h3 id="nginx"><strong>NginX</strong></h3>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_nginx.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_nginx.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
 <p>Status page os Nginx is disabled by default. You can enable it by adding following to NginX config file and restarting daemon. Code below will do the trick: </p>
 <div class="codehilite"><pre><span></span><code><span class="na">location /nginx_status {</span>
-   <span class="na">stub_status on;</span>
-   <span class="na">allow 127.0.0.1;</span>
-   <span class="na">deny all;</span>
+<span class="w">   </span><span class="na">stub_status on;</span>
+<span class="w">   </span><span class="na">allow 127.0.0.1;</span>
+<span class="w">   </span><span class="na">deny all;</span>
 <span class="na">}</span>
 </code></pre></div>
 
 <p>We recommend to use separate Server directive status for dedicated port. </p>
-<div class="codehilite"><pre><span></span><code>server <span class="o">{</span>
-        listen <span class="m">127</span>.0.0.1:8088<span class="p">;</span>
-        root /var/www<span class="p">;</span>
-        index index.html <span class="p">;</span>
-        server_name localhost<span class="p">;</span>
-location /nginx_status <span class="o">{</span>
-   stub_status on<span class="p">;</span>
+<div class="codehilite"><pre><span></span><code>server<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="m">127</span>.0.0.1:8088<span class="p">;</span>
+<span class="w">        </span>root<span class="w"> </span>/var/www<span class="p">;</span>
+<span class="w">        </span>index<span class="w"> </span>index.html<span class="w"> </span><span class="p">;</span>
+<span class="w">        </span>server_name<span class="w"> </span>localhost<span class="p">;</span>
+location<span class="w"> </span>/nginx_status<span class="w"> </span><span class="o">{</span>
+<span class="w">   </span>stub_status<span class="w"> </span>on<span class="p">;</span>
 <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
@@ -1024,16 +1038,16 @@ location /nginx_status <span class="o">{</span>
 <p>This way your NginX server will bind to port 8088 on loop back interface. Its very easy and secure way to provide status. 
 After enabling NginX Status, You should add status page parameters to <code>{AGENT_HOME}/conf/webservers.ini</code>. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[NginX]</span>
-<span class="na">address: http://127.0.0.1:8888</span>
-<span class="na">stats: /nginx_status</span>
-<span class="na">auth: False</span>
-<span class="na">user: user</span>
-<span class="na">pass: password</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8888</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">/nginx_status</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">user</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">password</span>
 </code></pre></div>
 
 <p>Change auth enabled from False to True, if you have anabled authentication on  NginX status URL. Please do not delete user/pass/auth, just put some placeholders, if authentication is disabled. </p>
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1093,8 +1107,8 @@ After enabling NginX Status, You should add status page parameters to <code>{AGE
 </table>
 <h3 id="php-fpm"><strong>PHP-FPM</strong></h3>
 <p><strong>Install</strong> </p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_phpfpm.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_phpfpm.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
@@ -1132,15 +1146,15 @@ location /fpm-status {
 <p>This is easy way to keep stats related configs in the same place and keep tracking of configuration files. 
 After PHP-FPM is configured you can copy or symlink <code>checks_available/check_phpfpm.py</code> to <code>checks_enabled/check_phpfpm.py</code>, configure Agent in conf/webservers.ini and restart Agent daemon.</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[PhpFPM]</span>
-<span class="na">address: http://127.0.0.1:8888</span>
-<span class="na">stats: /fpm-status</span>
-<span class="na">auth: False</span>
-<span class="na">user: User</span>
-<span class="na">pass: Pass</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8888</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">/fpm-status</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">User</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">Pass</span>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1200,28 +1214,28 @@ After PHP-FPM is configured you can copy or symlink <code>checks_available/check
 </table>
 <h3 id="tomcat"><strong>Tomcat</strong></h3>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_tomcat.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_tomcat.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
 <p>Apache Tomcat also ships with by default disabled status page. In order to get stats from tomcat, 
 you should edit <code>CATALINA_HOME/conf/tomcat-users.xml</code> and enable role <code>manager-jmx</code>. 
 To do this enter following to tomcat-users.xml and restart Tomcat . </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;user</span> <span class="na">username=</span><span class="s">&quot;User&quot;</span> <span class="na">password=</span><span class="s">&quot;Pass&quot;</span> <span class="na">roles=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;role</span><span class="w"> </span><span class="na">rolename=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;user</span><span class="w"> </span><span class="na">username=</span><span class="s">&quot;User&quot;</span><span class="w"> </span><span class="na">password=</span><span class="s">&quot;Pass&quot;</span><span class="w"> </span><span class="na">roles=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
 
 <p>If you see 403 Access Denied, try to edit <code>CATALINA_HOME/webapps/manager/META-INF/context.xml</code> and somment <code>Valve</code> : </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Context</span> <span class="na">antiResourceLocking=</span><span class="s">&quot;false&quot;</span> <span class="na">privileged=</span><span class="s">&quot;true&quot;</span> <span class="nt">&gt;</span>
-<span class="c">&lt;!--</span>
-<span class="c">&lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot; allow=&quot;127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1&quot; /&gt;</span>
-<span class="c">--&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Context</span><span class="w"> </span><span class="na">antiResourceLocking=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">privileged=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">&lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot; allow=&quot;127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1&quot; /&gt;</span>
+<span class="cm">--&gt;</span>
 <span class="nt">&lt;/Context&gt;</span>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1323,17 +1337,17 @@ To do this enter following to tomcat-users.xml and restart Tomcat . </p>
 </table>
 <h3 id="jetty"><strong>Jetty</strong></h3>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_jetty.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_jetty.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
 <p>Jetty comes with pre built support of Jolokia, but module is disabled by default.  <br />
 All is needed is just to enable jolokia and restart Jetty.  </p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$JETTY_HOME</span>
-bin/jetty.sh stop
-java -jar start.jar --add-to-start<span class="o">=</span>jolokia
-bin/jetty.sh start
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="nv">$JETTY_HOME</span>
+bin/jetty.sh<span class="w"> </span>stop
+java<span class="w"> </span>-jar<span class="w"> </span>start.jar<span class="w"> </span>--add-to-start<span class="o">=</span>jolokia
+bin/jetty.sh<span class="w"> </span>start
 </code></pre></div>
 
 <p>After enabling Jetty-Jolokia copy or symlink <code>checks_available/check_jetty.py</code> to <code>checks_enabled/check_jetty.py</code>,
@@ -1497,39 +1511,39 @@ Change IP:PORT of Jetty server at section [Jetty] of <code>conf/webservers.ini</
 </table>
 <h3 id="lighttpd"><strong>Lighttpd</strong></h3>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_lighttpd.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_lighttpd.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
 <p>Lighttpd is a lightweight  HTTP servers build with performance and security in mind. 
 In order to collect metrics from Lighttpd servers you need first to enable and configure stats module.  </p>
 <p>Loading module:</p>
-<div class="codehilite"><pre><span></span><code>server.modules <span class="o">=</span> <span class="o">(</span> ..., <span class="s2">&quot;mod_status&quot;</span>, ... <span class="o">)</span>
+<div class="codehilite"><pre><span></span><code>server.modules<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="w"> </span>...,<span class="w"> </span><span class="s2">&quot;mod_status&quot;</span>,<span class="w"> </span>...<span class="w"> </span><span class="o">)</span>
 </code></pre></div>
 
 <p>Status page is disabled by default so you need to enable it</p>
-<div class="codehilite"><pre><span></span><code>status.status-url <span class="o">=</span> <span class="s2">&quot;/server-status&quot;</span>
+<div class="codehilite"><pre><span></span><code>status.status-url<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/server-status&quot;</span>
 </code></pre></div>
 
 <p>You can restrict access to status url by allowing access only from certain subnet :</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">$HTTP</span><span class="o">[</span><span class="s2">&quot;remoteip&quot;</span><span class="o">]</span> <span class="o">==</span> <span class="s2">&quot;192.168.0.0/24&quot;</span> <span class="o">{</span>
-    status.status-url <span class="o">=</span> <span class="s2">&quot;/server-status&quot;</span> 
-  <span class="o">}</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">$HTTP</span><span class="o">[</span><span class="s2">&quot;remoteip&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;192.168.0.0/24&quot;</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>status.status-url<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/server-status&quot;</span><span class="w"> </span>
+<span class="w">  </span><span class="o">}</span>
 </code></pre></div>
 
 <p>Or requesting authentication:</p>
-<div class="codehilite"><pre><span></span><code>auth.require <span class="o">=</span> <span class="o">(</span> <span class="s2">&quot;/server-status&quot;</span> <span class="o">=</span>&gt; <span class="o">(</span> <span class="s2">&quot;realm&quot;</span> ... <span class="o">)</span> <span class="o">)</span>
+<div class="codehilite"><pre><span></span><code>auth.require<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="s2">&quot;/server-status&quot;</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="s2">&quot;realm&quot;</span><span class="w"> </span>...<span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="o">)</span>
 </code></pre></div>
 
 <p>Please make sure that you configure URL and HOST in <code>conf/webservers.ini</code> file.
 Default configuration looks like this: </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Lighttpd]</span>
-<span class="na">address: http://127.0.0.1</span>
-<span class="na">stats: /server-status?auto</span>
-<span class="na">auth: False</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">/server-status?auto</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
 </code></pre></div>
 
 <h3 id="http-api"><strong>HTTP API</strong></h3>
@@ -1538,10 +1552,10 @@ Any HTTP backend can act as monitoring point for this check.
 It will do GET request to your api server and calculate its response time, which will be sent to OddEye. 
 check_http_api supports HTTP basic authentication. Parameters for this check ate in  HTTP section of <code>webservers.ini</code> file: </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[HTTP]</span>
-<span class="na">upstream: http://your.api.com:8080, https://yoursecure.api.com:8443</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
-<span class="na">auth: True    </span>
+<span class="na">upstream</span><span class="o">:</span><span class="w"> </span><span class="s">http://your.api.com:8080, https://yoursecure.api.com:8443</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span><span class="w">    </span>
 </code></pre></div>
 
 <p>You can add as many upstreams as you wish to monitor. The only limit is that you must provide full URL of monitored endpoint. 
@@ -1553,10 +1567,10 @@ http_your_secure_api_com_8443
 <p>Where 8080 amd 8443 are ports of configured API server. 
 If your api server binds on default HTTP/HTTPS ports, you can exclude port number from <code>upstream</code>  of HTTP config:   </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[HTTP]</span>
-<span class="na">upstream: http://your.api.com, https://yoursecure.api.com</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
-<span class="na">auth: True    </span>
+<span class="na">upstream</span><span class="o">:</span><span class="w"> </span><span class="s">http://your.api.com, https://yoursecure.api.com</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span><span class="w">    </span>
 </code></pre></div>
 
 <p>In this case check names at OddEye will look like this:</p>
@@ -1589,7 +1603,7 @@ Thus both HTTP and HTTPS checks will have <code>http_</code> prefix.   </p>
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       
