@@ -940,8 +940,8 @@
 <p>Scylla is a massively scalable Open-Source NoSQL database. It's an implementation of Apache Cassandra using C++ instead of Java. 
 Developers of Scylla describe it as : Scylla is a drop-in replacement for Apache Cassandra and DynamoDB.
 Yet it also provides significant advantages over these other databases. Flip the cards to see similarities and differences. 
-Scylla ships with native metrics exported, which runs by default 9180 port. So there is no need for special configuration of Scylla.  </p>
-<p>Scylla config of OddEye agent is in <code>conf/bigdata.ini</code> file. If you run recommended Scylla installation, no need for making spacial configs for OddEye agent as well.  </p>
+Scylla ships with native metrics exported, which runs by default 9180 port. So there is no need for special configuration of Scylla. </p>
+<p>Scylla config of OddEye agent is in <code>conf/bigdata.ini</code> file. If you run recommended Scylla installation, no need for making spacial configs for OddEye agent as well. </p>
 <h4 id="install"><strong>Install</strong></h4>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_scylla.py<span class="w"> </span>./
@@ -1103,31 +1103,31 @@ If you are running Scylla's node_exporter other than default way, change the <co
 </tr>
 <tr>
 <td>scylla_cql_inserts</td>
-<td>The total number of CQL INSERT requests</td>
+<td>The Number of CQL INSERT requests</td>
 <td>gauge</td>
 <td>None</td>
 </tr>
 <tr>
 <td>scylla_cql_reads</td>
-<td>The total number of CQL SELECT requests.</td>
+<td>The Number of CQL SELECT requests.</td>
 <td>gauge</td>
 <td>None</td>
 </tr>
 <tr>
 <td>scylla_cql_deletes</td>
-<td>The total number of CQL DELETE requests.</td>
+<td>The Number of CQL DELETE requests.</td>
 <td>gauge</td>
 <td>None</td>
 </tr>
 <tr>
 <td>scylla_cql_updates</td>
-<td>The total number of CQL UPDATE requests</td>
+<td>The Number of CQL UPDATE requests</td>
 <td>gauge</td>
 <td>None</td>
 </tr>
 <tr>
 <td>scylla_cql_batches</td>
-<td>The total number of CQL BATCH requests</td>
+<td>The Number of CQL BATCH requests</td>
 <td>gauge</td>
 <td>None</td>
 </tr>
