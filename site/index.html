@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -954,84 +954,84 @@ so make sure your endpoint i configured properly. </p>
 <p>Main idea behind PuyPuyis simplicity and less as possible dependencies, it is tested on Debian and Ubuntu systems, but should work on any Linux system.   </p>
 <p>To install PuyPuyjust clone our repository. Base program requires only pycurl as external dependency. 
 On Debian/Ubuntu you can install it via apt-get</p>
-<div class="codehilite"><pre><span></span><code><span class="err">apt-get install python3-pycurl</span>
+<div class="codehilite"><pre><span></span><code>apt-get install python3-pycurl
 </code></pre></div>
 
 <p>On RedHat systems:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">yum install python3-pycurl</span>
+<div class="codehilite"><pre><span></span><code>yum install python3-pycurl
 </code></pre></div>
 
 <p>Via python pip: </p>
-<div class="codehilite"><pre><span></span><code><span class="err">pip3 install pycurl</span>
+<div class="codehilite"><pre><span></span><code>pip3 install pycurl
 </code></pre></div>
 
 <p>Some checks requires additional modules for example check_mysql requires MySQLdb. So make sure to install it before using MySQL check 
 Debian/Ubuntu : </p>
-<div class="codehilite"><pre><span></span><code><span class="err">apt-get install python3-mysqldb</span>
+<div class="codehilite"><pre><span></span><code>apt-get install python3-mysqldb
 </code></pre></div>
 
 <p>Python pip: </p>
-<div class="codehilite"><pre><span></span><code><span class="err">pip3 install MySQL-python</span>
+<div class="codehilite"><pre><span></span><code>pip3 install MySQL-python
 </code></pre></div>
 
 <p>Make your changes if needed in config.ini and run </p>
-<div class="codehilite"><pre><span></span><code><span class="err">./oddeye.sh start</span>
+<div class="codehilite"><pre><span></span><code>./oddeye.sh start
 </code></pre></div>
 
 <p>Python daemon process will start, run all python scripts from checks_available directory as well as all check_* files scripts_available directory. </p>
 <h3 id="main-config">Main Config</h3>
 <p>PuyPuy uses simple ini files to configure main service and all checks. Configs are splitted into sections. Section [SelfConfig] contains base config parameters like checks interval, log/pid file location as well as some basic tags. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[SelfConfig]</span>
-<span class="na">check_period_seconds</span> <span class="o">=</span> <span class="s">5</span>
-<span class="na">log_file</span> <span class="o">=</span> <span class="s">/var/log/oddeye.log</span>
-<span class="na">pid_file</span> <span class="o">=</span> <span class="s">/var/run/oddeye.pid</span>
-<span class="na">cluster_name</span> <span class="o">=</span> <span class="s">OddEye</span>
-<span class="na">host_group</span> <span class="o">=</span> <span class="s">workers</span>
-<span class="na">tmpdir</span> <span class="o">=</span> <span class="s">/tmp/oddeye_tmp</span>
+<span class="na">check_period_seconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5</span>
+<span class="na">log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/oddeye.log</span>
+<span class="na">pid_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/run/oddeye.pid</span>
+<span class="na">cluster_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OddEye</span>
+<span class="na">host_group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">workers</span>
+<span class="na">tmpdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/tmp/oddeye_tmp</span>
 </code></pre></div>
 
 <p>cluster_name and host_group are placeholders for tags for better manageability. </p>
 <p>In section [TSDB] you should set correct backend and uri. </p>
 <h3 id="back-end-config">Back End Config</h3>
 <p>To make it run you need to change <strong>uuid</strong> to one which you got during registration and start PuyPuy, optionally change run user from oddeye.sh and start </p>
-<div class="codehilite"><pre><span></span><code><span class="err">./oddeye.sh start</span>
+<div class="codehilite"><pre><span></span><code>./oddeye.sh start
 </code></pre></div>
 
 <p>PuyPuycan for with number of other open source backends. All configs are done at TSDB section of config.ini. Only one TSDB can be set at once, so make sure that all other are ether commented out or deleted from config file. </p>
 <h4 id="opentsdb"><strong>OpenTSDB</strong></h4>
 <div class="codehilite"><pre><span></span><code><span class="k">[TSDB]</span>
-<span class="na">tsdtype: OpenTSDB</span>
-<span class="na">address: http://opentsdb_address:4242</span>
-<span class="na">datapoints: /api/put</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
-<span class="na">auth: False</span>
+<span class="na">tsdtype</span><span class="o">:</span><span class="w"> </span><span class="s">OpenTSDB</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://opentsdb_address:4242</span>
+<span class="na">datapoints</span><span class="o">:</span><span class="w"> </span><span class="s">/api/put</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
 </code></pre></div>
 
 <p>As PuyPuysend metrics with small bulks you should enable chunked requests in opentsdb.conf</p>
-<div class="codehilite"><pre><span></span><code><span class="err">tsd.http.request.enable_chunked = true</span>
+<div class="codehilite"><pre><span></span><code>tsd.http.request.enable_chunked = true
 </code></pre></div>
 
 <p>OpenTSDB is designed to run in private networks and does not supports authentication, but if you want it to be public available, you can use any proxy server like Haproxy or NginX with basic auth enabled and configure credentials in  config.ini. If you do not need authentication, just set auth param to False and some placeholders as user/pass.  <strong>Do not delete user/pass/auth parameters.</strong></p>
 <h4 id="kairosdb"><strong>KairosDB</strong></h4>
 <div class="codehilite"><pre><span></span><code><span class="k">[TSDB]</span>
-<span class="na">address: http://kairosdb_address:8088</span>
-<span class="na">datapoints: /api/v1/datapoints</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
-<span class="na">auth: True</span>
-<span class="na">tsdtype: KairosDB</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://kairosdb_address:8088</span>
+<span class="na">datapoints</span><span class="o">:</span><span class="w"> </span><span class="s">/api/v1/datapoints</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">tsdtype</span><span class="o">:</span><span class="w"> </span><span class="s">KairosDB</span>
 </code></pre></div>
 
 <p>Enable or disable auth: in accordance to your KairosDB setup </p>
 <h4 id="influxdb"><strong>InfluxDB</strong></h4>
 <div class="codehilite"><pre><span></span><code><span class="k">[TSDB]</span>
-<span class="na">address: http://influxdb_address:8086</span>
-<span class="na">auth: False</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
-<span class="na">database: test</span>
-<span class="na">tsdtype: InfluxDB</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://influxdb_address:8086</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
+<span class="na">database</span><span class="o">:</span><span class="w"> </span><span class="s">test</span>
+<span class="na">tsdtype</span><span class="o">:</span><span class="w"> </span><span class="s">InfluxDB</span>
 </code></pre></div>
 
 <p>Enable or disable authentication.</p>
@@ -1040,11 +1040,11 @@ Debian/Ubuntu : </p>
 <p><code>tsdtype: Prometheus</code> </p>
 <h4 id="graphite-carbon"><strong>Graphite Carbon</strong></h4>
 <div class="codehilite"><pre><span></span><code><span class="k">[TSDB]</span>
-<span class="na">address: carbon_host:2004</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
-<span class="na">auth: false</span>
-<span class="na">tsdtype: Carbon</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">carbon_host:2004</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">false</span>
+<span class="na">tsdtype</span><span class="o">:</span><span class="w"> </span><span class="s">Carbon</span>
 </code></pre></div>
 
 <p>PuyPuyuses Carbon pickle, default port is 2004</p>
@@ -1053,29 +1053,29 @@ Debian/Ubuntu : </p>
 So <strong>Do not delete authentication parameters</strong>,  just write something meaningless and use it as placeholder. </p>
 <h3 id="configure-modules">Configure modules</h3>
 <p>By default, all checks are disabled . To enable check you need to create symlink  or copy check module from OE-AGENT_HOME/checks_available to OE-AGENT_HOME/checks_enable checks-available</p>
-<div class="codehilite"><pre><span></span><code><span class="err">cd $OE-AGENT_HOME/checks_enabled</span>
-<span class="err">ln -s ../checks_available/check_cpustats.py ./</span>
-<span class="err">../oddeye.sh restart</span>
+<div class="codehilite"><pre><span></span><code>cd $OE-AGENT_HOME/checks_enabled
+ln -s ../checks_available/check_cpustats.py ./
+../oddeye.sh restart
 </code></pre></div>
 
 <p>Some checks need to be configured before you can use it, for example <code>check_nginx.py</code> needs to know NginX status url and username password if authentication on NginX status is enabled. All config files are located in conf directory. <code>conf/webservers.ini</code>is where <code>check_nginx.py</code> will look for configuration parameters. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[NginX]</span>
-<span class="na">address: http://127.0.0.1:8888</span>
-<span class="na">stats: /nginx_status</span>
-<span class="na">auth: True</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8888</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">/nginx_status</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
 </code></pre></div>
 
 <p>Some checks depend on non-standard python modules, like check_mysql.py depends on MySQL-python , so be sure to install all dependent modules before running checks. information about modules that should be installed before using checks are inside module files as comments. </p>
-<div class="codehilite"><pre><span></span><code><span class="n">head</span>  <span class="n">checks</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">check_mysql</span><span class="p">.</span><span class="n">py</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">head</span><span class="w">  </span><span class="nv">checks</span><span class="o">-</span><span class="nv">available</span><span class="o">/</span><span class="nv">check_mysql</span>.<span class="nv">py</span>
 
-<span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">This check required Python MySQLDB, On Debian like systems do</span>
-<span class="s1">apt-get install python3-mysqldb</span>
-<span class="s1">or</span>
-<span class="s1">pip3 install MySQL-python</span>
-<span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&#39;&#39;</span><span class="err">&#39;</span>
+<span class="err">This check required Python MySQLDB, On Debian like systems do</span>
+<span class="err">apt-get install python3-mysqldb</span>
+<span class="err">or</span>
+<span class="err">pip3 install MySQL-python</span>
+<span class="s1">&#39;&#39;</span><span class="err">&#39;</span>
 </code></pre></div>
 
 <h3 id="create-own-python-module">Create own python module</h3>
@@ -1122,20 +1122,20 @@ Example below demonstrates how you can send single metric with random value from
 <h3 id="create-custom-non-python-module">Create custom non python module</h3>
 <p>To run custom script  like Bash, Perl etc.. Create scripts in format <em>check_name.extension</em> in folder scripts_enabled. 
 All is needed from custom is to system out values in right order, Below is sample Bash scripts, which generates random number and send to collector for graphing: Make sure to have check_style parameter (stack/rate). This is for telling main program if it should calculate value rates or just push data as it comes. </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="nv">myvalue</span><span class="o">=</span><span class="nv">$RANDOM</span>
 <span class="nv">mytype</span><span class="o">=</span>random_gen
@@ -1147,10 +1147,10 @@ All is needed from custom is to system out values in right order, Below is sampl
 <span class="nv">check_type2</span><span class="o">=</span>my_bash_random2
 <span class="nv">check_style2</span><span class="o">=</span>rate
 
-<span class="nb">echo</span> <span class="nv">$mytype</span> <span class="nv">$myvalue</span> <span class="nv">$check_type</span> <span class="nv">$check_style</span>
-<span class="nb">echo</span> -n <span class="nv">$mytype2</span> <span class="nv">$myvalue2</span> <span class="nv">$check_type2</span> <span class="nv">$check_style2</span>
-</code></pre></div>
-</td></tr></table>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$mytype</span><span class="w"> </span><span class="nv">$myvalue</span><span class="w"> </span><span class="nv">$check_type</span><span class="w"> </span><span class="nv">$check_style</span>
+<span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$mytype2</span><span class="w"> </span><span class="nv">$myvalue2</span><span class="w"> </span><span class="nv">$check_type2</span><span class="w"> </span><span class="nv">$check_style2</span>
+</code></pre></div></td></tr></table></div>
+
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">lib.getconfig</span>
 <span class="kn">import</span> <span class="nn">lib.pushdata</span>
 <span class="kn">import</span> <span class="nn">lib.basecheck</span>
@@ -1224,7 +1224,7 @@ All is needed from custom is to system out values in right order, Below is sampl
     
       <script src="assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"."}})</script>
       
         <script src="javascripts/jquery.min.js"></script>
       

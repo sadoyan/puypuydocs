@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -1074,41 +1074,41 @@
          
 <h2 id="linux-os-monitoring"><strong>Linux OS Monitoring</strong></h2>
 <h4 id="install"><strong>Install</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/<span class="o">{</span>check_cpustats.py,check_disks.py,check_load_average.py,check_memory.py,check_network_bytes.py<span class="o">}</span> ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/<span class="o">{</span>check_cpustats.py,check_disks.py,check_load_average.py,check_memory.py,check_network_bytes.py<span class="o">}</span><span class="w"> </span>./
 </code></pre></div>
 
 <h4 id="configure"><strong>Configure</strong></h4>
 <p>For most of installations, our defaults works well, but you can edit <code>conf/system.ini</code> if you need fine tuning. 
 For each of system check you van enable or disable static alerts and set appropriate thresholds. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Load Average]</span>
-<span class="na">static_enabled: True</span>
-<span class="na">high: 95</span>
-<span class="na">severe : 100</span>
+<span class="na">static_enabled</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">high</span><span class="o">:</span><span class="w"> </span><span class="s">95</span>
+<span class="na">severe</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">100</span>
 
 <span class="k">[Disk Stats]</span>
-<span class="na">static_enabled: True</span>
-<span class="na">high : 90</span>
-<span class="na">severe : 95</span>
+<span class="na">static_enabled</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">high</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">90</span>
+<span class="na">severe</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">95</span>
 
 <span class="k">[Memory Stats]</span>
-<span class="na">static_enabled: True</span>
-<span class="na">high : 90</span>
-<span class="na">severe : 95</span>
+<span class="na">static_enabled</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">high</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">90</span>
+<span class="na">severe</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">95</span>
 
 <span class="k">[CPU Stats]</span>
-<span class="na">static_enabled: True</span>
-<span class="na">percore_stats: False</span>
-<span class="na">high: 90</span>
-<span class="na">severe: 95</span>
+<span class="na">static_enabled</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">percore_stats</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="na">high</span><span class="o">:</span><span class="w"> </span><span class="s">90</span>
+<span class="na">severe</span><span class="o">:</span><span class="w"> </span><span class="s">95</span>
 
 <span class="k">[Network Stats]</span>
-<span class="na">localhost</span> <span class="o">=</span> <span class="s">False</span>
-<span class="na">rated</span> <span class="o">=</span> <span class="s">True</span>
+<span class="na">localhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span>
+<span class="na">rated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <h4 id="restart"><strong>Restart</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="cpu"><strong>CPU</strong></h5>
@@ -1388,8 +1388,8 @@ with enabled hyper trading Linux will see 16 CPUs, so Load Average should be bel
 </table>
 <p>As regular checks and also triggers special WARNING, when value of sys_load_1 is more that 90%  of amount of CPU cores and ERROR,
  when its equal or more that 100%. This behavior can be changed by editing check_load_average.py and changing : </p>
-<div class="codehilite"><pre><span></span><code><span class="na">warn_level</span> <span class="o">=</span> <span class="s">90</span>
-<span class="na">crit_level</span> <span class="o">=</span> <span class="s">100</span>
+<div class="codehilite"><pre><span></span><code><span class="na">warn_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">90</span>
+<span class="na">crit_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100</span>
 </code></pre></div>
 
 <p>to desired values. However these values are quite reasonable so, use it without modifications, if you are not for 100% sure that you need to change it </p>
@@ -1538,7 +1538,7 @@ btrfs_dev_{NAME}_write_io_errs
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

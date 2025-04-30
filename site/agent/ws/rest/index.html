@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -114,7 +114,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -218,7 +218,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -842,10 +842,10 @@ Any HTTP backend can act as monitoring point for this check.
 It will do GET request to your api server and calculate its response time, which will be sent to OddEye. 
 check_http_api supports HTTP basic authentication. Parameters for this check ate in  HTTP section of <code>webservers.ini</code> file: </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[HTTP]</span>
-<span class="na">upstream: http://your.api.com:8080, https://yoursecure.api.com:8443</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
-<span class="na">auth: True    </span>
+<span class="na">upstream</span><span class="o">:</span><span class="w"> </span><span class="s">http://your.api.com:8080, https://yoursecure.api.com:8443</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span><span class="w">    </span>
 </code></pre></div>
 
 <p>You can add as many upstreams as you wish to monitor. The only limit is that you must provide full URL of monitored endpoint. 
@@ -857,10 +857,10 @@ http_your_secure_api_com_8443
 <p>Where 8080 amd 8443 are ports of configured API server. 
 If your api server binds on default HTTP/HTTPS ports, you can exclude port number from <code>upstream</code>  of HTTP config:   </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[HTTP]</span>
-<span class="na">upstream: http://your.api.com, https://yoursecure.api.com</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
-<span class="na">auth: True    </span>
+<span class="na">upstream</span><span class="o">:</span><span class="w"> </span><span class="s">http://your.api.com, https://yoursecure.api.com</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span><span class="w">    </span>
 </code></pre></div>
 
 <p>In this case check names at OddEye will look like this:</p>
@@ -928,7 +928,7 @@ Thus both HTTP and HTTPS checks will have <code>http_</code> prefix.   </p>
     
       <script src="../../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../../.."}})</script>
       
         <script src="../../../javascripts/jquery.min.js"></script>
       

@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -993,20 +993,20 @@ Example below is simple check which gets system's Load Average and sends it to O
 All is needed from custom is to system out values in right order, Below is sample Bash script, 
 which generates random number and send to collector for graphing: Make sure to have check_style parameter (stack/rate). 
 This is for telling main program if it should calculate value rates or just push data as it comes. </p>
-<div class="codehilite"><pre><span></span><code>    <span class="c1">#!/bin/bash</span>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="c1">#!/bin/bash</span>
 
-    <span class="nv">myvalue</span><span class="o">=</span><span class="nv">$RANDOM</span>
-    <span class="nv">mytype</span><span class="o">=</span>random_gen
-    <span class="nv">check_type</span><span class="o">=</span>my_bash_random
-    <span class="nv">check_style</span><span class="o">=</span>stack
+<span class="w">    </span><span class="nv">myvalue</span><span class="o">=</span><span class="nv">$RANDOM</span>
+<span class="w">    </span><span class="nv">mytype</span><span class="o">=</span>random_gen
+<span class="w">    </span><span class="nv">check_type</span><span class="o">=</span>my_bash_random
+<span class="w">    </span><span class="nv">check_style</span><span class="o">=</span>stack
 
-    <span class="nv">myvalue2</span><span class="o">=</span><span class="nv">$RANDOM</span>
-    <span class="nv">mytype2</span><span class="o">=</span>random_gen2
-    <span class="nv">check_type2</span><span class="o">=</span>my_bash_random2
-    <span class="nv">check_style2</span><span class="o">=</span>rate
+<span class="w">    </span><span class="nv">myvalue2</span><span class="o">=</span><span class="nv">$RANDOM</span>
+<span class="w">    </span><span class="nv">mytype2</span><span class="o">=</span>random_gen2
+<span class="w">    </span><span class="nv">check_type2</span><span class="o">=</span>my_bash_random2
+<span class="w">    </span><span class="nv">check_style2</span><span class="o">=</span>rate
 
-    <span class="nb">echo</span> <span class="nv">$mytype</span> <span class="nv">$myvalue</span> <span class="nv">$check_type</span> <span class="nv">$check_style</span>
-    <span class="nb">echo</span> -n <span class="nv">$mytype2</span> <span class="nv">$myvalue2</span> <span class="nv">$check_type2</span> <span class="nv">$check_style2</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$mytype</span><span class="w"> </span><span class="nv">$myvalue</span><span class="w"> </span><span class="nv">$check_type</span><span class="w"> </span><span class="nv">$check_style</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$mytype2</span><span class="w"> </span><span class="nv">$myvalue2</span><span class="w"> </span><span class="nv">$check_type2</span><span class="w"> </span><span class="nv">$check_style2</span>
 </code></pre></div>
 
 <h3 id="oddeye-specific">OddEye Specific</h3>
@@ -1015,8 +1015,8 @@ we need special check which will determine if particular host is alive or not. T
 which will call our servers and get and send response times to OddEye. 
 We will generate host alive parameter based based on information sent by <code>check_oddeye.py</code>. 
 If you want to have host aliveness test, enable check_oddeye.py as you will do with any other python check and restart Agent:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">agent_home</span><span class="si">}</span>/checks enabled
-ln -s ../checks-available/check_oddeye.py ./ 
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">agent_home</span><span class="si">}</span>/checks<span class="w"> </span>enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks-available/check_oddeye.py<span class="w"> </span>./<span class="w"> </span>
 </code></pre></div>
 
 <p>OddEye is dynamic system based on machine learning, 
@@ -1137,7 +1137,7 @@ and will set high level of alerting to check. </p>
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -910,27 +910,27 @@
          
 <h2 id="couchbase"><strong>CouchBase</strong></h2>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_couchbase_<span class="o">{</span>VERSION<span class="o">}</span>.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_couchbase_<span class="o">{</span>VERSION<span class="o">}</span>.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
 <p>Edit <code>${OE_AGENT_HOME}/conf/bigdata.ini</code> and change auth parameters and ip address of Couchbase servers to values matching your actual node running node parameters. 
 Also its required to write comma separated list of buckets which you want to monitor, so please make sure to change <code>buckets:</code> to names of buckets which  you want to monitor.  </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[CouchBase]</span>
-<span class="na">stats: http://127.0.0.1:8091/pools/default/buckets</span>
-<span class="na">buckets : default</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8091/pools/default/buckets</span>
+<span class="na">buckets</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">default</span>
 
 <span class="k">[CouchBase5x]</span>
-<span class="na">stats: http://127.0.0.1:8091/pools/default/buckets</span>
-<span class="na">buckets : beer-sample, gamesim-sample, travel-sample</span>
-<span class="na">user: admin</span>
-<span class="na">pass: adminadmin</span>
-<span class="na">auth: True</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8091/pools/default/buckets</span>
+<span class="na">buckets</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">beer-sample, gamesim-sample, travel-sample</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">adminadmin</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1026,8 +1026,8 @@ Also its required to write comma separated list of buckets which you want to mon
 </table>
 <h2 id="couchdb"><strong>CouchDB</strong></h2>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_couchdb_<span class="o">{</span>VERSION<span class="o">}</span>.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_couchdb_<span class="o">{</span>VERSION<span class="o">}</span>.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
@@ -1035,18 +1035,18 @@ ln -s ../checks_available/check_couchdb_<span class="o">{</span>VERSION<span cla
 For CouchDB 2x check you can set  parameter <code>detailed</code> to <code>True/False</code>. 
 When detailed is set to True agent will send metrics about HTTP status and response codes and, which will significantly increase number of metrics.     </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[CouchDB]</span>
-<span class="na">stats: http://127.0.0.1:5984/_stats</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:5984/_stats</span>
 
 <span class="k">[CouchDB2]</span>
-<span class="na">stats: http://127.0.0.1:5984</span>
-<span class="na">user: admin</span>
-<span class="na">pass: admin</span>
-<span class="na">auth: True</span>
-<span class="na">detailed</span> <span class="o">=</span> <span class="s">True</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:5984</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">detailed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1180,7 +1180,7 @@ When detailed is set to True agent will send metrics about HTTP status and respo
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

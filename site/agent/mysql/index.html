@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -945,45 +945,45 @@
 </ol>
 <h3 id="install-mysql-driver"><strong>Install MySQL Driver</strong></h3>
 <p>If you are running Debian or Ubuntu, use apt-get to install MySQLdb module</p>
-<div class="codehilite"><pre><span></span><code>apt-get install python-mysqldb
+<div class="codehilite"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>python-mysqldb
 or
-apt-get install python3-mysqldb
+apt-get<span class="w"> </span>install<span class="w"> </span>python3-mysqldb
 </code></pre></div>
 
 <p>If you have enabled backports repositories for Debian, you can use it to install pymysql</p>
-<div class="codehilite"><pre><span></span><code>apt-get install python-mysqldb
+<div class="codehilite"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>python-mysqldb
 or
-apt-get install python3-mysqldb
+apt-get<span class="w"> </span>install<span class="w"> </span>python3-mysqldb
 </code></pre></div>
 
 <p>For CentOS you can Use YUM.</p>
-<div class="codehilite"><pre><span></span><code>yum install MySQL-python
+<div class="codehilite"><pre><span></span><code>yum<span class="w"> </span>install<span class="w"> </span>MySQL-python
 </code></pre></div>
 
 <p>MySQL drivers can be installed via PIP as well. </p>
-<div class="codehilite"><pre><span></span><code>pip install MySQL-python
-or 
-pip install pymysql 
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>MySQL-python
+or<span class="w"> </span>
+pip<span class="w"> </span>install<span class="w"> </span>pymysql<span class="w"> </span>
 </code></pre></div>
 
 <p>The reason of adding pymysql support, is that on some Linux distributions (Debian 9), MySQLdb is not working properly.  </p>
 <h3 id="create-mysql-user"><strong>Create MySQL User</strong></h3>
 <p>Login to your MySQL server as root and execute following statement : </p>
-<div class="codehilite"><pre><span></span><code><span class="k">GRANT</span> <span class="k">USAGE</span> <span class="k">ON</span> <span class="o">*</span><span class="p">.</span><span class="o">*</span> <span class="k">TO</span> <span class="n">puypuy</span><span class="o">@</span><span class="s1">&#39;127.0.0.1&#39;</span> <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="s1">&#39;Very-Long-Pa$$w0rd&#39;</span><span class="p">;</span>
-<span class="n">FLUSH</span> <span class="k">PRIVILEGES</span> <span class="p">;</span> 
+<div class="codehilite"><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">USAGE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">puypuy</span><span class="o">@</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;Very-Long-Pa$$w0rd&#39;</span><span class="p">;</span>
+<span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 
 <h3 id="configure-agent"><strong>Configure Agent</strong></h3>
 <p>Copy or symlink <code>checks_available/check_mysql.py</code> to <code>checks_enabled</code></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">AGENT_HOME</span><span class="p">/checks_enabled</span><span class="si">}</span>
-ln -s ../checks_available/check_mysql.py ./ 
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">AGENT_HOME</span><span class="p">/checks_enabled</span><span class="si">}</span>
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_mysql.py<span class="w"> </span>./<span class="w"> </span>
 </code></pre></div>
 
 <p>Edit conf<code>conf/sql_cache.ini</code> and put right parameters at <strong>MySQL</strong> section: </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[MySQL]</span>
-<span class="na">host: 127.0.0.1</span>
-<span class="na">user: puypuy</span>
-<span class="na">pass: Very-Long-Pa$$w0rd</span>
+<span class="na">host</span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">puypuy</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">Very-Long-Pa$$w0rd</span>
 </code></pre></div>
 
 <h3 id="provides"><strong>Provides</strong></h3>
@@ -1201,7 +1201,7 @@ ln -s ../checks_available/check_mysql.py ./
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

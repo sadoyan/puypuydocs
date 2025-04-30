@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -1048,8 +1048,8 @@
 <h3 id="mesos-master"><strong>Mesos Master</strong></h3>
 <p>Mesos master exposes metrics via HTTP/Json out of the box, so all you need is just to symlink <code>checks_available/check_mesos_master.py</code> to <code>checks_enabled</code> and restart Agent.</p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_mesos_master.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_mesos_master.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
@@ -1057,11 +1057,11 @@ ln -s ../checks_available/check_mesos_master.py ./
 or if you need to monitor Mesos Master, which is not running locally for Agent node, 
 edit <code>conf/bigdata.ini</code> and make your changes at Mesos-Master section. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Mesos-Master]</span>
-<span class="na">stats: http://127.0.0.1:5050/metrics/snapshot</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:5050/metrics/snapshot</span>
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1265,8 +1265,8 @@ edit <code>conf/bigdata.ini</code> and make your changes at Mesos-Master section
 </table>
 <h3 id="mesos-slave"><strong>Mesos Slave</strong></h3>
 <h5 id="install_1"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_mesos_slave.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_mesos_slave.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure_1"><strong>Configure</strong></h5>
@@ -1274,11 +1274,11 @@ ln -s ../checks_available/check_mesos_slave.py ./
 or if you need to monitor Mesos Master, which is not running locally for Agent node, 
 edit <code>conf/bigdata.ini</code> and make your changes at Mesos-Master section. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Mesos-Slave]</span>
-<span class="na">stats: http://127.0.0.1:5051/metrics/snapshot</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:5051/metrics/snapshot</span>
 </code></pre></div>
 
 <h5 id="restart_1"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides_1"><strong>Provides</strong></h5>
@@ -1472,7 +1472,7 @@ edit <code>conf/bigdata.ini</code> and make your changes at Mesos-Master section
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

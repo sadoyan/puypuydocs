@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -944,18 +944,18 @@ so monitoring of <strong>Zookeeper</strong> service is very critical for these i
 For most of setups it does not needs extra configuration, but if you run <strong>Zookeeper</strong> on different from default host/port, 
 edit <code>conf/hadoop.ini</code> section <code>ZooKeeper</code> with setting of your <strong>ZooKeeper</strong> service: </p>
 <h4 id="install"><strong>Install</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_zookeeper.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_zookeeper.py<span class="w"> </span>./
 </code></pre></div>
 
 <h4 id="configure"><strong>Configure</strong></h4>
 <div class="codehilite"><pre><span></span><code><span class="k">[ZooKeeper]</span>
-<span class="na">host: 127.0.0.1</span>
-<span class="na">port: 2181</span>
+<span class="na">host</span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1</span>
+<span class="na">port</span><span class="o">:</span><span class="w"> </span><span class="s">2181</span>
 </code></pre></div>
 
 <h4 id="restart"><strong>Restart</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h4 id="provides"><strong>Provides</strong></h4>
@@ -1095,7 +1095,7 @@ ln -s ../checks_available/check_zookeeper.py ./
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

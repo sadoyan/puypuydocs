@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -915,18 +915,18 @@ All Hadoop Ecosystem checks use the same config file:
 <h2 id="hdfs-namenode"><strong>HDFS NameNode</strong></h2>
 <p><img alt="NameNode" src="../../images/namenode.png" /></p>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_hadoop_namenode.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hadoop_namenode.py<span class="w"> </span>./
 </code></pre></div>
 
 <p>In real life cluster installation HDFS NameNode doesn't use loopback interface, so make sure that you put right IP of NameNode in config file.  </p>
 <p><strong>Configure</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Hadoop-NameNode]</span>
-<span class="na">jmx: http://${NAMENODE_IP}:50070/jmx</span>
+<span class="na">jmx</span><span class="o">:</span><span class="w"> </span><span class="s">http://${NAMENODE_IP}:50070/jmx</span>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1191,19 +1191,19 @@ ln -s ../checks_available/check_hadoop_namenode.py ./
 <h2 id="hdfs-datanode"><strong>HDFS DataNode</strong></h2>
 <p>DataNode configuration would be the very appropriate for the most installations and does not require any changes. </p>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_hadoop_datanode.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hadoop_datanode.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
 <p>Usually HDFS DataNode binds on 0.0.0.0:50075, so no extra configuration is needed.</p>
 <p>If you have specific  case, please make sure to change 127.0.0.1 to IP address matching you DataNode bind address.    </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Hadoop-Datanode]</span>
-<span class="na">jmx: http://127.0.0.1:50075/jmx</span>
+<span class="na">jmx</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:50075/jmx</span>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1385,7 +1385,7 @@ ln -s ../checks_available/check_hadoop_datanode.py ./
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

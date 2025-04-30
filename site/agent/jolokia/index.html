@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -979,15 +979,15 @@ Installation of Jolokia and <code>check_jolokia</code> is very easy :</p>
 Depending on your Servlet container, it will be auto deployed, or you shall deploy it manually in accordance to Container deployment rules. 
 After the deployment of Jolokia to you Server,  you can enable <code>check_jolokia</code> module. </p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_jolokia ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_jolokia<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Depending on your setup and jolokia-version, the metrics will be exposed trough <code>http://HOST:PORT/jolokia-war-X.X.X/read</code>
 Edit <code>conf/java.ini</code> with conducting changes in section Jolokia </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Jolokia]</span>
-<span class="na">jolokia: http://127.0.0.1:8888/jolokia-war-1.3.5/read</span>
+<span class="na">jolokia</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8888/jolokia-war-1.3.5/read</span>
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1135,7 +1135,7 @@ Edit <code>conf/java.ini</code> with conducting changes in section Jolokia </p>
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

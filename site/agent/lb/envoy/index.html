@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -926,23 +926,23 @@
          
 <p><img alt="Envoy" src="../../../images/envoy.png" /></p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code>cd <span class="cp">${</span><span class="n">OE_AGENT_HOME</span><span class="cp">}</span>/checks_enabled
-ln -s ../checks_available/check_envoy.py ./
+<div class="codehilite"><pre><span></span><code>cd<span class="w"> </span><span class="cp">${</span><span class="n">OE_AGENT_HOME</span><span class="cp">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_envoy.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Start Envoy with following parameters </p>
 <div class="codehilite"><pre><span></span><code><span class="nt">admin</span><span class="p">:</span>
-  <span class="nt">access_log_path</span><span class="p">:</span> <span class="s">&quot;/dev/null&quot;</span>
-  <span class="nt">address</span><span class="p">:</span>
-    <span class="nt">socket_address</span><span class="p">:</span>
-      <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
-      <span class="nt">port_value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8001</span>
+<span class="w">  </span><span class="nt">access_log_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/dev/null&quot;</span>
+<span class="w">  </span><span class="nt">address</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">socket_address</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="w">      </span><span class="nt">port_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8001</span>
 </code></pre></div>
 
 <p>Edit <code>conf/loadbalancer.ini</code> and set Envoy URL to prometheus stats. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Envoy]</span>
-<span class="na">metrics : http://127.0.0.1:8001/stats/prometheus</span>
+<span class="na">metrics</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8001/stats/prometheus</span>
 </code></pre></div>
 
 <p>Restart OddEye agent and Envoy. </p>
@@ -1231,7 +1231,7 @@ ln -s ../checks_available/check_envoy.py ./
     
       <script src="../../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../../.."}})</script>
       
         <script src="../../../javascripts/jquery.min.js"></script>
       

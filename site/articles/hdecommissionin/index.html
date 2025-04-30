@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -892,15 +892,15 @@
 If its not done yet, you should add property to <code>hdfs-site.xml</code> and restart NameNode. </p>
 <h2 id="configure-namenode">Configure NameNode</h2>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;property&gt;</span>
-  <span class="nt">&lt;name&gt;</span>dfs.hosts.exclude<span class="nt">&lt;/name&gt;</span>
-  <span class="nt">&lt;value&gt;</span>/etc/hadoop/conf/dfs.exclude<span class="nt">&lt;/value&gt;</span>
+<span class="w">  </span><span class="nt">&lt;name&gt;</span>dfs.hosts.exclude<span class="nt">&lt;/name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;value&gt;</span>/etc/hadoop/conf/dfs.exclude<span class="nt">&lt;/value&gt;</span>
 <span class="nt">&lt;property&gt;</span>
 </code></pre></div>
 
 <p>To decommission a DataNode: Create a file named <code>/etc/hadoop/conf/dfs.exclude</code> 
 Add the name of each DataNode host to be decommissioned to it(one host per line).</p>
 <h2 id="run-command">Run Command</h2>
-<div class="codehilite"><pre><span></span><code>$ hdfs dfsadmin -refreshNodes
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>hdfs<span class="w"> </span>dfsadmin<span class="w"> </span>-refreshNodes
 </code></pre></div>
 
 <h2 id="monitor-the-process">Monitor the process</h2>
@@ -919,7 +919,7 @@ It's recommended to decommission no more than two DataNodes at a time and carefu
 <p>If you see that the Sys-Load of DataNodes is getting higher that servers can handle, or have any other reason to stop the decommissioning process : 
 Remove the DataNode name from /etc/hadoop/conf/dfs.exclude.
 Run the command </p>
-<div class="codehilite"><pre><span></span><code>$ hdfs dfsadmin -refreshNodes
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>hdfs<span class="w"> </span>dfsadmin<span class="w"> </span>-refreshNodes
 </code></pre></div>
 
 
@@ -944,7 +944,7 @@ Run the command </p>
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -931,19 +931,19 @@ Configuration file for HBase plugin is  <code>hadoop.ini</code>. </p>
 <h4 id="hbase-master"><strong>HBase Master</strong></h4>
 <p><img alt="HMaster" src="../../images/hmaster.png" /></p>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_hbase_master.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hbase_master.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
 <p>Usually HBase Master binds on 0.0.0.0:60010, so no extra configuration is needed.</p>
 <p>If you have specific  case, please make sure to change 127.0.0.1 to IP address matching you HBase Master's  bind address.    </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[HBase-Master]</span>
-<span class="na">jmx: http://127.0.0.1:60010/jmx</span>
+<span class="na">jmx</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:60010/jmx</span>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1141,19 +1141,19 @@ ln -s ../checks_available/check_hbase_master.py ./
 </table>
 <h4 id="hbase-regionserver"><strong>HBase RegionServer</strong></h4>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_hbase_regionserver.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hbase_regionserver.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
 <p>Usually HBase RegionServer binds on 0.0.0.0:60030, so no extra configuration is needed.</p>
 <p>If you have specific  case, please make sure to change 127.0.0.1 to IP address matching you HBase Master's  bind address.    </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[HBase-Region]</span>
-<span class="na">jmx: http://127.0.0.1:60030/jmx</span>
+<span class="na">jmx</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:60030/jmx</span>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1400,23 +1400,23 @@ ln -s ../checks_available/check_hbase_regionserver.py ./
 </table>
 <h4 id="hbase-thrift-rest"><strong>HBase Thrift &amp; REST</strong></h4>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="o">{</span>AGENT_HOME<span class="o">}</span>/checks_enabled/
-ln -s ../checks_available/check_hbase_rest.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="o">{</span>AGENT_HOME<span class="o">}</span>/checks_enabled/
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hbase_rest.py<span class="w"> </span>./
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="o">{</span>AGENT_HOME<span class="o">}</span>/checks_enabled/
-ln -s ../checks_available/check_hbase_thrift.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="o">{</span>AGENT_HOME<span class="o">}</span>/checks_enabled/
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hbase_thrift.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
 <p>Here is sample config which should be fine for most of HBase installations: Default config parameters are suitable for most of installtions. 
 But if your services are running on different IP address or port, just change parameters below to match your installtion .   </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[HBase-Thrift]</span>
-<span class="na">jmx : http://127.0.0.1:9095/jmx</span>
+<span class="na">jmx</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:9095/jmx</span>
 </code></pre></div>
 
 <div class="codehilite"><pre><span></span><code><span class="k">[HBase-Rest]</span>
-<span class="na">jmx : http://127.0.0.1:9095/jmx</span>
+<span class="na">jmx</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:9095/jmx</span>
 </code></pre></div>
 
 <p><strong>HBase REST Provides</strong></p>
@@ -1761,7 +1761,7 @@ But if your services are running on different IP address or port, just change pa
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

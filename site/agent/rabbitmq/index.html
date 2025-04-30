@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -952,13 +952,13 @@
          
 <p><img alt="RabbitMQ" src="../../images/rabbitmq.png" /></p>
 <h5 id="agent-install"><strong>Agent Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_rabbitmq.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_rabbitmq.py<span class="w"> </span>./
 </code></pre></div>
 
 <p>Or if you are using recent versions of <strong>RabbitMQ</strong> : </p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_rabbitmq_368.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_rabbitmq_368.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="agent-configure"><strong>Agent Configure</strong></h5>
@@ -970,20 +970,20 @@ ln -s ../checks_available/check_rabbitmq_368.py ./
 </ol>
 <p>For <strong>RabbitMQ</strong> servers older than v3.68:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[RabbitMQ]</span>
-<span class="na">stats: http://127.0.0.1:15672</span>
-<span class="na">queue_details: True</span>
-<span class="na">user: admin</span>
-<span class="na">pass: admin</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:15672</span>
+<span class="na">queue_details</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
 </code></pre></div>
 
 <p>Parameter <code>queue_details</code> enables per queue statistics, depending on amount of queues in you <strong>RabbitMQ</strong> server in may significantly increase amount of sending metrics. </p>
 <p>For <strong>RabbitMQ</strong> servers newer than v3.68:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[RabbitMQ 3.6]</span>
-<span class="na">stats: http://127.0.0.1:15672</span>
-<span class="na">queue_details: True</span>
-<span class="na">desired_queues: beer-queue, deer-queue, bear-queue</span>
-<span class="na">user: admin</span>
-<span class="na">pass: admin</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:15672</span>
+<span class="na">queue_details</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">desired_queues</span><span class="o">:</span><span class="w"> </span><span class="s">beer-queue, deer-queue, bear-queue</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
 </code></pre></div>
 
 <p>Parameter <code>queue_details</code> enables per queue statistics, 
@@ -992,17 +992,17 @@ ln -s ../checks_available/check_rabbitmq_368.py ./
 <p><strong>RabbitMQ</strong> has very detailed monitoring interface, but before using, it must be enabled and configured.  </p>
 <p>To start Monitoring of <strong>RabbitMQ</strong> first we need to create user, and enable management plugin. </p>
 <p>If you already have done that, pass to <strong>Agent Configuration</strong>  </p>
-<div class="codehilite"><pre><span></span><code>rabbitmqctl add_user admin admin
-rabbitmqctl set_user_tags admin administrator
-rabbitmqctl set_permissions -p / admin <span class="s2">&quot;.*&quot;</span> <span class="s2">&quot;.*&quot;</span> <span class="s2">&quot;.*&quot;</span>
+<div class="codehilite"><pre><span></span><code>rabbitmqctl<span class="w"> </span>add_user<span class="w"> </span>admin<span class="w"> </span>admin
+rabbitmqctl<span class="w"> </span>set_user_tags<span class="w"> </span>admin<span class="w"> </span>administrator
+rabbitmqctl<span class="w"> </span>set_permissions<span class="w"> </span>-p<span class="w"> </span>/<span class="w"> </span>admin<span class="w"> </span><span class="s2">&quot;.*&quot;</span><span class="w"> </span><span class="s2">&quot;.*&quot;</span><span class="w"> </span><span class="s2">&quot;.*&quot;</span>
 </code></pre></div>
 
 <p>Enable <strong>RabbitMQ</strong> management plugin:</p>
-<div class="codehilite"><pre><span></span><code>rabbitmq-plugins <span class="nb">enable</span> rabbitmq_management
+<div class="codehilite"><pre><span></span><code>rabbitmq-plugins<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>rabbitmq_management
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1142,7 +1142,7 @@ rabbitmqctl set_permissions -p / admin <span class="s2">&quot;.*&quot;</span> <s
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

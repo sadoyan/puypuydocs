@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -902,18 +902,18 @@ It accepts requests from oe-agent, stores metrics in memory or RabbitMQ and push
 Binaries are hosted at releases section, please download and sun the latest version for Linux , it does not have any external dependencies</p>
 <h4 id="build-from-soure"><strong>Build from soure</strong></h4>
 <p>To build OddEye proxy from source, you need Go sdk and binaries . Building from source fo Linux is  easy with only few simple steps. </p>
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/oddeyeco/oe-go-proxy.git
-<span class="nb">cd</span> oe-go-proxy 
-<span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
-go get github.com/streadway/amqp
-go get gopkg.in/ini.v1
-go build -o oe-go-proxy src/start.go 
-mkdir /usr/local/oe-go-proxy
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/oddeyeco/oe-go-proxy.git
+<span class="nb">cd</span><span class="w"> </span>oe-go-proxy<span class="w"> </span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">GOPATH</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
+go<span class="w"> </span>get<span class="w"> </span>github.com/streadway/amqp
+go<span class="w"> </span>get<span class="w"> </span>gopkg.in/ini.v1
+go<span class="w"> </span>build<span class="w"> </span>-o<span class="w"> </span>oe-go-proxy<span class="w"> </span>src/start.go<span class="w"> </span>
+mkdir<span class="w"> </span>/usr/local/oe-go-proxy
 
-mv oe-go-proxy /usr/local/oe-go-proxy/
-mv src/config.ini /usr/local/oe-go-proxy/
-<span class="nb">cd</span> /usr/local/oe-go-proxy/
-chmod <span class="m">755</span> oe-go-proxy
+mv<span class="w"> </span>oe-go-proxy<span class="w"> </span>/usr/local/oe-go-proxy/
+mv<span class="w"> </span>src/config.ini<span class="w"> </span>/usr/local/oe-go-proxy/
+<span class="nb">cd</span><span class="w"> </span>/usr/local/oe-go-proxy/
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>oe-go-proxy
 ./oe-go-proxy
 </code></pre></div>
 
@@ -930,8 +930,8 @@ OddEye proxy does not need any special privileges so it is safer to run it a reg
 <span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span>
 
 <span class="k">[Service]</span>
-<span class="na">User</span> <span class="o">=</span> <span class="s">oddeye</span>
-<span class="na">Group</span> <span class="o">=</span> <span class="s">oddeye</span>
+<span class="na">User</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">oddeye</span>
+<span class="na">Group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">oddeye</span>
 <span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/usr/local/oe-go-proxy</span>
 <span class="na">ExecReload</span><span class="o">=</span><span class="s">/bin/kill -HUP $MAINPID</span>
 <span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/sbin/oe-go-proxy</span>
@@ -950,40 +950,40 @@ OddEye proxy does not need any special privileges so it is safer to run it a reg
 </code></pre></div>
 
 <p>Reload systemd and start service. </p>
-<div class="codehilite"><pre><span></span><code>systemctl daemon-reload 
-systemctl <span class="nb">enable</span> oe-go-proxy.service
-systemctl restart oe-go-proxy.service
+<div class="codehilite"><pre><span></span><code>systemctl<span class="w"> </span>daemon-reload<span class="w"> </span>
+systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>oe-go-proxy.service
+systemctl<span class="w"> </span>restart<span class="w"> </span>oe-go-proxy.service
 </code></pre></div>
 
 <h4 id="configuration"><strong>Configuration</strong></h4>
 <p>OddEye proxy uses simple and intuitive config file which ships with a source. Example config is below. 
 config file should be in same folder as oe-go-proxy binary. Just set up few parameters and run the service. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[main]</span>
-<span class="na">listen : 127.0.0.1:8080</span>
-<span class="na">remote : https://api.oddeye.co/oddeye-barlus/put/tsdb</span>
-<span class="na">dispatchers : 20</span>
-<span class="na">queuesize : 5000000</span>
-<span class="na">internalqueue : false</span>
+<span class="na">listen</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1:8080</span>
+<span class="na">remote</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">https://api.oddeye.co/oddeye-barlus/put/tsdb</span>
+<span class="na">dispatchers</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">20</span>
+<span class="na">queuesize</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">5000000</span>
+<span class="na">internalqueue</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">false</span>
 
 <span class="k">[server]</span>
-<span class="na">serverauth : true</span>
-<span class="na">serveruser : admin</span>
-<span class="na">serverpass : $ecretPaSs</span>
+<span class="na">serverauth</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">true</span>
+<span class="na">serveruser</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">serverpass</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">$ecretPaSs</span>
 
 <span class="k">[client]</span>
-<span class="na">clientauth : true</span>
-<span class="na">clientuser : admin</span>
-<span class="na">clientpass : $ecretPaSs</span>
+<span class="na">clientauth</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">true</span>
+<span class="na">clientuser</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">clientpass</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">$ecretPaSs</span>
 
 <span class="k">[rabbit]</span>
-<span class="na">rabbiturl : amqp://admin:admin@localhost:5672/</span>
-<span class="na">rabbitqueue : oemetrics</span>
+<span class="na">rabbiturl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">amqp://admin:admin@localhost:5672/</span>
+<span class="na">rabbitqueue</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">oemetrics</span>
 
 <span class="k">[monitoring]</span>
-<span class="na">enabled : true</span>
-<span class="na">url:  http://127.0.0.1:9191</span>
-<span class="na">user: admin</span>
-<span class="na">pass: $ecretPaSs</span>
+<span class="na">enabled</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">true</span>
+<span class="na">url</span><span class="o">:</span><span class="w">  </span><span class="s">http://127.0.0.1:9191</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">$ecretPaSs</span>
 </code></pre></div>
 
 <p>OddEye proxy support caching of messages in memory and RabbitMQ server. 
@@ -994,28 +994,28 @@ old one will be replaced with new messages.   </p>
 <h4 id="install-rabbitmq"><strong>Install RabbitMQ</strong></h4>
 <p>Now we need to install RabbitMQ. If you already have RabbitMQ installation at your environment, you can skip this steps. </p>
 <p><strong>Debian / Ubuntu</strong> </p>
-<div class="codehilite"><pre><span></span><code>apt-get install rabbitmq
+<div class="codehilite"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>rabbitmq
 </code></pre></div>
 
 <p><strong>CentOS / Redhat</strong> </p>
-<div class="codehilite"><pre><span></span><code>yum -y install epel-release
-yum -y update
-yum -y install erlang socat
-wget https://www.rabbitmq.com/releases/rabbitmq-server/<span class="si">${</span><span class="nv">VERSION</span><span class="si">}</span>/rabbitmq-server-<span class="si">${</span><span class="nv">VERSION</span><span class="si">}</span>.noarch.rpm
-rpm --import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
-rpm -Uvh rabbitmq-server-<span class="si">${</span><span class="nv">VERSION</span><span class="si">}</span>.noarch.rpm
-systemctl start rabbitmq-server
-systemctl <span class="nb">enable</span> rabbitmq-server
+<div class="codehilite"><pre><span></span><code>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>epel-release
+yum<span class="w"> </span>-y<span class="w"> </span>update
+yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>erlang<span class="w"> </span>socat
+wget<span class="w"> </span>https://www.rabbitmq.com/releases/rabbitmq-server/<span class="si">${</span><span class="nv">VERSION</span><span class="si">}</span>/rabbitmq-server-<span class="si">${</span><span class="nv">VERSION</span><span class="si">}</span>.noarch.rpm
+rpm<span class="w"> </span>--import<span class="w"> </span>https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
+rpm<span class="w"> </span>-Uvh<span class="w"> </span>rabbitmq-server-<span class="si">${</span><span class="nv">VERSION</span><span class="si">}</span>.noarch.rpm
+systemctl<span class="w"> </span>start<span class="w"> </span>rabbitmq-server
+systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>rabbitmq-server
 </code></pre></div>
 
 <p><strong>Enable RabbitMQ web console</strong></p>
-<div class="codehilite"><pre><span></span><code>rabbitmq-plugins <span class="nb">enable</span> rabbitmq_management
+<div class="codehilite"><pre><span></span><code>rabbitmq-plugins<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>rabbitmq_management
 </code></pre></div>
 
 <p><strong>Create admin user</strong> </p>
-<div class="codehilite"><pre><span></span><code>rabbitmqctl add_user admin StrongPassword
-rabbitmqctl set_user_tags admin administrator
-rabbitmqctl set_permissions -p / admin <span class="s2">&quot;.*&quot;</span> <span class="s2">&quot;.*&quot;</span> <span class="s2">&quot;.*&quot;</span>
+<div class="codehilite"><pre><span></span><code>rabbitmqctl<span class="w"> </span>add_user<span class="w"> </span>admin<span class="w"> </span>StrongPassword
+rabbitmqctl<span class="w"> </span>set_user_tags<span class="w"> </span>admin<span class="w"> </span>administrator
+rabbitmqctl<span class="w"> </span>set_permissions<span class="w"> </span>-p<span class="w"> </span>/<span class="w"> </span>admin<span class="w"> </span><span class="s2">&quot;.*&quot;</span><span class="w"> </span><span class="s2">&quot;.*&quot;</span><span class="w"> </span><span class="s2">&quot;.*&quot;</span>
 </code></pre></div>
 
 <p>You can manage RabbitMQ here : <code>http://Your_Server_IP:15672/</code></p>
@@ -1042,7 +1042,7 @@ rabbitmqctl set_permissions -p / admin <span class="s2">&quot;.*&quot;</span> <s
     
       <script src="../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:".."}})</script>
       
         <script src="../javascripts/jquery.min.js"></script>
       

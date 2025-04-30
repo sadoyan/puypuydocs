@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -985,8 +985,8 @@
 <h3 id="storm-api"><strong>Storm API</strong></h3>
 <p><img alt="Storm Workers" src="../../images/storm.png" /></p>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_ceph.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_ceph.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
@@ -994,14 +994,14 @@ ln -s ../checks_available/check_ceph.py ./
 Check supports Topology general aswell as per Spout/Bolt monitoring. 
 By default per spout/bolt monitoring is turned on, if you do not need thesedetail, please set <code>perspout</code> or <code>perbolt</code> to <code>False</code>.  </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Storm-API]</span>
-<span class="na">host: 127.0.0.1</span>
-<span class="na">port: 8080</span>
-<span class="na">perspout: True</span>
-<span class="na">perbolt: True</span>
+<span class="na">host</span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1</span>
+<span class="na">port</span><span class="o">:</span><span class="w"> </span><span class="s">8080</span>
+<span class="na">perspout</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">perbolt</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1093,8 +1093,8 @@ By default per spout/bolt monitoring is turned on, if you do not need thesedetai
 <p><img alt="Storm Workers" src="../../images/stormw.png" /></p>
 <p>In order to gather Storm workers statistics, we need to download and enable <strong>Jolokia JVM Agent</strong>    </p>
 <h4 id="jolokia"><strong>Jolokia</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> /usr/share/java/
-wget -O jolokia-agent.jar http://search.maven.org/remotecontent?filepath<span class="o">=</span>org/jolokia/jolokia-jvm/1.3.6/jolokia-jvm-1.3.6-agent.jar
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/usr/share/java/
+wget<span class="w"> </span>-O<span class="w"> </span>jolokia-agent.jar<span class="w"> </span>http://search.maven.org/remotecontent?filepath<span class="o">=</span>org/jolokia/jolokia-jvm/1.3.6/jolokia-jvm-1.3.6-agent.jar
 </code></pre></div>
 
 <h4 id="configure-storm"><strong>Configure Storm</strong></h4>
@@ -1106,28 +1106,28 @@ To do this, edit <code>storm.yaml</code>. It should be in <code>STORM_HOME/conf<
 <p>Based on configured <code>supervisor.slots.ports</code> Java agent will bind <code>4%WORKER-PORT%</code> if you don't like <code>4</code>, please feel free to change it to any suitable number. </p>
 <p>By default, storm children binds on 670<em> ports, so after making changes in <code>storm.yaml</code> and restarting </em><em>Storm Topology</em>*, you should see something like this,
 when you run <code>netstat -nlptu | grep java</code> </p>
-<div class="codehilite"><pre><span></span><code>tcp     <span class="m">0</span>   <span class="m">0</span> <span class="m">0</span>.0.0.0:46700     <span class="m">0</span>.0.0.0:*   LISTEN  <span class="m">6357</span>/java       
-tcp     <span class="m">0</span>   <span class="m">0</span> <span class="m">0</span>.0.0.0:46701     <span class="m">0</span>.0.0.0:*   LISTEN  <span class="m">11281</span>/java
+<div class="codehilite"><pre><span></span><code>tcp<span class="w">     </span><span class="m">0</span><span class="w">   </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>.0.0.0:46700<span class="w">     </span><span class="m">0</span>.0.0.0:*<span class="w">   </span>LISTEN<span class="w">  </span><span class="m">6357</span>/java<span class="w">       </span>
+tcp<span class="w">     </span><span class="m">0</span><span class="w">   </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>.0.0.0:46701<span class="w">     </span><span class="m">0</span>.0.0.0:*<span class="w">   </span>LISTEN<span class="w">  </span><span class="m">11281</span>/java
 
-tcp     <span class="m">0</span>   <span class="m">0</span> <span class="m">0</span>.0.0.0:4670x     <span class="m">0</span>.0.0.0:*   LISTEN  <span class="m">11281</span>/java
+tcp<span class="w">     </span><span class="m">0</span><span class="w">   </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>.0.0.0:4670x<span class="w">     </span><span class="m">0</span>.0.0.0:*<span class="w">   </span>LISTEN<span class="w">  </span><span class="m">11281</span>/java
 </code></pre></div>
 
 <p>If you see these ports open, you can configure <strong>Agent</strong>, otherwise, something is wrong with configuration.  </p>
 <h4 id="configure-agent"><strong>Configure Agent</strong></h4>
 <p>To configure <strong>Agent</strong>, change working directory to <code>AGENT_HOME</code> and :</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> checks_enabled
-ln -s ../checks_available/check_storm_workers.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_storm_workers.py<span class="w"> </span>./
 </code></pre></div>
 
 <p>Edit <code>conf/bigdata.init</code> and set correct parameters for <strong>Storm</strong> : </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Storm]</span>
-<span class="na">host: node1</span>
-<span class="na">port: 46700,46701,4670x</span>
-<span class="na">path: /jolokia/read</span>
+<span class="na">host</span><span class="o">:</span><span class="w"> </span><span class="s">node1</span>
+<span class="na">port</span><span class="o">:</span><span class="w"> </span><span class="s">46700,46701,4670x</span>
+<span class="na">path</span><span class="o">:</span><span class="w"> </span><span class="s">/jolokia/read</span>
 </code></pre></div>
 
 <p>You can set all ports, used by Jolokia or only those, that are interesting for you, separate them by comma and restart <strong>Agent</strong> .</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ../ <span class="o">&amp;&amp;</span> ./oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>../<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h4 id="provides"><strong>Provides</strong></h4>
@@ -1268,7 +1268,7 @@ ln -s ../checks_available/check_storm_workers.py ./
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

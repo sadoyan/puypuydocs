@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -917,9 +917,9 @@ And configure OE-Agent with Plugins which you want to use.
 In <code>[Nagios]</code> section of <code>conf/nagios.ini</code> file just write <code>check_name: command</code> key value pairs.   </p>
 <p>You can write, space separated, parameters for you plugin exactly as you will do when you configure Nagios/Icinga or nagios-nrpe-server. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Nagios]</span>
-<span class="na">loadaverage: /usr/lib/nagios/plugins/check_load -w 15,10,5 -c 30,25,20</span>
-<span class="na">diskusage:   /usr/lib/nagios/plugins/check_disk -l -w 20% -c 10% -p /dev/sda1</span>
-<span class="na">processes:   /usr/lib/nagios/plugins/check_procs -w 250 -c 400</span>
+<span class="na">loadaverage</span><span class="o">:</span><span class="w"> </span><span class="s">/usr/lib/nagios/plugins/check_load -w 15,10,5 -c 30,25,20</span>
+<span class="na">diskusage</span><span class="o">:</span><span class="w">   </span><span class="s">/usr/lib/nagios/plugins/check_disk -l -w 20% -c 10% -p /dev/sda1</span>
+<span class="na">processes</span><span class="o">:</span><span class="w">   </span><span class="s">/usr/lib/nagios/plugins/check_procs -w 250 -c 400</span>
 </code></pre></div>
 
 <p>After restarting oe-agent you can see alert at you Dashboard, where name of alert is given key at <code>nagios.ini</code> nd value is actual value of actual check command. </p>
@@ -927,30 +927,30 @@ In <code>[Nagios]</code> section of <code>conf/nagios.ini</code> file just write
 <p>OE-Agent can work with Nagion Or Icinga directly acting as remote agent for executing commands. </p>
 <p>for that we need to enable built in webserver and set api key in <code>config.ini</code> and restart the agent service. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[WebServer]</span>
-<span class="na">webserver: yes</span>
-<span class="na">webaddress: 0.0.0.0:9898</span>
-<span class="na">apikey: xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx</span>
+<span class="na">webserver</span><span class="o">:</span><span class="w"> </span><span class="s">yes</span>
+<span class="na">webaddress</span><span class="o">:</span><span class="w"> </span><span class="s">0.0.0.0:9898</span>
+<span class="na">apikey</span><span class="o">:</span><span class="w"> </span><span class="s">xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx</span>
 </code></pre></div>
 
 <p>Configuration of checks is in <code>conf/nagios.ini</code> file, and it looks like this:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Nagios]</span>
-<span class="na">loadaverage: /usr/lib/nagios/plugins/check_load -w 15,10,5 -c 30,25,20</span>
-<span class="na">diskusage:   /usr/lib/nagios/plugins/check_disk -l -w 20% -c 10% -p /dev/sda1</span>
-<span class="na">processes:   /usr/lib/nagios/plugins/check_procs -w 250 -c 400</span>
+<span class="na">loadaverage</span><span class="o">:</span><span class="w"> </span><span class="s">/usr/lib/nagios/plugins/check_load -w 15,10,5 -c 30,25,20</span>
+<span class="na">diskusage</span><span class="o">:</span><span class="w">   </span><span class="s">/usr/lib/nagios/plugins/check_disk -l -w 20% -c 10% -p /dev/sda1</span>
+<span class="na">processes</span><span class="o">:</span><span class="w">   </span><span class="s">/usr/lib/nagios/plugins/check_procs -w 250 -c 400</span>
 </code></pre></div>
 
 <p>After agent is configured to run a webserver and serve nagios plugins, we should configure our Nagios or Icinga server to connect to agent and run checks.
 The configuration of Icinga is easy, we need to copy <code>tools/icingacommands.conf</code> file to Icinga config directory,<br />
 usually <code>etc/icinga2/conf.d</code>,  <code>tools/naclient.conf</code> to plugins directory (<code>/usr/lib/nagios/plugins/</code>) and restart the Icinga service.</p>
 <p>Next we need to donfigure Icinga ckecks as examples below : </p>
-<div class="codehilite"><pre><span></span><code><span class="n">object</span> <span class="n">Service</span> <span class="s2">&quot;memory&quot;</span> <span class="p">{</span>
-  <span class="n">host_name</span> <span class="o">=</span> <span class="s2">&quot;HOSTNAME&quot;</span>
-  <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;Memory Usage&quot;</span>
-  <span class="n">check_command</span> <span class="o">=</span> <span class="s2">&quot;puypuyclient&quot;</span>
-  <span class="n">vars</span><span class="o">.</span><span class="n">puypuyclient_address</span> <span class="o">=</span> <span class="s2">&quot;ip or hostname of remote agent&quot;</span>
-  <span class="n">vars</span><span class="o">.</span><span class="n">puypuyclient_port</span> <span class="o">=</span> <span class="s2">&quot;port of agent&quot;</span>
-  <span class="n">vars</span><span class="o">.</span><span class="n">puypuyclient_key</span> <span class="o">=</span> <span class="s2">&quot;api key to connect to agent&quot;</span>
-  <span class="n">vars</span><span class="o">.</span><span class="n">puypuyclient_command</span> <span class="o">=</span> <span class="s2">&quot;loadaverage -w 15,10,5 -c 30,25,20&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">object</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="s2">&quot;memory&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">host_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;HOSTNAME&quot;</span>
+<span class="w">  </span><span class="n">display_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Memory Usage&quot;</span>
+<span class="w">  </span><span class="n">check_command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;puypuyclient&quot;</span>
+<span class="w">  </span><span class="n">vars</span><span class="o">.</span><span class="n">puypuyclient_address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ip or hostname of remote agent&quot;</span>
+<span class="w">  </span><span class="n">vars</span><span class="o">.</span><span class="n">puypuyclient_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;port of agent&quot;</span>
+<span class="w">  </span><span class="n">vars</span><span class="o">.</span><span class="n">puypuyclient_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;api key to connect to agent&quot;</span>
+<span class="w">  </span><span class="n">vars</span><span class="o">.</span><span class="n">puypuyclient_command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;loadaverage -w 15,10,5 -c 30,25,20&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -1016,7 +1016,7 @@ If you set parameters in icinga config file it will have higher prority and thes
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

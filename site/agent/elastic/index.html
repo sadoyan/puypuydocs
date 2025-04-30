@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -1058,18 +1058,18 @@ In order to enable ElasticSearch, copy or symlink <code>checks_available</code> 
 Both checks will be obvious at <code>{AGENT_HOME}/config/bigdata.ini</code> for configuration options.    </p>
 <h4 id="elasticsearch"><strong>ElasticSearch</strong></h4>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_elasticsearch.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_elasticsearch.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <div class="codehilite"><pre><span></span><code><span class="k">[ElasticSearch]</span>
-<span class="na">host: http://127.0.0.1:9200</span>
-<span class="na">stats: /_nodes/_local/stats</span>
+<span class="na">host</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:9200</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">/_nodes/_local/stats</span>
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1267,18 +1267,18 @@ ln -s ../checks_available/check_elasticsearch.py ./
 </table>
 <h4 id="elasticsearch-1x"><strong>ElasticSearch 1.x</strong></h4>
 <h5 id="install_1"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_elasticsearch1x.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_elasticsearch1x.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure_1"><strong>Configure</strong></h5>
 <div class="codehilite"><pre><span></span><code><span class="k">[ElasticSearch]</span>
-<span class="na">host: http://127.0.0.1:9200</span>
-<span class="na">stats: /_nodes/_local/stats/?all</span><span class="o">=</span><span class="s">true</span>
+<span class="na">host</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:9200</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">/_nodes/_local/stats/?all=true</span>
 </code></pre></div>
 
 <h5 id="restart_1"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides_1"><strong>Provides</strong></h5>
@@ -1520,7 +1520,7 @@ ln -s ../checks_available/check_elasticsearch1x.py ./
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -941,32 +941,32 @@
 <p><img alt="Apache" src="../../../images/httpd.png" /></p>
 <h5 id="install"><strong>Install</strong></h5>
 <p>In order to get statiscics from Apache2 web server, you should enable status module and define status URL. On Debian like system, you can do it by <code>a2enmod  status</code> or adding following to Apache main config file: </p>
-<div class="codehilite"><pre><span></span><code><span class="err">LoadModule status_module /path/to/apache/mod_status.so</span>
+<div class="codehilite"><pre><span></span><code>LoadModule status_module /path/to/apache/mod_status.so
 </code></pre></div>
 
 <p>After enabling status module you should configure status URL.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span> <span class="err">/server-status</span><span class="nt">&gt;</span>
-   SetHandler server-status
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span><span class="w"> </span><span class="err">/server-status</span><span class="nt">&gt;</span>
+<span class="w">   </span>SetHandler<span class="w"> </span>server-status
 <span class="nt">&lt;/Location&gt;</span>
 </code></pre></div>
 
 <p>Its STRONGLY recommended to limit access to this page ether by limiting by source IP, or enabling authentication on this page : </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span> <span class="err">/server-status</span><span class="nt">&gt;</span>
-   SetHandler server-status
-   Order deny,allow
-   Deny from all
-   Allow from 127.0.0.1 ::1
-   Allow from 192.0.1.0/24
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span><span class="w"> </span><span class="err">/server-status</span><span class="nt">&gt;</span>
+<span class="w">   </span>SetHandler<span class="w"> </span>server-status
+<span class="w">   </span>Order<span class="w"> </span>deny,allow
+<span class="w">   </span>Deny<span class="w"> </span>from<span class="w"> </span>all
+<span class="w">   </span>Allow<span class="w"> </span>from<span class="w"> </span>127.0.0.1<span class="w"> </span>::1
+<span class="w">   </span>Allow<span class="w"> </span>from<span class="w"> </span>192.0.1.0/24
 <span class="nt">&lt;/Location&gt;</span>
 </code></pre></div>
 
 <p>This will allow access to status page only from Localhost and 192.168.1.0/24 subnet. </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span> <span class="err">/server-status</span><span class="nt">&gt;</span>
-   SetHandler server-status
-   AuthUserFile /etc/apache2/USERLIST
-   AuthName &quot;restricted stuff&quot;
-   AuthType Basic
-   require valid-user
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span><span class="w"> </span><span class="err">/server-status</span><span class="nt">&gt;</span>
+<span class="w">   </span>SetHandler<span class="w"> </span>server-status
+<span class="w">   </span>AuthUserFile<span class="w"> </span>/etc/apache2/USERLIST
+<span class="w">   </span>AuthName<span class="w"> </span>&quot;restricted<span class="w"> </span>stuff&quot;
+<span class="w">   </span>AuthType<span class="w"> </span>Basic
+<span class="w">   </span>require<span class="w"> </span>valid-user
 <span class="nt">&lt;/Location&gt;</span>
 </code></pre></div>
 
@@ -976,17 +976,17 @@ In real life cluster installation HDFS NameNode doesn't use loopback interface, 
 <p>At Agent side you should make config changes in order to tell Agent how to get statistics from Apache server. 
 Config file for Webservers is {AGENT_HOME}/conf/webservers.ini. and it should look like this </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Apache]</span>
-<span class="na">url: http://127.0.0.1:8080/server-status?auto</span>
-<span class="na">user: user</span>
-<span class="na">pass: password</span>
-<span class="na">auth: True</span>
+<span class="na">url</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8080/server-status?auto</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">user</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">password</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <p>If you have not configured Apache to require login for status page just set <code>auth: True</code> and write something as username and password. 
 Do not delete user/pass/auth sections, even if you do not use it. 
 Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_enabled/check_apache.py</code>. </p>
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1102,7 +1102,7 @@ Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_e
     
       <script src="../../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../../.."}})</script>
       
         <script src="../../../javascripts/jquery.min.js"></script>
       

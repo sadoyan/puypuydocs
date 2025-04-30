@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -114,7 +114,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -218,7 +218,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -841,15 +841,15 @@ but for situation when some reads occasionally takes a long time. The benefits o
 <p>Following is example of enabling and setting up <strong>Hedged Reads</strong> in <code>hbase-site.xml</code>, there are no default values as by its desabled by default.  </p>
 <p>Setting Thread pool size for <strong>Hedged Reads</strong> . </p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;property&gt;</span>
-        <span class="nt">&lt;name&gt;</span>dfs.client.hedged.read.threadpool.size<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;value&gt;</span>20<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>dfs.client.hedged.read.threadpool.size<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>20<span class="nt">&lt;/value&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 </code></pre></div>
 
 <p>In accordance to this configuration <strong>HBase HDFS</strong> Client will spin up 20 threads to read data from another replica of read block.  </p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;property&gt;</span>
-        <span class="nt">&lt;name&gt;</span>dfs.client.hedged.read.threshold.millis<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;value&gt;</span>10<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>dfs.client.hedged.read.threshold.millis<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>10<span class="nt">&lt;/value&gt;</span>
 <span class="nt">&lt;/property&gt;</span>
 </code></pre></div>
 
@@ -888,7 +888,7 @@ but for situation when some reads occasionally takes a long time. The benefits o
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

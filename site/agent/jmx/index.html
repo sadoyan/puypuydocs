@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -977,15 +977,15 @@ To make this happen Agent must be able to execute java as user tomcat without pa
 
 <p>Change <code>oddeye</code> , <code>tomcat</code> and  <code>/opt/java/bin/java</code> to actual values for your system. </p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_jmx.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_jmx.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>To attach agent to running JVM, Agent needs to know the main class name, which is used to run your java application server. 
 If you already do not know main class name, you can get it via command below.</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="o">{</span>AGENT_HOME<span class="o">}</span>
-java -jar lib/agent.jar list
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="o">{</span>AGENT_HOME<span class="o">}</span>
+java<span class="w"> </span>-jar<span class="w"> </span>lib/agent.jar<span class="w"> </span>list
 </code></pre></div>
 
 <p>Output of it should be : </p>
@@ -999,14 +999,14 @@ java -jar lib/agent.jar list
 <p>Above are examples of main classes for Tomcat, HBase Thrift and HBase Rest. 
 Typically main class name should be in second column of output. Edit <code>conf/java.ini</code> and put correct fields in section <code>[JMX]</code>   </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[JMX]</span>
-<span class="na">jmx: http://127.0.0.1:7777/oddeye/read</span>
-<span class="na">user: tomcat</span>
-<span class="na">class : org.apache.catalina.startup.Bootstrap</span>
-<span class="na">java : /opt/java/bin/java</span>
+<span class="na">jmx</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:7777/oddeye/read</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">tomcat</span>
+<span class="na">class</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">org.apache.catalina.startup.Bootstrap</span>
+<span class="na">java</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">/opt/java/bin/java</span>
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p>If configuration is correct, after restarting Agent daemon, you would see that your existing Java program magically started to listen <code>TCP:7777</code> and exposes JMX via HTTP/Json.
@@ -1154,7 +1154,7 @@ You can change port to whatever you prefer, but do not change context path ot IP
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

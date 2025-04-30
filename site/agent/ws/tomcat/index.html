@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -940,28 +940,28 @@
          
 <p><img alt="Tomcat" src="../../../images/tomcat.png" /></p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_tomcat.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_tomcat.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Apache Tomcat also ships with by default disabled status page. In order to get stats from tomcat, 
 you should edit <code>CATALINA_HOME/conf/tomcat-users.xml</code> and enable role <code>manager-jmx</code>. 
 To do this enter following to tomcat-users.xml and restart Tomcat . </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;user</span> <span class="na">username=</span><span class="s">&quot;User&quot;</span> <span class="na">password=</span><span class="s">&quot;Pass&quot;</span> <span class="na">roles=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;role</span><span class="w"> </span><span class="na">rolename=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;user</span><span class="w"> </span><span class="na">username=</span><span class="s">&quot;User&quot;</span><span class="w"> </span><span class="na">password=</span><span class="s">&quot;Pass&quot;</span><span class="w"> </span><span class="na">roles=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
 
 <p>If you see 403 Access Denied, try to edit <code>CATALINA_HOME/webapps/manager/META-INF/context.xml</code> and somment <code>Valve</code> : </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Context</span> <span class="na">antiResourceLocking=</span><span class="s">&quot;false&quot;</span> <span class="na">privileged=</span><span class="s">&quot;true&quot;</span> <span class="nt">&gt;</span>
-<span class="c">&lt;!--</span>
-<span class="c">&lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot; allow=&quot;127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1&quot; /&gt;</span>
-<span class="c">--&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Context</span><span class="w"> </span><span class="na">antiResourceLocking=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">privileged=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">&lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot; allow=&quot;127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1&quot; /&gt;</span>
+<span class="cm">--&gt;</span>
 <span class="nt">&lt;/Context&gt;</span>
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1119,7 +1119,7 @@ To do this enter following to tomcat-users.xml and restart Tomcat . </p>
     
       <script src="../../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../../.."}})</script>
       
         <script src="../../../javascripts/jquery.min.js"></script>
       

@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -940,17 +940,17 @@
 <p><strong><em>OddEye</em></strong> Kubernetes plugin requires up and running  <strong>Kube State Metrics server</strong>    </p>
 <h5 id="install"><strong>Install</strong></h5>
 <p>Installation of Kube State Metrics server is easy and can be done by executing a single command :  </p>
-<div class="codehilite"><pre><span></span><code>go get k8s.io/kube-state-metrics
+<div class="codehilite"><pre><span></span><code>go<span class="w"> </span>get<span class="w"> </span>k8s.io/kube-state-metrics
 </code></pre></div>
 
 <p>This will Install Kube State Metrics server to your $GOPATH using go get:
 You can find more information about More info about Kube State Metrics server here : <a href="https://github.com/kubernetes/kube-state-metrics"><strong><em>https://github.com/kubernetes/kube-state-metrics</em></strong></a></p>
 <p>You can run Kube State Metrics in foreground by executing : </p>
-<div class="codehilite"><pre><span></span><code><span class="nv">$GOPATH</span>/bin/kube-state-metrics --port<span class="o">=</span><span class="m">6868</span> --telemetry-port<span class="o">=</span><span class="m">8081</span> --kubeconfig<span class="o">=</span>/etc/kubernetes/admin.conf
+<div class="codehilite"><pre><span></span><code><span class="nv">$GOPATH</span>/bin/kube-state-metrics<span class="w"> </span>--port<span class="o">=</span><span class="m">6868</span><span class="w"> </span>--telemetry-port<span class="o">=</span><span class="m">8081</span><span class="w"> </span>--kubeconfig<span class="o">=</span>/etc/kubernetes/admin.conf
 </code></pre></div>
 
 <p>It's recommended to create systemd service and run Kube State Metrics on startup; </p>
-<div class="codehilite"><pre><span></span><code>cat &gt; /etc/systemd/system/kube-state-metrics.service <span class="s">&lt;&lt;-EOF</span>
+<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>&gt;<span class="w"> </span>/etc/systemd/system/kube-state-metrics.service<span class="w"> </span><span class="s">&lt;&lt;-EOF</span>
 <span class="s">[Unit]</span>
 <span class="s">Description=Kube State Metrics</span>
 <span class="s">Documentation=https://github.com/kubernetes/kube-state-metrics</span>
@@ -974,15 +974,15 @@ You can find more information about More info about Kube State Metrics server he
 </code></pre></div>
 
 <p>Reload systemd and enable service . </p>
-<div class="codehilite"><pre><span></span><code>systemctl  daemon-reload  
-systemctl  <span class="nb">enable</span> kube-state-metrics.service 
-systemctl  start  kube-state-metrics.service 
+<div class="codehilite"><pre><span></span><code>systemctl<span class="w">  </span>daemon-reload<span class="w">  </span>
+systemctl<span class="w">  </span><span class="nb">enable</span><span class="w"> </span>kube-state-metrics.service<span class="w"> </span>
+systemctl<span class="w">  </span>start<span class="w">  </span>kube-state-metrics.service<span class="w"> </span>
 </code></pre></div>
 
 <p>Now <strong>Kube State Metrics server</strong> is controlled by systemd and will start in background during OS boot. </p>
 <p>Enable <strong>OddEye</strong> agent check :</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_kube_state_metrics.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_kube_state_metrics.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
@@ -991,12 +991,12 @@ If you need to monitor remote server or you <strong>Kube State Metrics</strong> 
 edit <code>conf/k8s.ini</code> section <code>kube-state-metrics</code> and set <code>metrics</code> parameter with value matching your needs.
 You can enable/disable per pod statistics collection by setting <code>podinfo : False/True</code> (Default is True)  </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[kube-state-metrics]</span>
-<span class="na">metrics : http://127.0.0.1:6868/metrics</span>
-<span class="na">podinfo : True</span>
+<span class="na">metrics</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:6868/metrics</span>
+<span class="na">podinfo</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1109,7 +1109,7 @@ You can enable/disable per pod statistics collection by setting <code>podinfo : 
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

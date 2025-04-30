@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -1130,8 +1130,8 @@
 <p><img alt="Nomad" src="../../images/nomad.png" /></p>
 <p>Nomad exposes metrics via HTTP/Json out of the box, so all you need is just to symlink <code>checks_available/check_hashicorp_nomad_py</code> to <code>checks_enabled</code> and restart Agent.</p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_hashicorp_nomad_py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hashicorp_nomad_py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
@@ -1140,12 +1140,12 @@ or if you need to monitor remote Nomad, edit <code>conf/hashicorp.ini</code> and
 Nomad also exposes metrics per running job, which fo some installations can create tens even hundreds os metrics. 
 If you do not want to monitor these metrics set <code>jobstats: False</code> st config file.   </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Hashicorp-Nomad]</span>
-<span class="na">telemetery: http://127.0.0.1:4646/v1/metrics</span>
-<span class="na">jobstats: True</span>
+<span class="na">telemetery</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:4646/v1/metrics</span>
+<span class="na">jobstats</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1273,8 +1273,8 @@ If you do not want to monitor these metrics set <code>jobstats: False</code> st 
 <p><img alt="Consul" src="../../images/consul.png" /></p>
 <p>Consul exposes metrics via HTTP/Json out of the box, so all you need is just to symlink <code>checks_available/check_hashicorp_consul_py</code> to <code>checks_enabled</code> and restart Agent.</p>
 <h5 id="install_1"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_hashicorp_consul_py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hashicorp_consul_py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure_1"><strong>Configure</strong></h5>
@@ -1282,13 +1282,13 @@ ln -s ../checks_available/check_hashicorp_consul_py ./
 or if you need to monitor remote Consul, edit <code>conf/hashicorp.ini</code> and make your changes at Hashicorp-Consul section. 
 Consul also exposes detailed metrics, with rates and counters, so if youwant to see these metrics set <code>detailed: True</code> for getting rated stats set <code>getrates: True</code></p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Hashicorp-Consul]</span>
-<span class="na">telemetery: http://127.0.0.1:8500/v1/agent/metrics</span>
-<span class="na">detailed: True</span>
-<span class="na">getrates: True</span>
+<span class="na">telemetery</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8500/v1/agent/metrics</span>
+<span class="na">detailed</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">getrates</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <h5 id="restart_1"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides_1"><strong>Provides</strong></h5>
@@ -1501,8 +1501,8 @@ Consul also exposes detailed metrics, with rates and counters, so if youwant to 
 <p><img alt="Vault" src="../../images/vault.png" /></p>
 <p>Vault exposes metrics via HTTP/Json out of the box, so all you need is just to symlink <code>checks_available/check_hashicorp_consul_py</code> to <code>checks_enabled</code> and restart Agent.</p>
 <h5 id="install_2"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_hashicorp_vault_py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hashicorp_vault_py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure_2"><strong>Configure</strong></h5>
@@ -1511,14 +1511,14 @@ or if you need to monitor remote Vault, edit <code>conf/hashicorp.ini</code> and
 Also it is very important to set correct token in config file, or Vault will deny requests from OddEye Agent 
 Vault also exposes detailed metrics, with rates and counters, so if youwant to see these metrics set <code>detailed: True</code> for getting rated stats set <code>getrates: True</code></p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Hashicorp-Vault]</span>
-<span class="na">telemetery: http://127.0.0.1:8200/v1/sys/metrics</span>
-<span class="na">token: s.HqQb7CFNBT1wHWLHD0DrOx6P</span>
-<span class="na">detailed: True</span>
-<span class="na">getrates: False</span>
+<span class="na">telemetery</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8200/v1/sys/metrics</span>
+<span class="na">token</span><span class="o">:</span><span class="w"> </span><span class="s">s.HqQb7CFNBT1wHWLHD0DrOx6P</span>
+<span class="na">detailed</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">getrates</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
 </code></pre></div>
 
 <h5 id="restart_2"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides_2"><strong>Provides</strong></h5>
@@ -1821,7 +1821,7 @@ Vault also exposes detailed metrics, with rates and counters, so if youwant to s
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

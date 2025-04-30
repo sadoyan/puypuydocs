@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -928,17 +928,17 @@ All you need is to configure <strong>Agent</strong> with appropriate parameters 
 <p>By Default <strong>Apache ActiveMQ</strong> sends metrics via <code>0.0.0.0:8161/api/jolokia/read</code> and uses <code>admin</code>:<code>admin</code> as user/pass. 
 So if default configuration is not changed <strong>Agent</strong> will work without extra config. </p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_activemq.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_activemq.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <div class="codehilite"><pre><span></span><code><span class="k">[ActiveMQ]</span>
-<span class="na">stats: http://127.0.0.1:8161/api/jolokia/read</span>
-<span class="na">brokername: localhost</span>
-<span class="na">user: admin</span>
-<span class="na">pass: admin</span>
-<span class="na">auth: True</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8161/api/jolokia/read</span>
+<span class="na">brokername</span><span class="o">:</span><span class="w"> </span><span class="s">localhost</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">admin</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <p>If you have changed default configuration of <strong>Apache ActiveMQ</strong>, pleas make sure that all params in <strong>Agent</strong> config matches it. 
@@ -1152,7 +1152,7 @@ Especially on clustered installations, you will need to change <code>brokername:
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

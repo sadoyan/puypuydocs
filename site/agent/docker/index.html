@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -928,8 +928,8 @@ such as libraries and other dependencies, and ship it all out as one package.
 <strong>Docker</strong> is the pioneer and the most popular solution for creating, sharing and using containers.<br />
 <strong>OddEye</strong> works with native Dockers HTTP API to get metrics from running containers. </p>
 <h4 id="install"><strong>Install</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_docker_stats.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_docker_stats.py<span class="w"> </span>./
 </code></pre></div>
 
 <h4 id="configure"><strong>Configure</strong></h4>
@@ -942,7 +942,7 @@ In general its just adding <code>-H tcp://{SERVER_IP}:{PORT}</code> parameter to
 </code></pre></div>
 
 <p>If you aur using SystemD servers like Debian 8 or newer, you should edit <code>/lib/systemd/system/docker.service</code> with following parameters : </p>
-<div class="codehilite"><pre><span></span><code><span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/dockerd -H tcp://127.0.0.1:3141 -H fd://
+<div class="codehilite"><pre><span></span><code><span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/dockerd<span class="w"> </span>-H<span class="w"> </span>tcp://127.0.0.1:3141<span class="w"> </span>-H<span class="w"> </span>fd://
 </code></pre></div>
 
 <p>After restarting docker daemon you can configure <strong>OE-Agent</strong> to get stats about containers from <code>http://127.0.0.1:3141</code></p>
@@ -951,10 +951,10 @@ In general its just adding <code>-H tcp://{SERVER_IP}:{PORT}</code> parameter to
 Config file of <code>check_docker_stats</code> module is <code>conf/docker.ini</code>. 
 If you have followed docker configuration examples above, <code>check_docker_stats</code> will works with already set up default settings. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Docker]</span>
-<span class="na">stats: http://127.0.0.1:3141/containers</span>
-<span class="na">detailed: True</span>
-<span class="na">memstats: True</span>
-<span class="na">prettynames: True</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:3141/containers</span>
+<span class="na">detailed</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">memstats</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">prettynames</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <p>If you have configure another HOST:PORT for dockerd, please make sure to edit <code>conf/docker.ini</code> to match you configuration parameters.</p>
@@ -1243,7 +1243,7 @@ otherwise container's memory utilization metrics will not available. </p>
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

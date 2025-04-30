@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -944,19 +944,19 @@
 </ul>
 <h5 id="install"><strong>Install</strong></h5>
 <p>At first download Jolokia   jolokia-jvm-VERSION-agent.jar from https://jolokia.org/download.html  and copy it to All nodes of Kafka cluster.</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> /usr/share/java/
-wget -O jolokia-agent.jar http://search.maven.org/remotecontent?filepath<span class="o">=</span>org/jolokia/jolokia-jvm/1.3.6/jolokia-jvm-1.3.6-agent.jar
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/usr/share/java/
+wget<span class="w"> </span>-O<span class="w"> </span>jolokia-agent.jar<span class="w"> </span>http://search.maven.org/remotecontent?filepath<span class="o">=</span>org/jolokia/jolokia-jvm/1.3.6/jolokia-jvm-1.3.6-agent.jar
 </code></pre></div>
 
 <p>Now we need to edit <code>kafka-server-start.sh</code> and add <code>javaagent</code> JVM option: lets assume that you have installed Kafka at <code>/opt/kafka</code> directory. </p>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span>  <span class="nv">KAFKA_OPTS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$KAFKA_OPTS</span><span class="s2"> -javaagent:/usr/share/java/jolokia-agent.jar=config=/opt/kafka/config/jolokia/jolokia.properties&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span><span class="w">  </span><span class="nv">KAFKA_OPTS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$KAFKA_OPTS</span><span class="s2"> -javaagent:/usr/share/java/jolokia-agent.jar=config=/opt/kafka/config/jolokia/jolokia.properties&quot;</span>
 </code></pre></div>
 
 <p><strong>Jolokia</strong></p>
 <p>Now we need to configure Jolokia: For packaged Kafka installations copy-paste of code below will do the trick. 
 If you have tarball Kafka installation, just replace paths with actual location of your config files . </p>
-<div class="codehilite"><pre><span></span><code>mkdir /opt/kafka/config/jolokia
-cat &gt; /opt/kafka/config/jolokia/jolokia.policy <span class="s">&lt;&lt;-EOF</span>
+<div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span>/opt/kafka/config/jolokia
+cat<span class="w"> </span>&gt;<span class="w"> </span>/opt/kafka/config/jolokia/jolokia.policy<span class="w"> </span><span class="s">&lt;&lt;-EOF</span>
 <span class="s">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="s">&lt;restrict&gt;</span>
 <span class="s">  &lt;http&gt;</span>
@@ -972,7 +972,7 @@ cat &gt; /opt/kafka/config/jolokia/jolokia.policy <span class="s">&lt;&lt;-EOF</
 <span class="s">EOF</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>cat &gt; /opt/kafka/config/jolokia/jolokia.properties <span class="s">&lt;&lt;-EOF</span>
+<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>&gt;<span class="w"> </span>/opt/kafka/config/jolokia/jolokia.properties<span class="w"> </span><span class="s">&lt;&lt;-EOF</span>
 <span class="s">host=0.0.0.0</span>
 <span class="s">port=7777</span>
 <span class="s">agentContext=/jolokia</span>
@@ -989,19 +989,19 @@ cat &gt; /opt/kafka/config/jolokia/jolokia.policy <span class="s">&lt;&lt;-EOF</
 
 <p>Restart Kafka node. </p>
 <p><strong>Agent</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_kafka.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_kafka.py<span class="w"> </span>./
 </code></pre></div>
 
 <p>Kafka check is enabled as any other check: so copy or symlink <code>check_kafka.py</code> check from <code>checks_available</code> to <code>checks_enabled</code>.</p>
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Edit <code>conf/mq.ini</code>, it already contains reasonable defaults to work out of the box, but if your Kafka and Jolokia are configured in other than described below way, just replace default parameters with desired ones. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Kafka]</span>
-<span class="na">jolokia: http://127.0.0.1:7777/jolokia/read</span>
+<span class="na">jolokia</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:7777/jolokia/read</span>
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="o">{</span>AGENT_HOME<span class="o">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="o">{</span>AGENT_HOME<span class="o">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1238,7 +1238,7 @@ ln -s ../checks_available/check_kafka.py ./
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

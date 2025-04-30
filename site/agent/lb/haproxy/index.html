@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -940,80 +940,80 @@
          
 <p><img alt="HAProxy" src="../../../images/haproxy.png" /></p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code>cd <span class="cp">${</span><span class="n">OE_AGENT_HOME</span><span class="cp">}</span>/checks_enabled
-ln -s ../checks_available/check_haproxy.py ./
+<div class="codehilite"><pre><span></span><code>cd<span class="w"> </span><span class="cp">${</span><span class="n">OE_AGENT_HOME</span><span class="cp">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_haproxy.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Statistics for HAProxy can be enabled by adding following to haproxy.conf : </p>
 <div class="codehilite"><pre><span></span><code><span class="na">listen stats</span>
-  <span class="na">bind:8888</span>
-  <span class="na">mode http</span>
-  <span class="na">stats enable</span>
-  <span class="na">stats hide-version</span>
-  <span class="na">stats realm Haproxy\ Statistics</span>
-  <span class="na">stats uri /haproxy?stats</span>
-  <span class="na">stats auth User:Pass</span>
+<span class="w">  </span><span class="na">bind</span><span class="o">:</span><span class="s">8888</span>
+<span class="w">  </span><span class="na">mode http</span>
+<span class="w">  </span><span class="na">stats enable</span>
+<span class="w">  </span><span class="na">stats hide-version</span>
+<span class="w">  </span><span class="na">stats realm Haproxy\ Statistics</span>
+<span class="w">  </span><span class="na">stats uri /haproxy?stats</span>
+<span class="w">  </span><span class="na">stats auth User</span><span class="o">:</span><span class="s">Pass</span>
 </code></pre></div>
 
 <p>Then you need to configure Agent to start gathering statistics from Haproxy server. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[HAProxy]</span>
-<span class="na">url: http://127.0.0.1/haproxy?stats;csv</span>
-<span class="na">user: User</span>
-<span class="na">pass: Pass</span>
-<span class="na">auth: True</span>
-<span class="na">upstream: MyApp1</span>
+<span class="na">url</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1/haproxy?stats</span><span class="c1">;csv</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">User</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">Pass</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">upstream</span><span class="o">:</span><span class="w"> </span><span class="s">MyApp1</span>
 </code></pre></div>
 
 <p>Config parameter <code>upstream</code> is name of upstream server configured in Haproxy.</p>
-<div class="codehilite"><pre><span></span><code><span class="na">listen  MyApp1 192.168.0.1:80</span>
-        <span class="na">option  httpchk</span>
-        <span class="na">balance roundrobin</span>
-        <span class="na">option httpchk HEAD / HTTP/1.0</span>
-        <span class="na">option forwardfor</span>
-        <span class="na">cookie  SERVERID insert indirect nocache</span>
-        <span class="na">server  app1 192.168.0.10:8888 cookie app1 check inter 10000 fall 3 weight 1</span>
-        <span class="na">server  app2 192.168.0.20:8888 cookie app2 check inter 10000 fall 3 weight 1</span>
-        <span class="na">capture cookie vgnvisitor</span><span class="o">=</span> <span class="s">len 32</span>
-<span class="s">        rspidel ^Set-cookie:\ IP=       </span>
+<div class="codehilite"><pre><span></span><code><span class="na">listen  MyApp1 192.168.0.1</span><span class="o">:</span><span class="s">80</span>
+<span class="w">        </span><span class="na">option  httpchk</span>
+<span class="w">        </span><span class="na">balance roundrobin</span>
+<span class="w">        </span><span class="na">option httpchk HEAD / HTTP/1.0</span>
+<span class="w">        </span><span class="na">option forwardfor</span>
+<span class="w">        </span><span class="na">cookie  SERVERID insert indirect nocache</span>
+<span class="w">        </span><span class="na">server  app1 192.168.0.10</span><span class="o">:</span><span class="s">8888 cookie app1 check inter 10000 fall 3 weight 1</span>
+<span class="w">        </span><span class="na">server  app2 192.168.0.20</span><span class="o">:</span><span class="s">8888 cookie app2 check inter 10000 fall 3 weight 1</span>
+<span class="w">        </span><span class="na">capture cookie vgnvisitor</span><span class="o">=</span><span class="w"> </span><span class="s">len 32</span>
+<span class="w">        </span><span class="na">rspidel ^Set-cookie</span><span class="o">:</span>\<span class="w"> </span><span class="s">IP=       </span>
 </code></pre></div>
 
 <p>From above mentioned example it is obvious, that upstream name is MyApp1, so this name should be placed as upstream parameter in <code>HAProxy</code> section of <code>webservers.ini</code>
 If you have more sophisticated HAProxy configuration with multiple upstreams and need to monitor several upstreams, you should write comma and separate names in upstream configuration of Agent: 
 So if your HAProxy configuration looks like this : </p>
 <div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">listen  MyApp1 192.168.0.1:80</span>
-        <span class="l l-Scalar l-Scalar-Plain">option  httpchk</span>
-        <span class="l l-Scalar l-Scalar-Plain">balance roundrobin</span>
-        <span class="l l-Scalar l-Scalar-Plain">option httpchk HEAD / HTTP/1.0</span>
-        <span class="l l-Scalar l-Scalar-Plain">option forwardfor</span>
-        <span class="l l-Scalar l-Scalar-Plain">cookie  SERVERID insert indirect nocache</span>
-        <span class="l l-Scalar l-Scalar-Plain">server  app1 192.168.0.10:8888 cookie app1 check inter 10000 fall 3 weight 1</span>
-        <span class="l l-Scalar l-Scalar-Plain">server  app2 192.168.0.20:8888 cookie app2 check inter 10000 fall 3 weight 1</span>
-        <span class="l l-Scalar l-Scalar-Plain">capture cookie vgnvisitor= len 32</span>
-        <span class="l l-Scalar l-Scalar-Plain">rspidel ^Set-cookie:\ IP=</span>       
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">option  httpchk</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">balance roundrobin</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">option httpchk HEAD / HTTP/1.0</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">option forwardfor</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">cookie  SERVERID insert indirect nocache</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">server  app1 192.168.0.10:8888 cookie app1 check inter 10000 fall 3 weight 1</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">server  app2 192.168.0.20:8888 cookie app2 check inter 10000 fall 3 weight 1</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">capture cookie vgnvisitor= len 32</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">rspidel ^Set-cookie:\ IP=</span><span class="w">       </span>
 
 <span class="l l-Scalar l-Scalar-Plain">listen  MyApp2 192.168.0.2:80</span>
-        <span class="l l-Scalar l-Scalar-Plain">option  httpchk</span>
-        <span class="l l-Scalar l-Scalar-Plain">balance roundrobin</span>
-        <span class="l l-Scalar l-Scalar-Plain">option httpchk HEAD / HTTP/1.0</span>
-        <span class="l l-Scalar l-Scalar-Plain">option forwardfor</span>
-        <span class="l l-Scalar l-Scalar-Plain">cookie  SERVERID insert indirect nocache</span>
-        <span class="l l-Scalar l-Scalar-Plain">server  app1 192.168.0.11:8888 cookie app1 check inter 10000 fall 3 weight 1</span>
-        <span class="l l-Scalar l-Scalar-Plain">server  app2 192.168.0.22:8888 cookie app2 check inter 10000 fall 3 weight 1</span>
-        <span class="l l-Scalar l-Scalar-Plain">capture cookie vgnvisitor= len 32</span>
-        <span class="l l-Scalar l-Scalar-Plain">rspidel ^Set-cookie:\ IP=</span>       
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">option  httpchk</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">balance roundrobin</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">option httpchk HEAD / HTTP/1.0</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">option forwardfor</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">cookie  SERVERID insert indirect nocache</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">server  app1 192.168.0.11:8888 cookie app1 check inter 10000 fall 3 weight 1</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">server  app2 192.168.0.22:8888 cookie app2 check inter 10000 fall 3 weight 1</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">capture cookie vgnvisitor= len 32</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">rspidel ^Set-cookie:\ IP=</span><span class="w">       </span>
 </code></pre></div>
 
 <p>Agent should be configured as follows: </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[HAProxy]</span>
-<span class="na">url: http://127.0.0.1/haproxy?stats;csv</span>
-<span class="na">user: User</span>
-<span class="na">pass: Pass</span>
-<span class="na">auth: True</span>
+<span class="na">url</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1/haproxy?stats</span><span class="c1">;csv</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">User</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">Pass</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1096,7 +1096,7 @@ So if your HAProxy configuration looks like this : </p>
     
       <script src="../../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../../.."}})</script>
       
         <script src="../../../javascripts/jquery.min.js"></script>
       

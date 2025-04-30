@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -923,8 +923,8 @@
      <h1></h1>
          
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_varnish.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_varnish.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
@@ -934,18 +934,18 @@ If you have compilled <strong>Varnish</strong> from source or used oher mechanis
 <p>Restart Agent. <code>./oddeye.sh restart</code>
 <code>check_varnish</code> module should run without making changes in configuration, but according to your specific needs, you can edit <code>conf/bindata.ini</code> and make changes in section <strong>Varnish</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Varnish]</span>
-<span class="na">varnishstat: /usr/bin/varnishstat</span>
-<span class="na">varnishuser: varnish</span>
+<span class="na">varnishstat</span><span class="o">:</span><span class="w"> </span><span class="s">/usr/bin/varnishstat</span>
+<span class="na">varnishuser</span><span class="o">:</span><span class="w"> </span><span class="s">varnish</span>
 </code></pre></div>
 
 <p>Usually <code>varnishstat</code> requires ether root or {VARNISH_USER} privilege, 
 so user which runs <strong>OddEye Agent</strong> should be able to execute <code>varnishstat</code>  on behalf of privileged user. 
 In most of linux distributions adding following line to <code>/etc/sudoers</code> will do the trick. Lets assume that <strong>Varnish</strong> is running under user <code>varnish</code></p>
-<div class="codehilite"><pre><span></span><code>oddeye    <span class="nv">ALL</span> <span class="o">=</span> <span class="o">(</span>varnish<span class="o">)</span> NOPASSWD: /usr/bin/varnishstat
+<div class="codehilite"><pre><span></span><code>oddeye<span class="w">    </span><span class="nv">ALL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>varnish<span class="o">)</span><span class="w"> </span>NOPASSWD:<span class="w"> </span>/usr/bin/varnishstat
 </code></pre></div>
 
 <p>Now restart <strong>OddEye Agent</strong> </p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1151,7 +1151,7 @@ In most of linux distributions adding following line to <code>/etc/sudoers</code
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

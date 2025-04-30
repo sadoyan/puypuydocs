@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -937,25 +937,25 @@
      <h1></h1>
          
 <p><img alt="Scylla" src="../../images/scylla.png" /></p>
-<p>Scylla is a massively scalable Open-Source NoSQL database. It's an implementation of Apache Cassandra using C++ instead of Java. <br />
+<p>Scylla is a massively scalable Open-Source NoSQL database. It's an implementation of Apache Cassandra using C++ instead of Java. 
 Developers of Scylla describe it as : Scylla is a drop-in replacement for Apache Cassandra and DynamoDB.
 Yet it also provides significant advantages over these other databases. Flip the cards to see similarities and differences. 
-Scylla ships with native metrics exported, which runs by default 9180 port. So there is no need for special configuration of Scylla.  </p>
-<p>Scylla config of OddEye agent is in <code>conf/bigdata.ini</code> file. If you run recommended Scylla installation, no need for making spacial configs for OddEye agent as well.  </p>
+Scylla ships with native metrics exported, which runs by default 9180 port. So there is no need for special configuration of Scylla. </p>
+<p>Scylla config of OddEye agent is in <code>conf/bigdata.ini</code> file. If you run recommended Scylla installation, no need for making spacial configs for OddEye agent as well. </p>
 <h4 id="install"><strong>Install</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_scylla.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_scylla.py<span class="w"> </span>./
 </code></pre></div>
 
 <h4 id="configure"><strong>Configure</strong></h4>
 <p>Default config should be suitable for the most of the installations. 
 If you are running Scylla's node_exporter other than default way, change the <code>stats</code> parameter to match your setup. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Scilla]</span>
-<span class="na">stats : http://127.0.0.1:9180/metrics</span>
+<span class="na">stats</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:9180/metrics</span>
 </code></pre></div>
 
 <h4 id="restart"><strong>Restart</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="cp">${</span><span class="n">OE_AGENT_HOME</span><span class="cp">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="cp">${</span><span class="n">OE_AGENT_HOME</span><span class="cp">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h4 id="provides"><strong>Provides</strong></h4>
@@ -1101,6 +1101,54 @@ If you are running Scylla's node_exporter other than default way, change the <co
 <td>counter</td>
 <td>None</td>
 </tr>
+<tr>
+<td>scylla_cql_inserts</td>
+<td>The Number of CQL INSERT requests</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cql_reads</td>
+<td>The Number of CQL SELECT requests.</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cql_deletes</td>
+<td>The Number of CQL DELETE requests.</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cql_updates</td>
+<td>The Number of CQL UPDATE requests</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cql_batches</td>
+<td>The Number of CQL BATCH requests</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cache_row_hits</td>
+<td>Total number of rows needed by reads and found in cache</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_cache_row_misses</td>
+<td>Total number of rows needed by reads and missing in cache</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
+<tr>
+<td>scylla_transport_requests_served</td>
+<td>Counts a number of served requests.</td>
+<td>gauge</td>
+<td>None</td>
+</tr>
 </tbody>
 </table>
 
@@ -1161,7 +1209,7 @@ If you are running Scylla's node_exporter other than default way, change the <co
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

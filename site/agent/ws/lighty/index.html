@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -912,39 +912,39 @@
          
 <p><img alt="Lighttpd" src="../../../images/lighty.png" /></p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_lighttpd.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_lighttpd.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Lighttpd is a lightweight  HTTP servers build with performance and security in mind. 
 In order to collect metrics from Lighttpd servers you need first to enable and configure stats module.  </p>
 <p>Loading module:</p>
-<div class="codehilite"><pre><span></span><code>server.modules <span class="o">=</span> <span class="o">(</span> ..., <span class="s2">&quot;mod_status&quot;</span>, ... <span class="o">)</span>
+<div class="codehilite"><pre><span></span><code>server.modules<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="w"> </span>...,<span class="w"> </span><span class="s2">&quot;mod_status&quot;</span>,<span class="w"> </span>...<span class="w"> </span><span class="o">)</span>
 </code></pre></div>
 
 <p>Status page is disabled by default so you need to enable it</p>
-<div class="codehilite"><pre><span></span><code>status.status-url <span class="o">=</span> <span class="s2">&quot;/server-status&quot;</span>
+<div class="codehilite"><pre><span></span><code>status.status-url<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/server-status&quot;</span>
 </code></pre></div>
 
 <p>You can restrict access to status url by allowing access only from certain subnet :</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">$HTTP</span><span class="o">[</span><span class="s2">&quot;remoteip&quot;</span><span class="o">]</span> <span class="o">==</span> <span class="s2">&quot;192.168.0.0/24&quot;</span> <span class="o">{</span>
-    status.status-url <span class="o">=</span> <span class="s2">&quot;/server-status&quot;</span> 
-  <span class="o">}</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">$HTTP</span><span class="o">[</span><span class="s2">&quot;remoteip&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;192.168.0.0/24&quot;</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>status.status-url<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/server-status&quot;</span><span class="w"> </span>
+<span class="w">  </span><span class="o">}</span>
 </code></pre></div>
 
 <p>Or requesting authentication:</p>
-<div class="codehilite"><pre><span></span><code>auth.require <span class="o">=</span> <span class="o">(</span> <span class="s2">&quot;/server-status&quot;</span> <span class="o">=</span>&gt; <span class="o">(</span> <span class="s2">&quot;realm&quot;</span> ... <span class="o">)</span> <span class="o">)</span>
+<div class="codehilite"><pre><span></span><code>auth.require<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="s2">&quot;/server-status&quot;</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="s2">&quot;realm&quot;</span><span class="w"> </span>...<span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="o">)</span>
 </code></pre></div>
 
 <p>Please make sure that you configure URL and HOST in <code>conf/webservers.ini</code> file.
 Default configuration looks like this: </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Lighttpd]</span>
-<span class="na">address: http://127.0.0.1</span>
-<span class="na">stats: /server-status?auto</span>
-<span class="na">auth: False</span>
-<span class="na">user: netangels</span>
-<span class="na">pass: bololo</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">/server-status?auto</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">netangels</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">bololo</span>
 </code></pre></div>
 
 
@@ -1004,7 +1004,7 @@ Default configuration looks like this: </p>
     
       <script src="../../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../../.."}})</script>
       
         <script src="../../../javascripts/jquery.min.js"></script>
       

@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -941,24 +941,24 @@
 OddEye Agent uses LizardFS's built in tools to expose statistics and send to OddEye servers. 
 You just need to set hostname of target server and chose detalization of metrics.   </p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_lizardfs.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_lizardfs.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Configuration parameters of LizardFS check are in <code>${OE_AGENT_HOME}/bonf/bigdata.ini</code> file  </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[LizardFS]</span>
-<span class="na">host: 127.0.0.1</span>
-<span class="na">port: 9421</span>
-<span class="na">chunkstats: True</span>
-<span class="na">diskstats: True</span>
+<span class="na">host</span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1</span>
+<span class="na">port</span><span class="o">:</span><span class="w"> </span><span class="s">9421</span>
+<span class="na">chunkstats</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">diskstats</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
 <p>Host and port parameters points to master node. It's always a good idea to run OddEye Agent on target hosts, 
 so for most of installtions these parameters can stay defaults. </p>
 <p>Other parameters enables and disabled detailed statistics of chunk servers, and disks|mountpoits </p>
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1229,7 +1229,7 @@ statistics from all nodes can be collected from single location.  </p>
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

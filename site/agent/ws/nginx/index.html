@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -940,27 +940,27 @@
          
 <p><img alt="Nginx" src="../../../images/nginx.png" /></p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
-ln -s ../checks_available/check_nginx.py ./
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_nginx.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Status page os Nginx is disabled by default. You can enable it by adding following to NginX config file and restarting daemon. Code below will do the trick: </p>
 <div class="codehilite"><pre><span></span><code><span class="na">location /nginx_status {</span>
-   <span class="na">stub_status on;</span>
-   <span class="na">allow 127.0.0.1;</span>
-   <span class="na">deny all;</span>
+<span class="w">   </span><span class="na">stub_status on;</span>
+<span class="w">   </span><span class="na">allow 127.0.0.1;</span>
+<span class="w">   </span><span class="na">deny all;</span>
 <span class="na">}</span>
 </code></pre></div>
 
 <p>We recommend to use separate Server directive status for dedicated port. </p>
-<div class="codehilite"><pre><span></span><code>server <span class="o">{</span>
-        listen <span class="m">127</span>.0.0.1:8088<span class="p">;</span>
-        root /var/www<span class="p">;</span>
-        index index.html <span class="p">;</span>
-        server_name localhost<span class="p">;</span>
-location /nginx_status <span class="o">{</span>
-   stub_status on<span class="p">;</span>
+<div class="codehilite"><pre><span></span><code>server<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="m">127</span>.0.0.1:8088<span class="p">;</span>
+<span class="w">        </span>root<span class="w"> </span>/var/www<span class="p">;</span>
+<span class="w">        </span>index<span class="w"> </span>index.html<span class="w"> </span><span class="p">;</span>
+<span class="w">        </span>server_name<span class="w"> </span>localhost<span class="p">;</span>
+location<span class="w"> </span>/nginx_status<span class="w"> </span><span class="o">{</span>
+<span class="w">   </span>stub_status<span class="w"> </span>on<span class="p">;</span>
 <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
@@ -968,16 +968,16 @@ location /nginx_status <span class="o">{</span>
 <p>This way your NginX server will bind to port 8088 on loop back interface. Its very easy and secure way to provide status. 
 After enabling NginX Status, You should add status page parameters to <code>{AGENT_HOME}/conf/webservers.ini</code>. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[NginX]</span>
-<span class="na">address: http://127.0.0.1:8888</span>
-<span class="na">stats: /nginx_status</span>
-<span class="na">auth: False</span>
-<span class="na">user: user</span>
-<span class="na">pass: password</span>
+<span class="na">address</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8888</span>
+<span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">/nginx_status</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">user</span>
+<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">password</span>
 </code></pre></div>
 
 <p>Change auth enabled from False to True, if you have anabled authentication on  NginX status URL. Please do not delete user/pass/auth, just put some placeholders, if authentication is disabled. </p>
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1093,7 +1093,7 @@ After enabling NginX Status, You should add status page parameters to <code>{AGE
     
       <script src="../../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../../.."}})</script>
       
         <script src="../../../javascripts/jquery.min.js"></script>
       

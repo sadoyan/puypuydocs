@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
     
     
       
@@ -118,7 +118,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -222,7 +222,7 @@
 
   
 
-<a href="https://github.com/sadoyan/puypuy/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/sadoyan/puypuy" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -927,9 +927,9 @@
 Module is tested and properly working with <code>pysnmp==4.3.9</code>, older versions may not work properly, 
 so please make sure to install<code>pysnmp==4.3.9</code> or newer.
 To avoid future confusions, we recommend to install exact tested version of <strong>PySNMP</strong>. </p>
-<div class="codehilite"><pre><span></span><code>pip install <span class="nv">pysnmp</span><span class="o">==</span><span class="m">4</span>.3.9
-or 
-pip3 install <span class="nv">pysnmp</span><span class="o">==</span><span class="m">4</span>.3.9
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pysnmp</span><span class="o">==</span><span class="m">4</span>.3.9
+or<span class="w"> </span>
+pip3<span class="w"> </span>install<span class="w"> </span><span class="nv">pysnmp</span><span class="o">==</span><span class="m">4</span>.3.9
 </code></pre></div>
 
 <p><code>check_snmp</code> supports v2 <strong>Public</strong> and v3 <strong>authPriv</strong> protocols. Configuration is done in <code>conf/snmp.ini</code> file. </p>
@@ -945,11 +945,11 @@ privProtocol: AES256
 
 <p><code>conf/snmp.ini</code> file already contains commented protocol and auth names, so you need to uncomment ones which matches your <strong>SNMP</strong> servers requirements. 
 <code>check_snmp</code> module runs similarly to <code>snmpget</code> <strong>Net-SNMP</strong> command. So if you run check without authentication, result will be equivalent to : </p>
-<div class="codehilite"><pre><span></span><code>snmpget  -v2c -cpublic <span class="m">192</span>.168.10.11 .1.3.6.1.4.1.2021.11.9.0
+<div class="codehilite"><pre><span></span><code>snmpget<span class="w">  </span>-v2c<span class="w"> </span>-cpublic<span class="w"> </span><span class="m">192</span>.168.10.11<span class="w"> </span>.1.3.6.1.4.1.2021.11.9.0
 </code></pre></div>
 
 <p>For v3 <strong>authPriv</strong> : </p>
-<div class="codehilite"><pre><span></span><code>snmpget -v3 -lauthPriv -u SecurityName -A AuthPassphrase -X PrivPassphrase -a MD5 -x AES <span class="m">192</span>.168.10.11  <span class="m">1</span>.3.6.1.2.1.25.2.3.1.5.65536
+<div class="codehilite"><pre><span></span><code>snmpget<span class="w"> </span>-v3<span class="w"> </span>-lauthPriv<span class="w"> </span>-u<span class="w"> </span>SecurityName<span class="w"> </span>-A<span class="w"> </span>AuthPassphrase<span class="w"> </span>-X<span class="w"> </span>PrivPassphrase<span class="w"> </span>-a<span class="w"> </span>MD5<span class="w"> </span>-x<span class="w"> </span>AES<span class="w"> </span><span class="m">192</span>.168.10.11<span class="w">  </span><span class="m">1</span>.3.6.1.2.1.25.2.3.1.5.65536
 </code></pre></div>
 
 <p>Configuration fo <strong>SNMP</strong> plugin is little different that other traditional checks. 
@@ -957,23 +957,23 @@ Config parameters are set in <code>conf/snmp.ini</code> file, but unlike others 
 Names of config sections represents friendly names for you devices. Also you should write names and OIDS of needed checks, 
 so Agent can do SNMP get with OID and use friendly names to send information to backend servers.   </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[mikrotik.router.net]</span>
-<span class="na">auth: True</span>
-<span class="na">port: 161</span>
-<span class="na">server: 192.168.10.2</span>
-<span class="na">authProtocol: MD5</span>
-<span class="na">privProtocol: AES128</span>
-<span class="na">SecurityName: demo</span>
-<span class="na">AuthPassphrase: Bb123456</span>
-<span class="na">PrivPassphrase: Bb123456</span>
-<span class="na">total_memory: .1.3.6.1.2.1.25.2.3.1.5.65536</span>
-<span class="na">used_memory: .1.3.6.1.2.1.25.2.3.1.6.65536</span>
-<span class="na">cpu_frequency: .1.3.6.1.4.1.14988.1.1.3.14.0</span>
-<span class="na">tx_rate: .1.3.6.1.4.1.14988.1.1.1.3.1.2.6</span>
-<span class="na">rx_rate: .1.3.6.1.4.1.14988.1.1.1.3.1.3.6</span>
-<span class="na">client_count: .1.3.6.1.4.1.14988.1.1.1.3.1.6.6</span>
-<span class="na">frequency: .1.3.6.1.4.1.14988.1.1.1.3.1.7.6</span>
-<span class="na">noise_floor: .1.3.6.1.4.1.14988.1.1.1.3.1.9.6</span>
-<span class="na">overall_ccq: .1.3.6.1.4.1.14988.1.1.1.3.1.10.6</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">port</span><span class="o">:</span><span class="w"> </span><span class="s">161</span>
+<span class="na">server</span><span class="o">:</span><span class="w"> </span><span class="s">192.168.10.2</span>
+<span class="na">authProtocol</span><span class="o">:</span><span class="w"> </span><span class="s">MD5</span>
+<span class="na">privProtocol</span><span class="o">:</span><span class="w"> </span><span class="s">AES128</span>
+<span class="na">SecurityName</span><span class="o">:</span><span class="w"> </span><span class="s">demo</span>
+<span class="na">AuthPassphrase</span><span class="o">:</span><span class="w"> </span><span class="s">Bb123456</span>
+<span class="na">PrivPassphrase</span><span class="o">:</span><span class="w"> </span><span class="s">Bb123456</span>
+<span class="na">total_memory</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.2.1.25.2.3.1.5.65536</span>
+<span class="na">used_memory</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.2.1.25.2.3.1.6.65536</span>
+<span class="na">cpu_frequency</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.4.1.14988.1.1.3.14.0</span>
+<span class="na">tx_rate</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.4.1.14988.1.1.1.3.1.2.6</span>
+<span class="na">rx_rate</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.4.1.14988.1.1.1.3.1.3.6</span>
+<span class="na">client_count</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.4.1.14988.1.1.1.3.1.6.6</span>
+<span class="na">frequency</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.4.1.14988.1.1.1.3.1.7.6</span>
+<span class="na">noise_floor</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.4.1.14988.1.1.1.3.1.9.6</span>
+<span class="na">overall_ccq</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.4.1.14988.1.1.1.3.1.10.6</span>
 </code></pre></div>
 
 <p>For better manageability metrics names at endpoint are prefixed with <code>snmp_</code> so <code>if_eth0_out_errors</code> 
@@ -981,11 +981,11 @@ will be shown as <code>snmp_if_eth0_out_errors</code> in Dashboard.    </p>
 <p><strong>Please make sure to create correct mappings before running  <code>check_snmp</code></strong></p>
 <h3 id="snmp-v2-public"><strong>SNMP v2 Public</strong></h3>
 <p><code>auth: Boolean</code> parameter in <code>conf/snmp.ini</code> controls switching protocol an community versions. </p>
-<div class="codehilite"><pre><span></span><code><span class="na">auth: False</span>
+<div class="codehilite"><pre><span></span><code><span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
 </code></pre></div>
 
 <p>Will set to legacy v2 protocol with <strong>Public</strong> community. As result you will have <strong>SNMP</strong> querly similar to :   </p>
-<div class="codehilite"><pre><span></span><code>snmpget  -v2c -cpublic <span class="m">192</span>.168.10.11 .1.3.6.1.4.1.2021.11.9.0
+<div class="codehilite"><pre><span></span><code>snmpget<span class="w">  </span>-v2c<span class="w"> </span>-cpublic<span class="w"> </span><span class="m">192</span>.168.10.11<span class="w"> </span>.1.3.6.1.4.1.2021.11.9.0
 </code></pre></div>
 
 <p><code>auth: True</code> enables v3 AuthPriv .  </p>
@@ -999,25 +999,25 @@ privProtocols, DES, 3DES, AES128, AES192, AES256
 <p>Please setup <code>authProtocol</code> and <code>privProtocol</code> values to ones which matches your SNMP servers requirements.
 Eventual config file will look something like this : </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[linux.router.net]</span>
-<span class="na">auth: True</span>
-<span class="na">port: 161</span>
-<span class="na">server: 192.168.10.11</span>
-<span class="na">authProtocol: SHA</span>
-<span class="na">privProtocol: DES</span>
-<span class="na">SecurityName: demo</span>
-<span class="na">AuthPassphrase: Bb1234567</span>
-<span class="na">PrivPassphrase: Bb1234567</span>
-<span class="na">mem_available: .1.3.6.1.4.1.2021.4.6.0</span>
+<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<span class="na">port</span><span class="o">:</span><span class="w"> </span><span class="s">161</span>
+<span class="na">server</span><span class="o">:</span><span class="w"> </span><span class="s">192.168.10.11</span>
+<span class="na">authProtocol</span><span class="o">:</span><span class="w"> </span><span class="s">SHA</span>
+<span class="na">privProtocol</span><span class="o">:</span><span class="w"> </span><span class="s">DES</span>
+<span class="na">SecurityName</span><span class="o">:</span><span class="w"> </span><span class="s">demo</span>
+<span class="na">AuthPassphrase</span><span class="o">:</span><span class="w"> </span><span class="s">Bb1234567</span>
+<span class="na">PrivPassphrase</span><span class="o">:</span><span class="w"> </span><span class="s">Bb1234567</span>
+<span class="na">mem_available</span><span class="o">:</span><span class="w"> </span><span class="s">.1.3.6.1.4.1.2021.4.6.0</span>
 </code></pre></div>
 
 <p>As result you will have <strong>SNMP</strong> querly similar to : </p>
-<div class="codehilite"><pre><span></span><code>snmpget -v3 -lauthPriv -u user -A AuthpaSS -X ProtopaSS -a SHA -x DES <span class="m">192</span>.168.10.11  .1.3.6.1.4.1.2021.4.6.0
+<div class="codehilite"><pre><span></span><code>snmpget<span class="w"> </span>-v3<span class="w"> </span>-lauthPriv<span class="w"> </span>-u<span class="w"> </span>user<span class="w"> </span>-A<span class="w"> </span>AuthpaSS<span class="w"> </span>-X<span class="w"> </span>ProtopaSS<span class="w"> </span>-a<span class="w"> </span>SHA<span class="w"> </span>-x<span class="w"> </span>DES<span class="w"> </span><span class="m">192</span>.168.10.11<span class="w">  </span>.1.3.6.1.4.1.2021.4.6.0
 </code></pre></div>
 
 <p>After configuration and mapping is finished, you can enable <code>check_snmp</code> as any other <strong>OddEye</strong> check and restart Agent: </p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> checks_enabled
-ln -s ../checks_available/check_snmp.py ./
-../oddeye.sh restart 
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>checks_enabled
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_snmp.py<span class="w"> </span>./
+../oddeye.sh<span class="w"> </span>restart<span class="w"> </span>
 </code></pre></div>
 
 
@@ -1077,7 +1077,7 @@ ln -s ../checks_available/check_snmp.py ./
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       
