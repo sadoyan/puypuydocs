@@ -1,252 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://www.oddeye.co/documentation/</loc>
+         <loc>https://github.com/sadoyan/puypuy/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/activemq/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/activemq/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/cassandra/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/cassandra/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/ceph/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/ceph/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/coredns/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/coredns/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/couch/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/couch/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/custom/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/custom/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/docker/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/docker/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/elastic/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/elastic/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/etcd/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/etcd/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/fdb/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/fdb/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/hadoop/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/hadoop/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/hashicorp/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/hashicorp/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/hbase/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/hbase/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/jmx/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/jmx/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/jolokia/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/jolokia/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/k8s/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/k8s/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/kafka/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/kafka/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/lizardfs/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/lizardfs/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/loadbalancrs/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/loadbalancrs/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/marathon/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/marathon/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/mesos/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/mesos/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/mysql/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/mysql/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/nagios/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/nagios/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/nvidia/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/nvidia/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/rabbitmq/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/rabbitmq/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/riak/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/riak/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/rrs/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/rrs/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/scylla/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/scylla/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/snmp/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/snmp/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/solr/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/solr/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/spark/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/spark/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/storm/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/storm/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/system/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/system/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/varnish/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/varnish/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/webservers/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/webservers/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/zookeeper/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/zookeeper/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/lb/envoy/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/lb/envoy/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/lb/haproxy/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/lb/haproxy/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/lb/traefik/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/lb/traefik/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/ws/apache/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/ws/apache/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/ws/jetty/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/ws/jetty/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/ws/lighty/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/ws/lighty/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/ws/nginx/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/ws/nginx/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/ws/php/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/ws/php/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/ws/rest/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/ws/rest/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/agent/ws/tomcat/</loc>
+         <loc>https://github.com/sadoyan/puypuy/agent/ws/tomcat/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/articles/hbasecompactions/</loc>
+         <loc>https://github.com/sadoyan/puypuy/articles/hbasecompactions/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/articles/hdecommissionin/</loc>
+         <loc>https://github.com/sadoyan/puypuy/articles/hdecommissionin/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/articles/hedgedreads/</loc>
+         <loc>https://github.com/sadoyan/puypuy/articles/hedgedreads/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
