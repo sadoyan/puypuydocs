@@ -911,7 +911,7 @@
 <h3 id="nagiosicinga"><strong>Nagios/Icinga</strong></h3>
 <p><img alt="Nagios" src="../../images/nagios.png" /></p>
 <p><strong>Nagios and Icinga</strong> are popular and powerful open source monitoring applications.
-There are tons of plugins for these systems. Recently we have created native integration of Nagios plugins with OddEye 
+There are tons of plugins for these systems. Recently we have created native integration of Nagios plugins with PuyPuy 
 All what's needed is to enable Nagios module <code>cd ${OE-AGENT-HOME}/checks_enabled &amp;&amp; ln -s ../checks_available/nagios.py ./</code>. 
 And configure OE-Agent with Plugins which you want to use. 
 In <code>[Nagios]</code> section of <code>conf/nagios.ini</code> file just write <code>check_name: command</code> key value pairs.   </p>

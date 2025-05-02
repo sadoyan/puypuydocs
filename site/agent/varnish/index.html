@@ -931,7 +931,7 @@ ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_va
 <p>Configuration of <strong>Varnish</strong> check is located at <code>webservers.ini</code>. 
 You only need to set right path for <code>varnishstat</code> binary, by default for packaged installation it is <code>/usr/bin/varnishstat</code> .
 If you have compilled <strong>Varnish</strong> from source or used oher mechanism to install it, just locate <code>varnishstat</code> change default path in config file. </p>
-<p>Restart Agent. <code>./oddeye.sh restart</code>
+<p>Restart Agent. <code>./puypuy.sh restart</code>
 <code>check_varnish</code> module should run without making changes in configuration, but according to your specific needs, you can edit <code>conf/bindata.ini</code> and make changes in section <strong>Varnish</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Varnish]</span>
 <span class="na">varnishstat</span><span class="o">:</span><span class="w"> </span><span class="s">/usr/bin/varnishstat</span>
@@ -939,13 +939,13 @@ If you have compilled <strong>Varnish</strong> from source or used oher mechanis
 </code></pre></div>
 
 <p>Usually <code>varnishstat</code> requires ether root or {VARNISH_USER} privilege, 
-so user which runs <strong>OddEye Agent</strong> should be able to execute <code>varnishstat</code>  on behalf of privileged user. 
+so user which runs <strong>PuyPuy Agent</strong> should be able to execute <code>varnishstat</code>  on behalf of privileged user. 
 In most of linux distributions adding following line to <code>/etc/sudoers</code> will do the trick. Lets assume that <strong>Varnish</strong> is running under user <code>varnish</code></p>
-<div class="codehilite"><pre><span></span><code>oddeye<span class="w">    </span><span class="nv">ALL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>varnish<span class="o">)</span><span class="w"> </span>NOPASSWD:<span class="w"> </span>/usr/bin/varnishstat
+<div class="codehilite"><pre><span></span><code>puypuy<span class="w">    </span><span class="nv">ALL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>varnish<span class="o">)</span><span class="w"> </span>NOPASSWD:<span class="w"> </span>/usr/bin/varnishstat
 </code></pre></div>
 
-<p>Now restart <strong>OddEye Agent</strong> </p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
+<p>Now restart <strong>PuyPuy Agent</strong> </p>
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>

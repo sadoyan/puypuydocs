@@ -938,7 +938,7 @@
          
 <p><img alt="Lizardfs" src="../../images/lizardfs.png" /></p>
 <p>LizardFS is a high performance distributed storage system for storing massive amount of data on commodity hardware.
-OddEye Agent uses LizardFS's built in tools to expose statistics and send to OddEye servers. 
+PuyPuy Agent uses LizardFS's built in tools to expose statistics and send to PuyPuy servers. 
 You just need to set hostname of target server and chose detalization of metrics.   </p>
 <h5 id="install"><strong>Install</strong></h5>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
@@ -954,11 +954,11 @@ ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_li
 <span class="na">diskstats</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
 </code></pre></div>
 
-<p>Host and port parameters points to master node. It's always a good idea to run OddEye Agent on target hosts, 
+<p>Host and port parameters points to master node. It's always a good idea to run PuyPuy Agent on target hosts, 
 so for most of installtions these parameters can stay defaults. </p>
 <p>Other parameters enables and disabled detailed statistics of chunk servers, and disks|mountpoits </p>
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>

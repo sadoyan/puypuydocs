@@ -926,7 +926,7 @@
 <p>Container allows developers to package up an application with all needed parts, 
 such as libraries and other dependencies, and ship it all out as one package.
 <strong>Docker</strong> is the pioneer and the most popular solution for creating, sharing and using containers.<br />
-<strong>OddEye</strong> works with native Dockers HTTP API to get metrics from running containers. </p>
+<strong>PuyPuy</strong> works with native Dockers HTTP API to get metrics from running containers. </p>
 <h4 id="install"><strong>Install</strong></h4>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_docker_stats.py<span class="w"> </span>./
@@ -934,7 +934,7 @@ ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_do
 
 <h4 id="configure"><strong>Configure</strong></h4>
 <p><strong>Server</strong></p>
-<p>To collect Docker metrics about all your containers, you will run one OddEye Agent on every host. </p>
+<p>To collect Docker metrics about all your containers, you will run one PuyPuy Agent on every host. </p>
 <p>In order to start collecting metrics from Docker you should first configure Docker server to expose metrics via HTTP socket.
 In general its just adding <code>-H tcp://{SERVER_IP}:{PORT}</code> parameter to dockerd at startup.  </p>
 <p>For SystemV and Upstart servers you should add following to <code>/etc/default/docker</code> file  </p>
