@@ -63,7 +63,7 @@ Restart Kafka node.
 **Agent**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_kafka.py ./
 ```
 Kafka check is enabled as any other check: so copy or symlink `check_kafka.py` check from `checks_available` to `checks_enabled`.

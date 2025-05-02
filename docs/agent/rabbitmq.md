@@ -3,14 +3,14 @@
 ##### **Agent Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_rabbitmq.py ./
 ```
 
 Or if you are using recent versions of **RabbitMQ** : 
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_rabbitmq_368.py ./
 ```
 
@@ -77,7 +77,7 @@ rabbitmq-plugins enable rabbitmq_management
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

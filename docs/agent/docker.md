@@ -8,7 +8,7 @@ such as libraries and other dependencies, and ship it all out as one package.
 #### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_docker_stats.py ./
 ```
 

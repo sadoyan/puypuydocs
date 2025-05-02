@@ -11,7 +11,7 @@ Scylla config of PuyPuy agent is in `conf/bigdata.ini` file. If you run recommen
 
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_scylla.py ./
 ```
 
@@ -27,7 +27,7 @@ stats : http://127.0.0.1:9180/metrics
 #### **Restart**
 
 ```commandline
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 #### **Provides**

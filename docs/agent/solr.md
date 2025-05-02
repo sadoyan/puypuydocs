@@ -6,7 +6,7 @@ Out of the box installtion of **PuyPuy Agent** may not work properly with other 
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_solr.py ./
 ```
 
@@ -23,7 +23,7 @@ stats: http://127.0.0.1:8983/solr/admin/metrics?group=all&wt=json
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

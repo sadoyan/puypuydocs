@@ -11,7 +11,7 @@ All Hadoop Ecosystem checks use the same config file:
 **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_hadoop_namenode.py ./
 ```
 
@@ -26,7 +26,7 @@ jmx: http://${NAMENODE_IP}:50070/jmx
 ```
 **Restart**
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 **Provides**
 
@@ -83,7 +83,7 @@ DataNode configuration would be the very appropriate for the most installations 
 **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_hadoop_datanode.py ./
 ```
 
@@ -101,7 +101,7 @@ jmx: http://127.0.0.1:50075/jmx
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 **Provides**

@@ -3,7 +3,7 @@
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_tomcat.py ./
 ```
 
@@ -31,7 +31,7 @@ If you see 403 Access Denied, try to edit `CATALINA_HOME/webapps/manager/META-IN
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

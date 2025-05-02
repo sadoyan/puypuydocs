@@ -19,14 +19,14 @@ Enablling Cassandra checks has two parts:
 
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_cassandra.py ./
 ```
 
 or 
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_cassandra3.py ./
 ```
 
@@ -97,7 +97,7 @@ jolokia: http://127.0.0.1:7777/jolokia/read
 #### **Restart**
 
 ```commandline
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 #### **Provides**

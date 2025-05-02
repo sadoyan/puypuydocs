@@ -3,7 +3,7 @@
 **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_redis.py ./
 ```
 
@@ -20,7 +20,7 @@ port: 6379
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 **Provides**
@@ -51,7 +51,7 @@ ${OE_AGENT_HOME}/puypuy.sh restart
 **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_memcached.py ./
 ```
 
@@ -68,7 +68,7 @@ port: 11211
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 **Provides**

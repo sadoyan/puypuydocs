@@ -7,7 +7,7 @@ Nomad exposes metrics via HTTP/Json out of the box, so all you need is just to s
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_hashicorp_nomad_py ./
 ```
 
@@ -27,7 +27,7 @@ jobstats: True
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**
@@ -64,7 +64,7 @@ Consul exposes metrics via HTTP/Json out of the box, so all you need is just to 
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_hashicorp_consul_py ./
 ```
 
@@ -84,7 +84,7 @@ getrates: True
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**
@@ -136,7 +136,7 @@ Vault exposes metrics via HTTP/Json out of the box, so all you need is just to s
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_hashicorp_vault_py ./
 ```
 
@@ -158,7 +158,7 @@ getrates: False
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

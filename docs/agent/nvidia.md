@@ -25,14 +25,14 @@ pip3 install nvidia-ml-py3
 just enable ```check_nvidia_gpu``` module and restart oe-agent 
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled/
+cd ${PUYPUY_HOME}/checks_enabled/
 ln -s ../checks_available/check_nvidia_gpu.py
 ```
 
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

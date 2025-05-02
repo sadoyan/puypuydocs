@@ -59,7 +59,7 @@ Now **Kube State Metrics server** is controlled by systemd and will start in bac
 Enable **PuyPuy** agent check :
  
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_kube_state_metrics.py ./
 ```
 
@@ -79,7 +79,7 @@ podinfo : True
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

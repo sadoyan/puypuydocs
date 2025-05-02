@@ -6,7 +6,7 @@ Configuration of coredns check is stored `k8s.ini` file in `conf` directory.
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_coredns.py ./
 ```
 
@@ -36,7 +36,7 @@ metrics : http://127.0.0.1:9253/metrics
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

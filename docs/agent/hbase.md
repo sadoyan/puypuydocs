@@ -14,7 +14,7 @@ Configuration file for HBase plugin is  `hadoop.ini`.
 **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_hbase_master.py ./
 ```
 
@@ -32,7 +32,7 @@ jmx: http://127.0.0.1:60010/jmx
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 **Provides**
@@ -75,7 +75,7 @@ ${OE_AGENT_HOME}/puypuy.sh restart
 **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_hbase_regionserver.py ./
 ```
 
@@ -93,7 +93,7 @@ jmx: http://127.0.0.1:60030/jmx
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 **Provides**

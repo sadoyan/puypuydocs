@@ -4,7 +4,7 @@
 #### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/{check_cpustats.py,check_disks.py,check_load_average.py,check_memory.py,check_network_bytes.py} ./
 ```
 
@@ -43,7 +43,7 @@ rated = True
 #### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **CPU**

@@ -38,7 +38,7 @@ After the deployment of Jolokia to you Server,  you can enable `check_jolokia` m
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_jolokia ./
 ```
 

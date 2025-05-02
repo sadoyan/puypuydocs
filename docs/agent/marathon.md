@@ -8,7 +8,7 @@ Marathon master exposes metrics via HTTP/Json out of the box, so all you need is
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_marathon.py ./
 ```
 
@@ -24,7 +24,7 @@ stats: http://127.0.0.1:8888/metrics
 
 ##### **Restart**
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

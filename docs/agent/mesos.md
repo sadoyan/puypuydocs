@@ -8,7 +8,7 @@ Mesos master exposes metrics via HTTP/Json out of the box, so all you need is ju
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_mesos_master.py ./
 ```
 
@@ -26,7 +26,7 @@ stats: http://127.0.0.1:5050/metrics/snapshot
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**
@@ -71,7 +71,7 @@ ${OE_AGENT_HOME}/puypuy.sh restart
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_mesos_slave.py ./
 ```
 
@@ -89,7 +89,7 @@ stats: http://127.0.0.1:5051/metrics/snapshot
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

@@ -24,7 +24,7 @@ Change `puypuy` , `tomcat` and  `/opt/java/bin/java` to actual values for your s
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_jmx.py ./
 ```
 
@@ -61,7 +61,7 @@ java : /opt/java/bin/java
 ##### **Restart** 
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 If configuration is correct, after restarting Agent daemon, you would see that your existing Java program magically started to listen `TCP:7777` and exposes JMX via HTTP/Json.

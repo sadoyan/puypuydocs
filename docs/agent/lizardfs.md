@@ -7,13 +7,13 @@ You just need to set hostname of target server and chose detalization of metrics
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_lizardfs.py ./
 ```
 
 ##### **Configure**
 
-Configuration parameters of LizardFS check are in ``${OE_AGENT_HOME}/bonf/bigdata.ini`` file  
+Configuration parameters of LizardFS check are in ``${PUYPUY_HOME}/bonf/bigdata.ini`` file  
 
 ```ini
 [LizardFS]
@@ -30,7 +30,7 @@ Other parameters enables and disabled detailed statistics of chunk servers, and 
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

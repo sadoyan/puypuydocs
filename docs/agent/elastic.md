@@ -21,7 +21,7 @@ Both checks will be obvious at `{AGENT_HOME}/config/bigdata.ini` for configurati
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_elasticsearch.py ./
 ```
 
@@ -36,7 +36,7 @@ stats: /_nodes/_local/stats
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**
@@ -80,7 +80,7 @@ ${OE_AGENT_HOME}/puypuy.sh restart
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_elasticsearch1x.py ./
 ```
 
@@ -95,7 +95,7 @@ stats: /_nodes/_local/stats/?all=true
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

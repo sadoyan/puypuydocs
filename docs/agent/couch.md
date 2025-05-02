@@ -5,13 +5,13 @@
 **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_couchbase_{VERSION}.py ./
 ```
 
 **Configure**
 
-Edit `${OE_AGENT_HOME}/conf/bigdata.ini` and change auth parameters and ip address of Couchbase servers to values matching your actual node running node parameters. 
+Edit `${PUYPUY_HOME}/conf/bigdata.ini` and change auth parameters and ip address of Couchbase servers to values matching your actual node running node parameters. 
 Also its required to write comma separated list of buckets which you want to monitor, so please make sure to change `buckets:` to names of buckets which  you want to monitor.  
 
 ```ini
@@ -30,7 +30,7 @@ auth: True
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 **Provides**
@@ -58,13 +58,13 @@ ${OE_AGENT_HOME}/puypuy.sh restart
 **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_couchdb_{VERSION}.py ./
 ```
 
 **Configure**
 
-Edit `${OE_AGENT_HOME}/conf/bigdata.ini` and change auth parameters and ip address of CouchDB servers to values matching your actual node running node parameters. 
+Edit `${PUYPUY_HOME}/conf/bigdata.ini` and change auth parameters and ip address of CouchDB servers to values matching your actual node running node parameters. 
 For CouchDB 2x check you can set  parameter `detailed` to `True/False`. 
 When detailed is set to True agent will send metrics about HTTP status and response codes and, which will significantly increase number of metrics.     
 
@@ -83,7 +83,7 @@ detailed = True
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/puypuy.sh restart
+${PUYPUY_HOME}/puypuy.sh restart
 ```
 
 **Provides**

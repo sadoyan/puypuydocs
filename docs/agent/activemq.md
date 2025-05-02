@@ -9,7 +9,7 @@ So if default configuration is not changed **Agent** will work without extra con
 ##### **Install**
 
 ```bash
-cd ${OE_AGENT_HOME}/checks_enabled
+cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_activemq.py ./
 ```
 
