@@ -14,7 +14,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon : '/assets/images/home_white.png'
-  logo: 'images/logowhite.png'
+  logo: 'images/logomin.png'
   feature:
     tabs: false
 
