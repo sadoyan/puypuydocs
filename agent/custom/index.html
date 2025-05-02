@@ -846,8 +846,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#oddeye-specific" class="md-nav__link">
-    OddEye Specific
+  <a href="#puypuy-specific" class="md-nav__link">
+    PuyPuy Specific
   </a>
   
 </li>
@@ -902,8 +902,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#oddeye-specific" class="md-nav__link">
-    OddEye Specific
+  <a href="#puypuy-specific" class="md-nav__link">
+    PuyPuy Specific
   </a>
   
 </li>
@@ -938,7 +938,7 @@
 <p>Create file in checks_enabled directory with name check_checkname.py, 
 inside script you should have class <strong>Check</strong> which is inherited from <strong>lib.basecheck.CheckBase</strong> and function precheck(self) which will override precheck() in main class.  (Here you actual check should live). 
 Your check should contain some  minimal imports in order to talk to main program:
-Example below is simple check which gets system's Load Average and sends it to OddEye  </p>
+Example below is simple check which gets system's Load Average and sends it to PuyPuy  </p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">lib.getconfig</span>
 <span class="kn">import</span> <span class="nn">lib.pushdata</span>
 <span class="kn">import</span> <span class="nn">lib.basecheck</span>
@@ -1009,17 +1009,17 @@ This is for telling main program if it should calculate value rates or just push
 <span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$mytype2</span><span class="w"> </span><span class="nv">$myvalue2</span><span class="w"> </span><span class="nv">$check_type2</span><span class="w"> </span><span class="nv">$check_style2</span>
 </code></pre></div>
 
-<h3 id="oddeye-specific">OddEye Specific</h3>
-<p>As OddEye is completely push based and our servers does not have any direct access to your infrastructure, 
+<h3 id="puypuy-specific">PuyPuy Specific</h3>
+<p>As PuyPuy is completely push based and our servers does not have any direct access to your infrastructure, 
 we need special check which will determine if particular host is alive or not. Thus we made small module, 
-which will call our servers and get and send response times to OddEye. 
-We will generate host alive parameter based based on information sent by <code>check_oddeye.py</code>. 
-If you want to have host aliveness test, enable check_oddeye.py as you will do with any other python check and restart Agent:</p>
+which will call our servers and get and send response times to PuyPuy. 
+We will generate host alive parameter based based on information sent by <code>check_puypuy.py</code>. 
+If you want to have host aliveness test, enable check_puypuy.py as you will do with any other python check and restart Agent:</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">agent_home</span><span class="si">}</span>/checks<span class="w"> </span>enabled
-ln<span class="w"> </span>-s<span class="w"> </span>../checks-available/check_oddeye.py<span class="w"> </span>./<span class="w"> </span>
+ln<span class="w"> </span>-s<span class="w"> </span>../checks-available/check_puypuy.py<span class="w"> </span>./<span class="w"> </span>
 </code></pre></div>
 
-<p>OddEye is dynamic system based on machine learning, 
+<p>PuyPuy is dynamic system based on machine learning, 
 but if you want to have statically defined alerts you can use <code>send_special</code> method in your python module. 
 Example below demonstrates how custom alerts can be configured, its taken from <strong>check_network_bytes</strong> module: </p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">glob</span>
@@ -1083,10 +1083,10 @@ reaction = 0  # (Default : Enable dynamic alerting and learning on this check)
 jsondata.gen_data(txname, timestamp, value, lib.pushdata.hostname, check_type, cluster_name, reaction)
 </code></pre></div>
 
-<p>We have created another <strong>OddEye</strong> specific optional parameter. 
+<p>We have created another <strong>PuyPuy</strong> specific optional parameter. 
 This is to tell back-end type of incoming messages. 
 It accepts "Rate" and "Counter" arguments.</p>
-<p><strong>Rate</strong>: is used to tell <strong>OddEye</strong> that incoming metrics are rated so back-end knows <strong>better</strong> how to calculate  dynamic rules.</p>
+<p><strong>Rate</strong>: is used to tell <strong>PuyPuy</strong> that incoming metrics are rated so back-end knows <strong>better</strong> how to calculate  dynamic rules.</p>
 <p><strong>Counter</strong>: Is set when we have increasing counter for metrics values. </p>
 <p>This is needed to do better calculation of regression, and to reset it when next value is smaller than previous. 
 If you find this not suitable for your needs, do not set parameter even when your metrics values are increasing counter, 

@@ -975,7 +975,7 @@ Debian/Ubuntu : </p>
 </code></pre></div>
 
 <p>Make your changes if needed in config.ini and run </p>
-<div class="codehilite"><pre><span></span><code>./oddeye.sh start
+<div class="codehilite"><pre><span></span><code>./puypuy.sh start
 </code></pre></div>
 
 <p>Python daemon process will start, run all python scripts from checks_available directory as well as all check_* files scripts_available directory. </p>
@@ -983,18 +983,18 @@ Debian/Ubuntu : </p>
 <p>PuyPuy uses simple ini files to configure main service and all checks. Configs are splitted into sections. Section [SelfConfig] contains base config parameters like checks interval, log/pid file location as well as some basic tags. </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[SelfConfig]</span>
 <span class="na">check_period_seconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5</span>
-<span class="na">log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/oddeye.log</span>
-<span class="na">pid_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/run/oddeye.pid</span>
-<span class="na">cluster_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OddEye</span>
+<span class="na">log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/puypuy.log</span>
+<span class="na">pid_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/run/puypuy.pid</span>
+<span class="na">cluster_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PuyPuy</span>
 <span class="na">host_group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">workers</span>
-<span class="na">tmpdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/tmp/oddeye_tmp</span>
+<span class="na">tmpdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/tmp/puypuy_tmp</span>
 </code></pre></div>
 
 <p>cluster_name and host_group are placeholders for tags for better manageability. </p>
 <p>In section [TSDB] you should set correct backend and uri. </p>
 <h3 id="back-end-config">Back End Config</h3>
-<p>To make it run you need to change <strong>uuid</strong> to one which you got during registration and start PuyPuy, optionally change run user from oddeye.sh and start </p>
-<div class="codehilite"><pre><span></span><code>./oddeye.sh start
+<p>To make it run you need to change <strong>uuid</strong> to one which you got during registration and start PuyPuy, optionally change run user from puypuy.sh and start </p>
+<div class="codehilite"><pre><span></span><code>./puypuy.sh start
 </code></pre></div>
 
 <p>PuyPuycan for with number of other open source backends. All configs are done at TSDB section of config.ini. Only one TSDB can be set at once, so make sure that all other are ether commented out or deleted from config file. </p>
@@ -1055,7 +1055,7 @@ So <strong>Do not delete authentication parameters</strong>,  just write somethi
 <p>By default, all checks are disabled . To enable check you need to create symlink  or copy check module from OE-AGENT_HOME/checks_available to OE-AGENT_HOME/checks_enable checks-available</p>
 <div class="codehilite"><pre><span></span><code>cd $OE-AGENT_HOME/checks_enabled
 ln -s ../checks_available/check_cpustats.py ./
-../oddeye.sh restart
+../puypuy.sh restart
 </code></pre></div>
 
 <p>Some checks need to be configured before you can use it, for example <code>check_nginx.py</code> needs to know NginX status url and username password if authentication on NginX status is enabled. All config files are located in conf directory. <code>conf/webservers.ini</code>is where <code>check_nginx.py</code> will look for configuration parameters. </p>

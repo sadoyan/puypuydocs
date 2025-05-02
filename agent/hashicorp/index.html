@@ -1145,7 +1145,7 @@ If you do not want to monitor these metrics set <code>jobstats: False</code> st 
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1288,7 +1288,7 @@ Consul also exposes detailed metrics, with rates and counters, so if youwant to 
 </code></pre></div>
 
 <h5 id="restart_1"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides_1"><strong>Provides</strong></h5>
@@ -1508,7 +1508,7 @@ ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_ha
 <h5 id="configure_2"><strong>Configure</strong></h5>
 <p>At most of cases there is no need to change telemetry link, but if you have non default installation of Vault, 
 or if you need to monitor remote Vault, edit <code>conf/hashicorp.ini</code> and make your changes at Hashicorp-Vault section. 
-Also it is very important to set correct token in config file, or Vault will deny requests from OddEye Agent 
+Also it is very important to set correct token in config file, or Vault will deny requests from PuyPuy Agent 
 Vault also exposes detailed metrics, with rates and counters, so if youwant to see these metrics set <code>detailed: True</code> for getting rated stats set <code>getrates: True</code></p>
 <div class="codehilite"><pre><span></span><code><span class="k">[Hashicorp-Vault]</span>
 <span class="na">telemetery</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8200/v1/sys/metrics</span>
@@ -1518,7 +1518,7 @@ Vault also exposes detailed metrics, with rates and counters, so if youwant to s
 </code></pre></div>
 
 <h5 id="restart_2"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides_2"><strong>Provides</strong></h5>

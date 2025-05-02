@@ -937,7 +937,7 @@
      <h1></h1>
          
 <p><img alt="kubernetes" src="../../images/kubernetes.png" /></p>
-<p><strong><em>OddEye</em></strong> Kubernetes plugin requires up and running  <strong>Kube State Metrics server</strong>    </p>
+<p><strong><em>PuyPuy</em></strong> Kubernetes plugin requires up and running  <strong>Kube State Metrics server</strong>    </p>
 <h5 id="install"><strong>Install</strong></h5>
 <p>Installation of Kube State Metrics server is easy and can be done by executing a single command :  </p>
 <div class="codehilite"><pre><span></span><code>go<span class="w"> </span>get<span class="w"> </span>k8s.io/kube-state-metrics
@@ -980,7 +980,7 @@ systemctl<span class="w">  </span>start<span class="w">  </span>kube-state-metri
 </code></pre></div>
 
 <p>Now <strong>Kube State Metrics server</strong> is controlled by systemd and will start in background during OS boot. </p>
-<p>Enable <strong>OddEye</strong> agent check :</p>
+<p>Enable <strong>PuyPuy</strong> agent check :</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_kube_state_metrics.py<span class="w"> </span>./
 </code></pre></div>
@@ -996,7 +996,7 @@ You can enable/disable per pod statistics collection by setting <code>podinfo : 
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/oddeye.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
