@@ -10,7 +10,7 @@ ln -s ../checks_available/check_riak.py ./
 Configuration of **Riak** check is located at `bigdata.ini`. By default it will look fo **Riak** installation `localhost`. 
 Please make sure to set correct IP address of **Riak** instance which you want to monitor.   
 
-Restart Agent. `./oddeye.sh restart`
+Restart Agent. `./puypuy.sh restart`
 `check_riak` module should run without making changes in configuration, but according to your specific needs, you can edit `conf/bindata.ini` and make changes in section **Riak**
 
 ```ini

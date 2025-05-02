@@ -27,7 +27,7 @@ jobstats: True
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**
@@ -84,7 +84,7 @@ getrates: True
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**
@@ -144,7 +144,7 @@ ln -s ../checks_available/check_hashicorp_vault_py ./
 
 At most of cases there is no need to change telemetry link, but if you have non default installation of Vault, 
 or if you need to monitor remote Vault, edit `conf/hashicorp.ini` and make your changes at Hashicorp-Vault section. 
-Also it is very important to set correct token in config file, or Vault will deny requests from OddEye Agent 
+Also it is very important to set correct token in config file, or Vault will deny requests from PuyPuy Agent 
 Vault also exposes detailed metrics, with rates and counters, so if youwant to see these metrics set ```detailed: True``` for getting rated stats set ```getrates: True```
 
 ```ini
@@ -158,7 +158,7 @@ getrates: False
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

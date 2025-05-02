@@ -1,6 +1,6 @@
 ![kubernetes](../images/kubernetes.png)
 
-***OddEye*** Kubernetes plugin requires up and running  **Kube State Metrics server**    
+***PuyPuy*** Kubernetes plugin requires up and running  **Kube State Metrics server**    
 
 ##### **Install**
 
@@ -56,7 +56,7 @@ systemctl  start  kube-state-metrics.service
 
 Now **Kube State Metrics server** is controlled by systemd and will start in background during OS boot. 
 
-Enable **OddEye** agent check :
+Enable **PuyPuy** agent check :
  
 ```bash
 cd ${OE_AGENT_HOME}/checks_enabled
@@ -79,7 +79,7 @@ podinfo : True
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

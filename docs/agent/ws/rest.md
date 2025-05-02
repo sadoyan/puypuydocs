@@ -2,7 +2,7 @@
 
 `check_http_api` is basic check for measuring performance of HTTP API servers.
 Any HTTP backend can act as monitoring point for this check. 
-It will do GET request to your api server and calculate its response time, which will be sent to OddEye. 
+It will do GET request to your api server and calculate its response time, which will be sent to PuyPuy. 
 check_http_api supports HTTP basic authentication. Parameters for this check ate in  HTTP section of `webservers.ini` file: 
 
 ```ini
@@ -30,7 +30,7 @@ user: netangels
 pass: bololo
 auth: True    
 ```
-In this case check names at OddEye will look like this:
+In this case check names at PuyPuy will look like this:
  
 ```text
 http_your_api_com_80

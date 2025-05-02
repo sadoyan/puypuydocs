@@ -115,10 +115,10 @@ As result you will have **SNMP** querly similar to :
 snmpget -v3 -lauthPriv -u user -A AuthpaSS -X ProtopaSS -a SHA -x DES 192.168.10.11  .1.3.6.1.4.1.2021.4.6.0
 ```
 
-After configuration and mapping is finished, you can enable `check_snmp` as any other **OddEye** check and restart Agent: 
+After configuration and mapping is finished, you can enable `check_snmp` as any other **PuyPuy** check and restart Agent: 
 
 ```bash
 cd checks_enabled
 ln -s ../checks_available/check_snmp.py ./
-../oddeye.sh restart 
+../puypuy.sh restart 
 ```

@@ -57,7 +57,7 @@ Symlink or copy  `checks_available/check_apache.py` to `checks_enabled/check_apa
 
 **Restart**
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 **Provides**
 
@@ -124,7 +124,7 @@ Change auth enabled from False to True, if you have anabled authentication on  N
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 **Provides**
 
@@ -198,7 +198,7 @@ pass: Pass
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 
@@ -248,7 +248,7 @@ If you see 403 Access Denied, try to edit `CATALINA_HOME/webapps/manager/META-IN
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 **Provides**
@@ -384,7 +384,7 @@ pass: bololo
 
 `check_http_api` is basic check for measuring performance of HTTP API servers.
 Any HTTP backend can act as monitoring point for this check. 
-It will do GET request to your api server and calculate its response time, which will be sent to OddEye. 
+It will do GET request to your api server and calculate its response time, which will be sent to PuyPuy. 
 check_http_api supports HTTP basic authentication. Parameters for this check ate in  HTTP section of `webservers.ini` file: 
 
 ```ini
@@ -412,7 +412,7 @@ user: netangels
 pass: bololo
 auth: True    
 ```
-In this case check names at OddEye will look like this:
+In this case check names at PuyPuy will look like this:
  
 ```text
 http_your_api_com_80

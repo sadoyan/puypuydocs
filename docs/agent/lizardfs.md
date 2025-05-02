@@ -1,7 +1,7 @@
 ![Lizardfs](../images/lizardfs.png)
 
 LizardFS is a high performance distributed storage system for storing massive amount of data on commodity hardware.
-OddEye Agent uses LizardFS's built in tools to expose statistics and send to OddEye servers. 
+PuyPuy Agent uses LizardFS's built in tools to expose statistics and send to PuyPuy servers. 
 You just need to set hostname of target server and chose detalization of metrics.   
 
 ##### **Install**
@@ -22,7 +22,7 @@ port: 9421
 chunkstats: True
 diskstats: True
 ```
-Host and port parameters points to master node. It's always a good idea to run OddEye Agent on target hosts, 
+Host and port parameters points to master node. It's always a good idea to run PuyPuy Agent on target hosts, 
 so for most of installtions these parameters can stay defaults. 
 
 Other parameters enables and disabled detailed statistics of chunk servers, and disks|mountpoits 
@@ -30,7 +30,7 @@ Other parameters enables and disabled detailed statistics of chunk servers, and 
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

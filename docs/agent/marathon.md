@@ -24,7 +24,7 @@ stats: http://127.0.0.1:8888/metrics
 
 ##### **Restart**
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

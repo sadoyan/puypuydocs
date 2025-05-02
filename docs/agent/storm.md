@@ -1,6 +1,6 @@
 **Apache Storm** is an Open Source distributed real time processing system. 
 
-**OddEye** Have two modules for monitoring **Apache Storm**  
+**PuyPuy** Have two modules for monitoring **Apache Storm**  
 
 1. `check_storm` (Monitors Storm worker processes and exposes Java Lang metrics)
 2. `check_storm_api` (Collect's Topology specific metrics from Storm UI-)
@@ -33,7 +33,7 @@ perbolt: True
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 **Provides**
@@ -111,7 +111,7 @@ path: /jolokia/read
 You can set all ports, used by Jolokia or only those, that are interesting for you, separate them by comma and restart **Agent** .
 
 ```bash
-cd ../ && ./oddeye.sh restart
+cd ../ && ./puypuy.sh restart
 ``` 
 
 #### **Provides** 

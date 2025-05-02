@@ -6,16 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.oddeye.co/documentation/barlus/</loc>
-         <lastmod>2025-05-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.oddeye.co/documentation/proxy/</loc>
-         <lastmod>2025-05-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://www.oddeye.co/documentation/agent/activemq/</loc>
          <lastmod>2025-05-02</lastmod>
          <changefreq>daily</changefreq>

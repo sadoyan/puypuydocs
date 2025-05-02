@@ -43,7 +43,7 @@ rated = True
 #### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **CPU**

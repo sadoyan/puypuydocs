@@ -26,7 +26,7 @@ port: 2181
 #### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 #### **Provides**

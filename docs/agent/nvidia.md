@@ -3,7 +3,7 @@
 
 ![Cuda](../images/cuda.png)
 
-Detailed monitoring of **Nvidia GPU** with **OddEye**.  
+Detailed monitoring of **Nvidia GPU** with **PuyPuy**.  
 
 **Nvidia CUDA** check depends on **nvidia-ml** python module, so in order to use this check **nvidia-ml**  should be installed.    
 
@@ -32,7 +32,7 @@ ln -s ../checks_available/check_nvidia_gpu.py
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

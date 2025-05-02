@@ -57,7 +57,7 @@ Symlink or copy  `checks_available/check_apache.py` to `checks_enabled/check_apa
 
 ##### **Restart**
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 ##### **Provides**
 

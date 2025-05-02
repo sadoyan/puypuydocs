@@ -36,7 +36,7 @@ stats: /_nodes/_local/stats
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**
@@ -95,7 +95,7 @@ stats: /_nodes/_local/stats/?all=true
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

@@ -11,7 +11,7 @@ Configuration of **Varnish** check is located at `webservers.ini`.
 You only need to set right path for ```varnishstat``` binary, by default for packaged installation it is ```/usr/bin/varnishstat``` .
 If you have compilled **Varnish** from source or used oher mechanism to install it, just locate ```varnishstat``` change default path in config file. 
 
-Restart Agent. `./oddeye.sh restart`
+Restart Agent. `./puypuy.sh restart`
 `check_varnish` module should run without making changes in configuration, but according to your specific needs, you can edit `conf/bindata.ini` and make changes in section **Varnish**
 
 ```ini
@@ -21,17 +21,17 @@ varnishuser: varnish
 ```
 
 Usually ```varnishstat``` requires ether root or {VARNISH_USER} privilege, 
-so user which runs **OddEye Agent** should be able to execute ```varnishstat```  on behalf of privileged user. 
+so user which runs **PuyPuy Agent** should be able to execute ```varnishstat```  on behalf of privileged user. 
 In most of linux distributions adding following line to ```/etc/sudoers``` will do the trick. Lets assume that **Varnish** is running under user ```varnish```
 
 ```bash
-oddeye    ALL = (varnish) NOPASSWD: /usr/bin/varnishstat
+puypuy    ALL = (varnish) NOPASSWD: /usr/bin/varnishstat
 ```
 
-Now restart **OddEye Agent** 
+Now restart **PuyPuy Agent** 
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

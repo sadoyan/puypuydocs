@@ -26,7 +26,7 @@ jmx: http://${NAMENODE_IP}:50070/jmx
 ```
 **Restart**
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 **Provides**
 
@@ -101,7 +101,7 @@ jmx: http://127.0.0.1:50075/jmx
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 **Provides**

@@ -80,7 +80,7 @@ jolokia: http://127.0.0.1:7777/jolokia/read
 ##### **Restart**
 
 ```bash
-{AGENT_HOME}/oddeye.sh restart
+{AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

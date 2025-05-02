@@ -14,11 +14,11 @@ The trick is, that newest JVM's will not allow other users to attach agent to JV
 To make this happen Agent must be able to execute java as user tomcat without password. Code below is an example of how `/etc/sudoers` will be configured :  
  
 ```text
-oddeye    ALL = (tomcat) NOPASSWD: /opt/java/bin/java
+puypuy    ALL = (tomcat) NOPASSWD: /opt/java/bin/java
 ```
 
 
-Change `oddeye` , `tomcat` and  `/opt/java/bin/java` to actual values for your system. 
+Change `puypuy` , `tomcat` and  `/opt/java/bin/java` to actual values for your system. 
 
 
 ##### **Install**
@@ -52,7 +52,7 @@ Typically main class name should be in second column of output. Edit `conf/java.
 
 ```ini
 [JMX]
-jmx: http://127.0.0.1:7777/oddeye/read
+jmx: http://127.0.0.1:7777/puypuy/read
 user: tomcat
 class : org.apache.catalina.startup.Bootstrap
 java : /opt/java/bin/java
@@ -61,7 +61,7 @@ java : /opt/java/bin/java
 ##### **Restart** 
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 If configuration is correct, after restarting Agent daemon, you would see that your existing Java program magically started to listen `TCP:7777` and exposes JMX via HTTP/Json.

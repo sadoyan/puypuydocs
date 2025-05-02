@@ -1,7 +1,7 @@
 ![Ceph](../images/ceph.png)
 
 Ceph is high performance distributed storage system, for storing petabytes of data on commodity hardware.
-Agent uses Ceph built in tools to expose statistics and send to OddEye servers. Configuration is very minimal and easy : 
+Agent uses Ceph built in tools to expose statistics and send to PuyPuy servers. Configuration is very minimal and easy : 
 All that is needed is to tell Agent the username, which is allowed to grab statistics (Typically client.admin) and path to keyring. 
 If you run Ceph, you already have installed all needed dependencies, so nothing else is needed to add. 
 Agent will look for configuration in file `bigdata.ini`. 
@@ -29,7 +29,7 @@ keyring: /etc/ceph/ceph.client.admin.keyring
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

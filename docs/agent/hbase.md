@@ -4,7 +4,7 @@ HBase is an open-source non-relational distributed database modeled after Google
 It is developed as part of Apache Software Foundation's Apache Hadoop project and runs on top of HDFS (Hadoop Distributed File System), 
 providing Bigtable-like capabilities for Hadoop.
 
-OddEye Agent uses HBase built in Json interface, to get statistics from HBase Master and RegionServers
+PuyPuy Agent uses HBase built in Json interface, to get statistics from HBase Master and RegionServers
 Configuration file for HBase plugin is  `hadoop.ini`. 
 
 #### **HBase Master**
@@ -32,7 +32,7 @@ jmx: http://127.0.0.1:60010/jmx
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 **Provides**
@@ -93,7 +93,7 @@ jmx: http://127.0.0.1:60030/jmx
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 **Provides**

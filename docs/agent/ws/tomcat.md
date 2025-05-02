@@ -31,7 +31,7 @@ If you see 403 Access Denied, try to edit `CATALINA_HOME/webapps/manager/META-IN
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

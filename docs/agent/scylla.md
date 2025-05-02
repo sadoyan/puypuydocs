@@ -5,7 +5,7 @@ Developers of Scylla describe it as : Scylla is a drop-in replacement for Apache
 Yet it also provides significant advantages over these other databases. Flip the cards to see similarities and differences. 
 Scylla ships with native metrics exported, which runs by default 9180 port. So there is no need for special configuration of Scylla. 
 
-Scylla config of OddEye agent is in `conf/bigdata.ini` file. If you run recommended Scylla installation, no need for making spacial configs for OddEye agent as well. 
+Scylla config of PuyPuy agent is in `conf/bigdata.ini` file. If you run recommended Scylla installation, no need for making spacial configs for PuyPuy agent as well. 
 
 #### **Install**
 
@@ -27,7 +27,7 @@ stats : http://127.0.0.1:9180/metrics
 #### **Restart**
 
 ```commandline
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 #### **Provides**

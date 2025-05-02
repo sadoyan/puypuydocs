@@ -26,7 +26,7 @@ Edit ```conf/loadbalancer.ini``` and set Envoy URL to prometheus stats.
 metrics : http://127.0.0.1:8081/metrics
 ```  
 
-Restart OddEye agent and Envoy. 
+Restart PuyPuy agent and Envoy. 
 
 ##### **Provides**
 

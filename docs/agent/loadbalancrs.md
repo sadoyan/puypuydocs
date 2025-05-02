@@ -88,7 +88,7 @@ auth: True
 **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 **Provides**
@@ -130,7 +130,7 @@ Edit ```conf/loadbalancer.ini``` and set Envoy URL to prometheus stats.
 metrics : http://127.0.0.1:8001/stats/prometheus
 ```  
 
-Restart OddEye agent and Envoy. 
+Restart PuyPuy agent and Envoy. 
 
 **Provides**
 
@@ -210,7 +210,7 @@ Edit ```conf/loadbalancer.ini``` and set Envoy URL to prometheus stats.
 metrics : http://127.0.0.1:8081/metrics
 ```  
 
-Restart OddEye agent and Envoy. 
+Restart PuyPuy agent and Envoy. 
 
 **Provides**
 

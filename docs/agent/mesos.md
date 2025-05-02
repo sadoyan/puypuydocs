@@ -26,7 +26,7 @@ stats: http://127.0.0.1:5050/metrics/snapshot
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**
@@ -89,7 +89,7 @@ stats: http://127.0.0.1:5051/metrics/snapshot
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

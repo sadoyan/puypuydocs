@@ -3,7 +3,7 @@
 Create file in checks_enabled directory with name check_checkname.py, 
 inside script you should have class **Check** which is inherited from **lib.basecheck.CheckBase** and function precheck(self) which will override precheck() in main class.  (Here you actual check should live). 
 Your check should contain some  minimal imports in order to talk to main program:
-Example below is simple check which gets system's Load Average and sends it to OddEye  
+Example below is simple check which gets system's Load Average and sends it to PuyPuy  
 
 ```python
 import lib.getconfig
@@ -84,20 +84,20 @@ This is for telling main program if it should calculate value rates or just push
 	echo -n $mytype2 $myvalue2 $check_type2 $check_style2
 ```
 
-### OddEye Specific 
+### PuyPuy Specific 
 
-As OddEye is completely push based and our servers does not have any direct access to your infrastructure, 
+As PuyPuy is completely push based and our servers does not have any direct access to your infrastructure, 
 we need special check which will determine if particular host is alive or not. Thus we made small module, 
-which will call our servers and get and send response times to OddEye. 
-We will generate host alive parameter based based on information sent by `check_oddeye.py`. 
-If you want to have host aliveness test, enable check_oddeye.py as you will do with any other python check and restart Agent:
+which will call our servers and get and send response times to PuyPuy. 
+We will generate host alive parameter based based on information sent by `check_puypuy.py`. 
+If you want to have host aliveness test, enable check_puypuy.py as you will do with any other python check and restart Agent:
 
 ```bash
 cd ${agent_home}/checks enabled
-ln -s ../checks-available/check_oddeye.py ./ 
+ln -s ../checks-available/check_puypuy.py ./ 
 ```
 
-OddEye is dynamic system based on machine learning, 
+PuyPuy is dynamic system based on machine learning, 
 but if you want to have statically defined alerts you can use `send_special` method in your python module. 
 Example below demonstrates how custom alerts can be configured, its taken from **check_network_bytes** module: 
 
@@ -165,11 +165,11 @@ reaction = 0  # (Default : Enable dynamic alerting and learning on this check)
 jsondata.gen_data(txname, timestamp, value, lib.pushdata.hostname, check_type, cluster_name, reaction)
 ```
 
-We have created another **OddEye** specific optional parameter. 
+We have created another **PuyPuy** specific optional parameter. 
 This is to tell back-end type of incoming messages. 
 It accepts "Rate" and "Counter" arguments.
 
-**Rate**: is used to tell **OddEye** that incoming metrics are rated so back-end knows **better** how to calculate  dynamic rules.
+**Rate**: is used to tell **PuyPuy** that incoming metrics are rated so back-end knows **better** how to calculate  dynamic rules.
 
 **Counter**: Is set when we have increasing counter for metrics values. 
 

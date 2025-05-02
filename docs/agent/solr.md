@@ -1,7 +1,7 @@
 ![Solr](../images/solr.png)
 
 **Solr** check is tested with Vanilla (**Apache** version) of **Solr** based on **Jetty**.
-Out of the box installtion of **OddEye Agent** may not work properly with other ditrinution of **Solr** (Cloudera, Tomcat, etc ...)   
+Out of the box installtion of **PuyPuy Agent** may not work properly with other ditrinution of **Solr** (Cloudera, Tomcat, etc ...)   
 
 ##### **Install**
 
@@ -23,7 +23,7 @@ stats: http://127.0.0.1:8983/solr/admin/metrics?group=all&wt=json
 ##### **Restart**
 
 ```bash
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 ##### **Provides**

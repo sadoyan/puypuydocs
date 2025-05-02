@@ -37,7 +37,7 @@ Following metrics for monitoring Hedged Reads are emitted by Hadoop at ```http:/
 * **hedgedReadOps** : The number of hedged reads that have occurred
 * **hedgeReadOpsWin** : The number of times the hedged read returned faster than the original read
 
-**OddEye** agent will automatically detect if Hedged Reads are enabled and working and these metrics will appear.: 
+**PuyPuy** agent will automatically detect if Hedged Reads are enabled and working and these metrics will appear.: 
 
 * **hregion_node_hedgedreads**
 * **hregion_node_hedgedreadwins**

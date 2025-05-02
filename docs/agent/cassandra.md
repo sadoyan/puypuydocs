@@ -97,7 +97,7 @@ jolokia: http://127.0.0.1:7777/jolokia/read
 #### **Restart**
 
 ```commandline
-${OE_AGENT_HOME}/oddeye.sh restart
+${OE_AGENT_HOME}/puypuy.sh restart
 ```
 
 #### **Provides**

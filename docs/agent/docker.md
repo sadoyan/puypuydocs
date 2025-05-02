@@ -3,7 +3,7 @@
 Container allows developers to package up an application with all needed parts, 
 such as libraries and other dependencies, and ship it all out as one package.
 **Docker** is the pioneer and the most popular solution for creating, sharing and using containers.  
-**OddEye** works with native Dockers HTTP API to get metrics from running containers. 
+**PuyPuy** works with native Dockers HTTP API to get metrics from running containers. 
 
 #### **Install**
 
@@ -16,7 +16,7 @@ ln -s ../checks_available/check_docker_stats.py ./
 
 **Server**
 
-To collect Docker metrics about all your containers, you will run one OddEye Agent on every host. 
+To collect Docker metrics about all your containers, you will run one PuyPuy Agent on every host. 
 
 In order to start collecting metrics from Docker you should first configure Docker server to expose metrics via HTTP socket.
 In general its just adding `-H tcp://{SERVER_IP}:{PORT}` parameter to dockerd at startup.  

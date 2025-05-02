@@ -11,7 +11,7 @@ Configuration of **FoundationDB** check is located at `bigdata.ini`.
 You only need to set right path for ```fdbcli``` binary, by default for packaged installation it is ```/usr/bin/fdbcli``` .
 If you have compilled **FoundationDB** from source or used oher mechanism to install it, just locate ```fdbcli``` change default path in config file. 
 
-Restart Agent. `./oddeye.sh restart`
+Restart Agent. `./puypuy.sh restart`
 `check_foundationdb` module should run without making changes in configuration, but according to your specific needs, you can edit `conf/bindata.ini` and make changes in section **FoundationDB**
 
 ```ini
