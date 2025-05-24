@@ -930,11 +930,11 @@ ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_ng
 
 <h5 id="configure"><strong>Configure</strong></h5>
 <p>Status page os Nginx is disabled by default. You can enable it by adding following to NginX config file and restarting daemon. Code below will do the trick: </p>
-<div class="codehilite"><pre><span></span><code><span class="na">location /nginx_status {</span>
-<span class="w">   </span><span class="na">stub_status on;</span>
-<span class="w">   </span><span class="na">allow 127.0.0.1;</span>
-<span class="w">   </span><span class="na">deny all;</span>
-<span class="na">}</span>
+<div class="codehilite"><pre><span></span><code>location /nginx_status {
+   stub_status on;
+   allow 127.0.0.1;
+   deny all;
+}
 </code></pre></div>
 
 <p>We recommend to use separate Server directive status for dedicated port. </p>
