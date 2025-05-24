@@ -1114,7 +1114,7 @@
 <p><img alt="Nomad" src="../../images/nomad.png" /></p>
 <p>Nomad exposes metrics via HTTP/Json out of the box, so all you need is just to symlink <code>checks_available/check_hashicorp_nomad_py</code> to <code>checks_enabled</code> and restart Agent.</p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hashicorp_nomad_py<span class="w"> </span>./
 </code></pre></div>
 
@@ -1129,7 +1129,7 @@ If you do not want to monitor these metrics set <code>jobstats: False</code> st 
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1257,7 +1257,7 @@ If you do not want to monitor these metrics set <code>jobstats: False</code> st 
 <p><img alt="Consul" src="../../images/consul.png" /></p>
 <p>Consul exposes metrics via HTTP/Json out of the box, so all you need is just to symlink <code>checks_available/check_hashicorp_consul_py</code> to <code>checks_enabled</code> and restart Agent.</p>
 <h5 id="install_1"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hashicorp_consul_py<span class="w"> </span>./
 </code></pre></div>
 
@@ -1272,7 +1272,7 @@ Consul also exposes detailed metrics, with rates and counters, so if youwant to 
 </code></pre></div>
 
 <h5 id="restart_1"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides_1"><strong>Provides</strong></h5>
@@ -1485,7 +1485,7 @@ Consul also exposes detailed metrics, with rates and counters, so if youwant to 
 <p><img alt="Vault" src="../../images/vault.png" /></p>
 <p>Vault exposes metrics via HTTP/Json out of the box, so all you need is just to symlink <code>checks_available/check_hashicorp_consul_py</code> to <code>checks_enabled</code> and restart Agent.</p>
 <h5 id="install_2"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_hashicorp_vault_py<span class="w"> </span>./
 </code></pre></div>
 
@@ -1502,7 +1502,7 @@ Vault also exposes detailed metrics, with rates and counters, so if youwant to s
 </code></pre></div>
 
 <h5 id="restart_2"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides_2"><strong>Provides</strong></h5>

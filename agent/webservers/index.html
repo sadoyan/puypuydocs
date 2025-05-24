@@ -934,7 +934,7 @@ Config file for Webservers is {AGENT_HOME}/conf/webservers.ini. and it should lo
 Do not delete user/pass/auth sections, even if you do not use it. 
 Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_enabled/check_apache.py</code>. </p>
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -994,7 +994,7 @@ Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_e
 </table>
 <h3 id="nginx"><strong>NginX</strong></h3>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_nginx.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -1031,7 +1031,7 @@ After enabling NginX Status, You should add status page parameters to <code>{AGE
 
 <p>Change auth enabled from False to True, if you have anabled authentication on  NginX status URL. Please do not delete user/pass/auth, just put some placeholders, if authentication is disabled. </p>
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1091,7 +1091,7 @@ After enabling NginX Status, You should add status page parameters to <code>{AGE
 </table>
 <h3 id="php-fpm"><strong>PHP-FPM</strong></h3>
 <p><strong>Install</strong> </p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_phpfpm.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -1138,7 +1138,7 @@ After PHP-FPM is configured you can copy or symlink <code>checks_available/check
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1198,7 +1198,7 @@ After PHP-FPM is configured you can copy or symlink <code>checks_available/check
 </table>
 <h3 id="tomcat"><strong>Tomcat</strong></h3>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_tomcat.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -1219,7 +1219,7 @@ To do this enter following to tomcat-users.xml and restart Tomcat . </p>
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1321,7 +1321,7 @@ To do this enter following to tomcat-users.xml and restart Tomcat . </p>
 </table>
 <h3 id="jetty"><strong>Jetty</strong></h3>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_jetty.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -1495,7 +1495,7 @@ Change IP:PORT of Jetty server at section [Jetty] of <code>conf/webservers.ini</
 </table>
 <h3 id="lighttpd"><strong>Lighttpd</strong></h3>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_lighttpd.py<span class="w"> </span>./
 </code></pre></div>
 

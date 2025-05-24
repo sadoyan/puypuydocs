@@ -894,12 +894,12 @@
          
 <h2 id="couchbase"><strong>CouchBase</strong></h2>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_couchbase_<span class="o">{</span>VERSION<span class="o">}</span>.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
-<p>Edit <code>${OE_AGENT_HOME}/conf/bigdata.ini</code> and change auth parameters and ip address of Couchbase servers to values matching your actual node running node parameters. 
+<p>Edit <code>${PUYPUY_HOME}/conf/bigdata.ini</code> and change auth parameters and ip address of Couchbase servers to values matching your actual node running node parameters. 
 Also its required to write comma separated list of buckets which you want to monitor, so please make sure to change <code>buckets:</code> to names of buckets which  you want to monitor.  </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[CouchBase]</span>
 <span class="na">stats</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8091/pools/default/buckets</span>
@@ -914,7 +914,7 @@ Also its required to write comma separated list of buckets which you want to mon
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>
@@ -1010,12 +1010,12 @@ Also its required to write comma separated list of buckets which you want to mon
 </table>
 <h2 id="couchdb"><strong>CouchDB</strong></h2>
 <p><strong>Install</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_couchdb_<span class="o">{</span>VERSION<span class="o">}</span>.py<span class="w"> </span>./
 </code></pre></div>
 
 <p><strong>Configure</strong></p>
-<p>Edit <code>${OE_AGENT_HOME}/conf/bigdata.ini</code> and change auth parameters and ip address of CouchDB servers to values matching your actual node running node parameters. 
+<p>Edit <code>${PUYPUY_HOME}/conf/bigdata.ini</code> and change auth parameters and ip address of CouchDB servers to values matching your actual node running node parameters. 
 For CouchDB 2x check you can set  parameter <code>detailed</code> to <code>True/False</code>. 
 When detailed is set to True agent will send metrics about HTTP status and response codes and, which will significantly increase number of metrics.     </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[CouchDB]</span>
@@ -1030,7 +1030,7 @@ When detailed is set to True agent will send metrics about HTTP status and respo
 </code></pre></div>
 
 <p><strong>Restart</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p><strong>Provides</strong></p>

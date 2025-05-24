@@ -950,7 +950,7 @@
 <h3 id="marathon"><strong>Marathon</strong></h3>
 <p>Marathon master exposes metrics via HTTP/Json out of the box, so all you need is just to symlink <code>checks_available/check_marathon.py</code> to <code>checks_enabled</code> and restart Agent.</p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_marathon.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -962,7 +962,7 @@ You need to set full URL of statistics interface of marathon which is : http://{
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>

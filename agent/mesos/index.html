@@ -1032,7 +1032,7 @@
 <h3 id="mesos-master"><strong>Mesos Master</strong></h3>
 <p>Mesos master exposes metrics via HTTP/Json out of the box, so all you need is just to symlink <code>checks_available/check_mesos_master.py</code> to <code>checks_enabled</code> and restart Agent.</p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_mesos_master.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -1045,7 +1045,7 @@ edit <code>conf/bigdata.ini</code> and make your changes at Mesos-Master section
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
@@ -1249,7 +1249,7 @@ edit <code>conf/bigdata.ini</code> and make your changes at Mesos-Master section
 </table>
 <h3 id="mesos-slave"><strong>Mesos Slave</strong></h3>
 <h5 id="install_1"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_mesos_slave.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -1262,7 +1262,7 @@ edit <code>conf/bigdata.ini</code> and make your changes at Mesos-Master section
 </code></pre></div>
 
 <h5 id="restart_1"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides_1"><strong>Provides</strong></h5>

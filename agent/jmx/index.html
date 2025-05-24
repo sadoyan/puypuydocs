@@ -961,7 +961,7 @@ To make this happen Agent must be able to execute java as user tomcat without pa
 
 <p>Change <code>puypuy</code> , <code>tomcat</code> and  <code>/opt/java/bin/java</code> to actual values for your system. </p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_jmx.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -990,7 +990,7 @@ Typically main class name should be in second column of output. Edit <code>conf/
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <p>If configuration is correct, after restarting Agent daemon, you would see that your existing Java program magically started to listen <code>TCP:7777</code> and exposes JMX via HTTP/Json.

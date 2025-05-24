@@ -927,7 +927,7 @@ Yet it also provides significant advantages over these other databases. Flip the
 Scylla ships with native metrics exported, which runs by default 9180 port. So there is no need for special configuration of Scylla. </p>
 <p>Scylla config of PuyPuy agent is in <code>conf/bigdata.ini</code> file. If you run recommended Scylla installation, no need for making spacial configs for PuyPuy agent as well. </p>
 <h4 id="install"><strong>Install</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_scylla.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -939,7 +939,7 @@ If you are running Scylla's node_exporter other than default way, change the <co
 </code></pre></div>
 
 <h4 id="restart"><strong>Restart</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="cp">${</span><span class="n">OE_AGENT_HOME</span><span class="cp">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="cp">${</span><span class="n">PUYPUY_HOME</span><span class="cp">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h4 id="provides"><strong>Provides</strong></h4>

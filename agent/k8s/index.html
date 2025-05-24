@@ -965,7 +965,7 @@ systemctl<span class="w">  </span>start<span class="w">  </span>kube-state-metri
 
 <p>Now <strong>Kube State Metrics server</strong> is controlled by systemd and will start in background during OS boot. </p>
 <p>Enable <strong>PuyPuy</strong> agent check :</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_kube_state_metrics.py<span class="w"> </span>./
 </code></pre></div>
 
@@ -980,7 +980,7 @@ You can enable/disable per pod statistics collection by setting <code>podinfo : 
 </code></pre></div>
 
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>

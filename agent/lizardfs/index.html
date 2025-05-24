@@ -925,12 +925,12 @@
 PuyPuy Agent uses LizardFS's built in tools to expose statistics and send to PuyPuy servers. 
 You just need to set hostname of target server and chose detalization of metrics.   </p>
 <h5 id="install"><strong>Install</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/checks_enabled
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/checks_enabled
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_lizardfs.py<span class="w"> </span>./
 </code></pre></div>
 
 <h5 id="configure"><strong>Configure</strong></h5>
-<p>Configuration parameters of LizardFS check are in <code>${OE_AGENT_HOME}/bonf/bigdata.ini</code> file  </p>
+<p>Configuration parameters of LizardFS check are in <code>${PUYPUY_HOME}/bonf/bigdata.ini</code> file  </p>
 <div class="codehilite"><pre><span></span><code><span class="k">[LizardFS]</span>
 <span class="na">host</span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1</span>
 <span class="na">port</span><span class="o">:</span><span class="w"> </span><span class="s">9421</span>
@@ -942,7 +942,7 @@ ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_li
 so for most of installtions these parameters can stay defaults. </p>
 <p>Other parameters enables and disabled detailed statistics of chunk servers, and disks|mountpoits </p>
 <h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">OE_AGENT_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
 </code></pre></div>
 
 <h5 id="provides"><strong>Provides</strong></h5>
