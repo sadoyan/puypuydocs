@@ -1,34 +1,38 @@
-![Hadoop](../images/hadoop.png)
+# Hadoop Monitoring with Puypuy
 
-Agent uses Hadoop's own JMX to Json interface, to get statistics from HDFS NameNode and DataNodes.
-All Hadoop Ecosystem checks use the same config file:
- `hadoop.ini`. 
+Puypuy uses Hadoop's native JMX-to-JSON HTTP interface to gather performance metrics from both the **NameNode** and **DataNodes** in an HDFS cluster.
 
-**HDFS NameNode**
----------
+All Hadoop-related checks share a single configuration file: `hadoop.ini`.
+
+![Hadoop Overview](../images/hadoop.png)
+
+---
+
+## 🟦 HDFS NameNode
+
 ![NameNode](../images/namenode.png)
 
-**Install**
+### 🔧 Installation
 
 ```bash
 cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_hadoop_namenode.py ./
+
 ```
 
+In production environments, the NameNode typically listens on a non-loopback interface. Ensure you use the correct external IP address of the NameNode:
 
-In real life cluster installation HDFS NameNode doesn't use loopback interface, so make sure that you put right IP of NameNode in config file.  
-
-**Configure**
+***⚙️ Configuration***
 
 ```ini
 [Hadoop-NameNode]
-jmx: http://${NAMENODE_IP}:50070/jmx
+jmx = http://${NAMENODE_IP}:50070/jmx
 ```
-**Restart**
+**🔄 Restart Agent**
 ```bash
 ${PUYPUY_HOME}/puypuy.sh restart
 ```
-**Provides**
+**📊 Metrics Provided**
 
 | Name  | Description | Type | Unit|
 | ------------- | ------------- |------------- |------------- |
@@ -75,19 +79,19 @@ ${PUYPUY_HOME}/puypuy.sh restart
 |namenode_underreplicatedblocks|HDFS under replicated blocks count|gauge|None|
 
 
-**HDFS DataNode**
+**🟩 HDFS DataNode**
 ---------
 
-DataNode configuration would be the very appropriate for the most installations and does not require any changes. 
+Most DataNode installations bind to 0.0.0.0:50075, so no custom configuration is typically required.
 
-**Install**
+**🔧 Installation**
 
 ```bash
 cd ${PUYPUY_HOME}/checks_enabled
 ln -s ../checks_available/check_hadoop_datanode.py ./
 ```
 
-**Configure**
+**⚙️ Configuration**
 
 Usually HDFS DataNode binds on 0.0.0.0:50075, so no extra configuration is needed.
  
@@ -98,7 +102,7 @@ If you have specific  case, please make sure to change 127.0.0.1 to IP address m
 jmx: http://127.0.0.1:50075/jmx
 ```
 
-**Restart**
+**🔄 Restart Agent**
 
 ```bash
 ${PUYPUY_HOME}/puypuy.sh restart
@@ -127,3 +131,12 @@ ${PUYPUY_HOME}/puypuy.sh restart
 |datanode_totalreadtime|Read operations time  on current DataNode|rate|Milliseconds|
 |datanode_totalwritetime|Write operations time  on current DataNode|rate|Milliseconds|
 
+***💡 Best Practices***
+
+* 🔐 Security: Always restrict ՝/jmx՝ to internal networks or use firewalls.
+* 📈 Dashboards: Visualize metrics in Grafana or similar for better observability.
+* 🚨 Troubleshooting: Watch for high GC times, under-replication, or dead DataNodes as early warnings of cluster instability.
+
+***📈 Example of Grafana Dashboard***
+
+![Grafana](../images/hadoop-example.png)
