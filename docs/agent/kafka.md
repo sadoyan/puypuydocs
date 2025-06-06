@@ -117,4 +117,6 @@ After several seconds you can start building your Kafka dashboards. Metrics will
 |kafka_produce|Prodeucers per second on current node|rate|OPS|
 |kafka_totalproducerequestspersec|Kafka total produced requess per second |rate|OPS|
 
+***📈 Example Grafana Dashboard***
 
+![Grafana](../images/kafka-example.png)

@@ -137,6 +137,6 @@ ${PUYPUY_HOME}/puypuy.sh restart
 * 📈 Dashboards: Visualize metrics in Grafana or similar for better observability.
 * 🚨 Troubleshooting: Watch for high GC times, under-replication, or dead DataNodes as early warnings of cluster instability.
 
-***📈 Example of Grafana Dashboard***
+***📈 Example Grafana Dashboard***
 
 ![Grafana](../images/hadoop-example.png)

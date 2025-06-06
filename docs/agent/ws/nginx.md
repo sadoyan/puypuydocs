@@ -11,7 +11,7 @@ ln -s ../checks_available/check_nginx.py ./
 
 Status page os Nginx is disabled by default. You can enable it by adding following to NginX config file and restarting daemon. Code below will do the trick: 
 
-```ini
+```
 location /nginx_status {
    stub_status on;
    allow 127.0.0.1;
@@ -61,3 +61,7 @@ ${PUYPUY_HOME}/puypuy.sh restart
 |nginx_requests|Total requests handled by per second |rate|OPS|
 |nginx_waiting|Nginx Waiting for client |counter|None|
 |nginx_writing|Nginx writing requests |counter|None|
+
+***📈 Example Grafana Dashboard***
+
+![Grafana](../../images/nginx-example.png)

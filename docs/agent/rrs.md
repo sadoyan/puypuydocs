@@ -45,6 +45,9 @@ ${PUYPUY_HOME}/puypuy.sh restart
 |redis_used_memory_peak|Redis Memory peak usage |gauge|Bytes|
 |redis_used_memory_rss|Redis RSS used memory |gauge|Bytes|
 
+***📈 Example Grafana Dashboard***
+
+![Grafana](../images/redis-example.png)
 
 ### **Memcached**
 
