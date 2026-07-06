@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://github.com/sadoyan/puypuy/agent/ws/apache/">
+        <link rel="canonical" href="https://github.com/sadoyan/puypuy/agent/postgres/">
       
       
       
@@ -38,18 +38,18 @@
     
     
       
-        <title>Apache - Cloud scale intelligent monitoring & analytics platform</title>
+        <title>PostgreSQL - Cloud scale intelligent monitoring & analytics platform</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.4031d38b.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.4031d38b.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.3e3d1dff.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.3e3d1dff.css">
       
       
     
     
-      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -58,12 +58,12 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="../../../stylesheets/bootstrap.css">
+      <link rel="stylesheet" href="../../stylesheets/bootstrap.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     
       
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#install" tabindex="1" class="md-skip">
+      <a href="#install-postresql-python-client" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -97,7 +97,7 @@
         <div class="md-flex">
             <div class="md-flex__cell md-flex__cell--shrink">
                 <a href="https://sadoyan.github.io/puypuydocs/" title="PuyPuy" class="md-header-nav__button md-logo">         
-                    <img src="../../../images/logomin.png" width="65">            
+                    <img src="../../images/logomin.png" width="65">            
                 </a>        
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -142,7 +142,7 @@
                        Cloud scale intelligent monitoring & analytics platform
                     </span>
                     <span class="md-header-nav__topic">
-                        Apache
+                        PostgreSQL
                     </span>                   
                 </div>
             </div>
@@ -194,7 +194,7 @@
 <!--  <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://github.com/sadoyan/puypuy/" title="Cloud scale intelligent monitoring & analytics platform" class="md-nav__button md-logo">
       
-        <img src="../../../images/logomin.png" width="48" height="48">
+        <img src="../../images/logomin.png" width="48" height="48">
       
     </a>
     Cloud scale intelligent monitoring & analytics platform
@@ -228,7 +228,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../system/" title="System Checks" class="md-nav__link">
+    <a href="../system/" title="System Checks" class="md-nav__link">
       System Checks
     </a>
   </li>
@@ -240,7 +240,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../nvidia/" title="Nvidia GPU" class="md-nav__link">
+    <a href="../nvidia/" title="Nvidia GPU" class="md-nav__link">
       Nvidia GPU
     </a>
   </li>
@@ -252,7 +252,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../docker/" title="Docker Containers" class="md-nav__link">
+    <a href="../docker/" title="Docker Containers" class="md-nav__link">
       Docker Containers
     </a>
   </li>
@@ -262,12 +262,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       WEB Servers
@@ -283,66 +281,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Apache
-      </label>
-    
-    <a href="./" title="Apache" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../ws/apache/" title="Apache" class="md-nav__link">
       Apache
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    Install
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure" class="md-nav__link">
-    Configure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restart" class="md-nav__link">
-    Restart
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#provides" class="md-nav__link">
-    Provides
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -352,7 +295,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../nginx/" title="NginX" class="md-nav__link">
+    <a href="../ws/nginx/" title="NginX" class="md-nav__link">
       NginX
     </a>
   </li>
@@ -364,7 +307,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../php/" title="PHP-FPM" class="md-nav__link">
+    <a href="../ws/php/" title="PHP-FPM" class="md-nav__link">
       PHP-FPM
     </a>
   </li>
@@ -376,7 +319,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tomcat/" title="Tomcat" class="md-nav__link">
+    <a href="../ws/tomcat/" title="Tomcat" class="md-nav__link">
       Tomcat
     </a>
   </li>
@@ -388,7 +331,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../jetty/" title="Jetty" class="md-nav__link">
+    <a href="../ws/jetty/" title="Jetty" class="md-nav__link">
       Jetty
     </a>
   </li>
@@ -400,7 +343,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lighty/" title="Lighttpd" class="md-nav__link">
+    <a href="../ws/lighty/" title="Lighttpd" class="md-nav__link">
       Lighttpd
     </a>
   </li>
@@ -412,7 +355,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../rest/" title="HTTP API" class="md-nav__link">
+    <a href="../ws/rest/" title="HTTP API" class="md-nav__link">
       HTTP API
     </a>
   </li>
@@ -448,7 +391,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lb/haproxy/" title="HAProxy" class="md-nav__link">
+    <a href="../lb/haproxy/" title="HAProxy" class="md-nav__link">
       HAProxy
     </a>
   </li>
@@ -460,7 +403,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lb/envoy/" title="Envoy" class="md-nav__link">
+    <a href="../lb/envoy/" title="Envoy" class="md-nav__link">
       Envoy
     </a>
   </li>
@@ -472,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lb/traefik/" title="Traefik" class="md-nav__link">
+    <a href="../lb/traefik/" title="Traefik" class="md-nav__link">
       Traefik
     </a>
   </li>
@@ -489,7 +432,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../varnish/" title="Varnish" class="md-nav__link">
+    <a href="../varnish/" title="Varnish" class="md-nav__link">
       Varnish
     </a>
   </li>
@@ -501,7 +444,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cassandra/" title="Cassandra" class="md-nav__link">
+    <a href="../cassandra/" title="Cassandra" class="md-nav__link">
       Cassandra
     </a>
   </li>
@@ -513,7 +456,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ceph/" title="Ceph" class="md-nav__link">
+    <a href="../ceph/" title="Ceph" class="md-nav__link">
       Ceph
     </a>
   </li>
@@ -525,7 +468,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lizardfs/" title="LizardFS" class="md-nav__link">
+    <a href="../lizardfs/" title="LizardFS" class="md-nav__link">
       LizardFS
     </a>
   </li>
@@ -537,7 +480,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../couch/" title="CouchBase, CouchDB" class="md-nav__link">
+    <a href="../couch/" title="CouchBase, CouchDB" class="md-nav__link">
       CouchBase, CouchDB
     </a>
   </li>
@@ -549,7 +492,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elastic/" title="ElasticSearch" class="md-nav__link">
+    <a href="../elastic/" title="ElasticSearch" class="md-nav__link">
       ElasticSearch
     </a>
   </li>
@@ -561,7 +504,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../solr/" title="Solr" class="md-nav__link">
+    <a href="../solr/" title="Solr" class="md-nav__link">
       Solr
     </a>
   </li>
@@ -573,7 +516,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../hadoop/" title="Hadoop" class="md-nav__link">
+    <a href="../hadoop/" title="Hadoop" class="md-nav__link">
       Hadoop
     </a>
   </li>
@@ -585,7 +528,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../hbase/" title="HBase" class="md-nav__link">
+    <a href="../hbase/" title="HBase" class="md-nav__link">
       HBase
     </a>
   </li>
@@ -597,7 +540,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../jmx/" title="Java JMX" class="md-nav__link">
+    <a href="../jmx/" title="Java JMX" class="md-nav__link">
       Java JMX
     </a>
   </li>
@@ -609,7 +552,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../jolokia/" title="Jolokia" class="md-nav__link">
+    <a href="../jolokia/" title="Jolokia" class="md-nav__link">
       Jolokia
     </a>
   </li>
@@ -621,7 +564,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kafka/" title="Kafka" class="md-nav__link">
+    <a href="../kafka/" title="Kafka" class="md-nav__link">
       Kafka
     </a>
   </li>
@@ -633,7 +576,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../hashicorp/" title="Hashicorp" class="md-nav__link">
+    <a href="../hashicorp/" title="Hashicorp" class="md-nav__link">
       Hashicorp
     </a>
   </li>
@@ -645,7 +588,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../etcd/" title="Etcd" class="md-nav__link">
+    <a href="../etcd/" title="Etcd" class="md-nav__link">
       Etcd
     </a>
   </li>
@@ -657,7 +600,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../coredns/" title="Coredns" class="md-nav__link">
+    <a href="../coredns/" title="Coredns" class="md-nav__link">
       Coredns
     </a>
   </li>
@@ -669,7 +612,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../mesos/" title="Mesos" class="md-nav__link">
+    <a href="../mesos/" title="Mesos" class="md-nav__link">
       Mesos
     </a>
   </li>
@@ -681,7 +624,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../marathon/" title="Marathon" class="md-nav__link">
+    <a href="../marathon/" title="Marathon" class="md-nav__link">
       Marathon
     </a>
   </li>
@@ -693,7 +636,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../mysql/" title="MySQL" class="md-nav__link">
+    <a href="../mysql/" title="MySQL" class="md-nav__link">
       MySQL
     </a>
   </li>
@@ -703,11 +646,66 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../postgres/" title="PostgreSQL" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        PostgreSQL
+      </label>
+    
+    <a href="./" title="PostgreSQL" class="md-nav__link md-nav__link--active">
       PostgreSQL
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-postresql-python-client" class="md-nav__link">
+    Install PostreSQL Python client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-postresql-user" class="md-nav__link">
+    Create PostreSQL User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-agent" class="md-nav__link">
+    Configure Agent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provides" class="md-nav__link">
+    Provides
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -717,7 +715,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rabbitmq/" title="RabbitMQ" class="md-nav__link">
+    <a href="../rabbitmq/" title="RabbitMQ" class="md-nav__link">
       RabbitMQ
     </a>
   </li>
@@ -729,7 +727,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../activemq/" title="ActiveMQ" class="md-nav__link">
+    <a href="../activemq/" title="ActiveMQ" class="md-nav__link">
       ActiveMQ
     </a>
   </li>
@@ -741,7 +739,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rrs/" title="Redis, Memcached" class="md-nav__link">
+    <a href="../rrs/" title="Redis, Memcached" class="md-nav__link">
       Redis, Memcached
     </a>
   </li>
@@ -753,7 +751,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../riak/" title="Riak" class="md-nav__link">
+    <a href="../riak/" title="Riak" class="md-nav__link">
       Riak
     </a>
   </li>
@@ -765,7 +763,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../fdb/" title="FoundationDB" class="md-nav__link">
+    <a href="../fdb/" title="FoundationDB" class="md-nav__link">
       FoundationDB
     </a>
   </li>
@@ -777,7 +775,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../storm/" title="Apache Storm" class="md-nav__link">
+    <a href="../storm/" title="Apache Storm" class="md-nav__link">
       Apache Storm
     </a>
   </li>
@@ -789,7 +787,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../spark/" title="Apache Spark" class="md-nav__link">
+    <a href="../spark/" title="Apache Spark" class="md-nav__link">
       Apache Spark
     </a>
   </li>
@@ -801,7 +799,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../zookeeper/" title="Zookeeper" class="md-nav__link">
+    <a href="../zookeeper/" title="Zookeeper" class="md-nav__link">
       Zookeeper
     </a>
   </li>
@@ -813,7 +811,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../snmp/" title="SNMP" class="md-nav__link">
+    <a href="../snmp/" title="SNMP" class="md-nav__link">
       SNMP
     </a>
   </li>
@@ -825,7 +823,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../k8s/" title="Kubernetes" class="md-nav__link">
+    <a href="../k8s/" title="Kubernetes" class="md-nav__link">
       Kubernetes
     </a>
   </li>
@@ -837,7 +835,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../scylla/" title="Scylla" class="md-nav__link">
+    <a href="../scylla/" title="Scylla" class="md-nav__link">
       Scylla
     </a>
   </li>
@@ -849,7 +847,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../nagios/" title="Nagios/Icinga" class="md-nav__link">
+    <a href="../nagios/" title="Nagios/Icinga" class="md-nav__link">
       Nagios/Icinga
     </a>
   </li>
@@ -861,7 +859,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../custom/" title="Custom Checks" class="md-nav__link">
+    <a href="../custom/" title="Custom Checks" class="md-nav__link">
       Custom Checks
     </a>
   </li>
@@ -886,22 +884,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    Install
+  <a href="#install-postresql-python-client" class="md-nav__link">
+    Install PostreSQL Python client
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure" class="md-nav__link">
-    Configure
+  <a href="#create-postresql-user" class="md-nav__link">
+    Create PostreSQL User
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#restart" class="md-nav__link">
-    Restart
+  <a href="#configure-agent" class="md-nav__link">
+    Configure Agent
   </a>
   
 </li>
@@ -929,63 +927,55 @@
             <article class="md-content__inner md-typeset">
               
 <!--                
-                  <a href="https://github.com/sadoyan/puypuy/edit/master/docs/agent/ws/apache.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/sadoyan/puypuy/edit/master/docs/agent/postgres.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 -->
     
      <h1></h1>
          
-<p><img alt="Apache" src="../../../images/httpd.png" /></p>
-<h5 id="install"><strong>Install</strong></h5>
-<p>In order to get statiscics from Apache2 web server, you should enable status module and define status URL. On Debian like system, you can do it by <code>a2enmod  status</code> or adding following to Apache main config file: </p>
-<div class="codehilite"><pre><span></span><code>LoadModule status_module /path/to/apache/mod_status.so
+<p><strong>To monitor PostreSQL server you need :</strong></p>
+<ol>
+<li>Install psycopg2 module.</li>
+<li>Create PostreSQL user with privileges <code>pg_monitor</code>.</li>
+<li>Configure Agent with User/Pass/Host, for connecting to Postgres server.</li>
+</ol>
+<h3 id="install-postresql-python-client"><strong>Install PostreSQL Python client</strong></h3>
+<p><strong>For Debian or Ubuntu</strong></p>
+<div class="codehilite"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>python3-psycopg2
 </code></pre></div>
 
-<p>After enabling status module you should configure status URL.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span><span class="w"> </span><span class="err">/server-status</span><span class="nt">&gt;</span>
-<span class="w">   </span>SetHandler<span class="w"> </span>server-status
-<span class="nt">&lt;/Location&gt;</span>
+<p><strong>For RHEL / Rocky / AlmaLinux</strong></p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>python3-psycopg2
 </code></pre></div>
 
-<p>Its STRONGLY recommended to limit access to this page ether by limiting by source IP, or enabling authentication on this page : </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span><span class="w"> </span><span class="err">/server-status</span><span class="nt">&gt;</span>
-<span class="w">   </span>SetHandler<span class="w"> </span>server-status
-<span class="w">   </span>Order<span class="w"> </span>deny,allow
-<span class="w">   </span>Deny<span class="w"> </span>from<span class="w"> </span>all
-<span class="w">   </span>Allow<span class="w"> </span>from<span class="w"> </span>127.0.0.1<span class="w"> </span>::1
-<span class="w">   </span>Allow<span class="w"> </span>from<span class="w"> </span>192.0.1.0/24
-<span class="nt">&lt;/Location&gt;</span>
+<p>PostreSQL drivers can be installed via PIP as well.</p>
+<div class="codehilite"><pre><span></span><code>pip3<span class="w">  </span>install<span class="w"> </span>psycopg2
 </code></pre></div>
 
-<p>This will allow access to status page only from Localhost and 192.168.1.0/24 subnet. </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;Location</span><span class="w"> </span><span class="err">/server-status</span><span class="nt">&gt;</span>
-<span class="w">   </span>SetHandler<span class="w"> </span>server-status
-<span class="w">   </span>AuthUserFile<span class="w"> </span>/etc/apache2/USERLIST
-<span class="w">   </span>AuthName<span class="w"> </span>&quot;restricted<span class="w"> </span>stuff&quot;
-<span class="w">   </span>AuthType<span class="w"> </span>Basic
-<span class="w">   </span>require<span class="w"> </span>valid-user
-<span class="nt">&lt;/Location&gt;</span>
+<h3 id="create-postresql-user"><strong>Create PostreSQL User</strong></h3>
+<p>Login to your PostreSQL server as superuser</p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql
 </code></pre></div>
 
-<p>This will require authentication for status page. 
-In real life cluster installation HDFS NameNode doesn't use loopback interface, so make sure that you put right IP of NameNode in config file.  </p>
-<h5 id="configure"><strong>Configure</strong></h5>
-<p>At Agent side you should make config changes in order to tell Agent how to get statistics from Apache server. 
-Config file for Webservers is {AGENT_HOME}/conf/webservers.ini. and it should look like this </p>
-<div class="codehilite"><pre><span></span><code><span class="k">[Apache]</span>
-<span class="na">url</span><span class="o">:</span><span class="w"> </span><span class="s">http://127.0.0.1:8080/server-status?auto</span>
-<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">user</span>
-<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">password</span>
-<span class="na">auth</span><span class="o">:</span><span class="w"> </span><span class="s">True</span>
+<p>and execute following statement :</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span>
+<span class="k">USER</span><span class="w"> </span><span class="n">monitor</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">&#39;your_secure_password&#39;</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">pg_monitor</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">monitor</span><span class="p">;</span>
 </code></pre></div>
 
-<p>If you have not configured Apache to require login for status page just set <code>auth: True</code> and write something as username and password. 
-Do not delete user/pass/auth sections, even if you do not use it. 
-Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_enabled/check_apache.py</code>. </p>
-<h5 id="restart"><strong>Restart</strong></h5>
-<div class="codehilite"><pre><span></span><code><span class="si">${</span><span class="nv">PUYPUY_HOME</span><span class="si">}</span>/puypuy.sh<span class="w"> </span>restart
+<h3 id="configure-agent"><strong>Configure Agent</strong></h3>
+<p>Copy or symlink <code>checks_available/check_postgres.py</code> to <code>checks_enabled</code></p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">AGENT_HOME</span><span class="p">/checks_enabled</span><span class="si">}</span>
+ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_postgres.py<span class="w"> </span>./<span class="w"> </span>
 </code></pre></div>
 
-<h5 id="provides"><strong>Provides</strong></h5>
+<p>Edit conf<code>conf/sql_cache.ini</code> and put right parameters at <strong>PostreSQL</strong> section:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">[PostreSQL]</span>
+<span class="na">host</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1</span>
+<span class="na">user</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">monitor</span>
+<span class="na">pass</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">your_secure_password</span>
+</code></pre></div>
+
+<h3 id="provides"><strong>Provides</strong></h3>
 <table>
 <thead>
 <tr>
@@ -997,46 +987,118 @@ Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_e
 </thead>
 <tbody>
 <tr>
-<td>apache_busyworkers</td>
-<td>Worker processes that servers client requests</td>
-<td>gauge</td>
+<td>psql_xact_commit</td>
+<td>Committed PostgreSQL transactions</td>
+<td>rate</td>
+<td>TPS</td>
+</tr>
+<tr>
+<td>psql_xact_rollback</td>
+<td>Rolled back PostgreSQL transactions</td>
+<td>rate</td>
+<td>TPS</td>
+</tr>
+<tr>
+<td>psql_rollback_ratio</td>
+<td>Ratio of rolled back transactions to total transactions</td>
+<td>current</td>
+<td>Ratio</td>
+</tr>
+<tr>
+<td>psql_numbackends</td>
+<td>Number of active client connections to the database</td>
+<td>current</td>
 <td>None</td>
 </tr>
 <tr>
-<td>apache_bytesperreq</td>
-<td>Served bytes per request</td>
-<td>gauge</td>
-<td>Bytes</td>
+<td>psql_blks_read</td>
+<td>Disk blocks read from storage</td>
+<td>rate</td>
+<td>Blocks</td>
 </tr>
 <tr>
-<td>apache_bytespersec</td>
-<td>Served bytes per second</td>
+<td>psql_blks_hit</td>
+<td>Shared buffer cache hits</td>
+<td>rate</td>
+<td>Blocks</td>
+</tr>
+<tr>
+<td>psql_cache_hits_ratio</td>
+<td>PostgreSQL shared buffer cache hit ratio</td>
+<td>current</td>
+<td>Ratio</td>
+</tr>
+<tr>
+<td>psql_tup_returned</td>
+<td>Rows returned by sequential and index scans</td>
+<td>rate</td>
+<td>Rows/s</td>
+</tr>
+<tr>
+<td>psql_tup_fetched</td>
+<td>Rows fetched by index scans</td>
+<td>rate</td>
+<td>Rows/s</td>
+</tr>
+<tr>
+<td>psql_tup_inserted</td>
+<td>Rows inserted</td>
+<td>rate</td>
+<td>Rows/s</td>
+</tr>
+<tr>
+<td>psql_tup_updated</td>
+<td>Rows updated</td>
+<td>rate</td>
+<td>Rows/s</td>
+</tr>
+<tr>
+<td>psql_tup_deleted</td>
+<td>Rows deleted</td>
+<td>rate</td>
+<td>Rows/s</td>
+</tr>
+<tr>
+<td>psql_write_amplification</td>
+<td>Total modified rows (inserted + updated + deleted)</td>
+<td>rate</td>
+<td>Rows/s</td>
+</tr>
+<tr>
+<td>psql_temp_files</td>
+<td>Temporary files created by queries</td>
+<td>rate</td>
+<td>Files/s</td>
+</tr>
+<tr>
+<td>psql_temp_bytes</td>
+<td>Temporary data written to disk</td>
 <td>rate</td>
 <td>Bytes</td>
 </tr>
 <tr>
-<td>apache_idleworkers</td>
-<td>Started workers which do not serve any request</td>
-<td>gauge</td>
-<td>None</td>
-</tr>
-<tr>
-<td>apache_reqpersec</td>
-<td>Requests per second served by HTTTPD server</td>
+<td>psql_deadlocks</td>
+<td>Deadlocks detected</td>
 <td>rate</td>
-<td>OPS</td>
+<td>Events/s</td>
 </tr>
 <tr>
-<td>apache_totalaccesses</td>
-<td>Accesses to server since last restart</td>
-<td>counter</td>
-<td>None</td>
+<td>psql_conflicts</td>
+<td>Query conflicts on standby servers</td>
+<td>rate</td>
+<td>Events/s</td>
 </tr>
 <tr>
-<td>apache_totalkbytes</td>
-<td>Bytes served since last restart</td>
-<td>counter</td>
-<td>kBytes</td>
+<td>psql_checksum_failures</td>
+<td>Data checksum failures detected</td>
+<td>rate</td>
+<td>Events/s</td>
+</tr>
+<tr>
+<td>psql_stats_reset</td>
+<td>Timestamp when PostgreSQL statistics were last reset</td>
+<td>current</td>
+<td>Timestamp</td>
 </tr>
 </tbody>
 </table>
@@ -1060,7 +1122,7 @@ Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_e
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../docker/" title="Docker Containers" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../mysql/" title="MySQL" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1069,19 +1131,19 @@ Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_e
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Docker Containers
+                MySQL
               </span>
             </div>
           </a>
         
         
-          <a href="../nginx/" title="NginX" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../rabbitmq/" title="RabbitMQ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                NginX
+                RabbitMQ
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1096,13 +1158,13 @@ Symlink or copy  <code>checks_available/check_apache.py</code> to <code>checks_e
       
     </div>
     
-      <script src="../../../assets/javascripts/application.718059d6.js"></script>
+      <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.6.1",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.6.1",url:{base:"../.."}})</script>
       
-        <script src="../../../javascripts/jquery.min.js"></script>
+        <script src="../../javascripts/jquery.min.js"></script>
       
-        <script src="../../../javascripts/bootstrap.min.js"></script>
+        <script src="../../javascripts/bootstrap.min.js"></script>
       
     
   </body>

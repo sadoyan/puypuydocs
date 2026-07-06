@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-4.4.3">
     
     
       
@@ -703,6 +703,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../postgres/" title="PostgreSQL" class="md-nav__link">
+      PostgreSQL
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../rabbitmq/" title="RabbitMQ" class="md-nav__link">
       RabbitMQ
     </a>
@@ -921,11 +933,11 @@
      <h1></h1>
          
 <p><img alt="MySQL" src="../../images/mysql.png" /></p>
-<p>To monitor MySQL server you need : </p>
+<p>To monitor MySQL server you need :</p>
 <ol>
 <li>Install MySQLdb or pymysql module.</li>
-<li>Create MySQL user with privileges to run <code>SHOW GLOBAL STATUS</code>. </li>
-<li>Configure Agent with User/Pass/Host, for connecting to Mysql server.  </li>
+<li>Create MySQL user with privileges to run <code>SHOW GLOBAL STATUS</code>.</li>
+<li>Configure Agent with User/Pass/Host, for connecting to Mysql server.</li>
 </ol>
 <h3 id="install-mysql-driver"><strong>Install MySQL Driver</strong></h3>
 <p>If you are running Debian or Ubuntu, use apt-get to install MySQLdb module</p>
@@ -944,17 +956,18 @@ apt-get<span class="w"> </span>install<span class="w"> </span>python3-mysqldb
 <div class="codehilite"><pre><span></span><code>yum<span class="w"> </span>install<span class="w"> </span>MySQL-python
 </code></pre></div>
 
-<p>MySQL drivers can be installed via PIP as well. </p>
+<p>MySQL drivers can be installed via PIP as well.</p>
 <div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>MySQL-python
 or<span class="w"> </span>
 pip<span class="w"> </span>install<span class="w"> </span>pymysql<span class="w"> </span>
 </code></pre></div>
 
-<p>The reason of adding pymysql support, is that on some Linux distributions (Debian 9), MySQLdb is not working properly.  </p>
+<p>The reason of adding pymysql support, is that on some Linux distributions (Debian 9), MySQLdb is not working properly.</p>
 <h3 id="create-mysql-user"><strong>Create MySQL User</strong></h3>
-<p>Login to your MySQL server as root and execute following statement : </p>
+<p>Login to your MySQL server as root and execute following statement :</p>
 <div class="codehilite"><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">USAGE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">puypuy</span><span class="o">@</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;Very-Long-Pa$$w0rd&#39;</span><span class="p">;</span>
-<span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="n">FLUSH</span>
+<span class="k">PRIVILEGES</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 
 <h3 id="configure-agent"><strong>Configure Agent</strong></h3>
@@ -963,11 +976,11 @@ pip<span class="w"> </span>install<span class="w"> </span>pymysql<span class="w"
 ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_mysql.py<span class="w"> </span>./<span class="w"> </span>
 </code></pre></div>
 
-<p>Edit conf<code>conf/sql_cache.ini</code> and put right parameters at <strong>MySQL</strong> section: </p>
+<p>Edit conf<code>conf/sql_cache.ini</code> and put right parameters at <strong>MySQL</strong> section:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[MySQL]</span>
-<span class="na">host</span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1</span>
-<span class="na">user</span><span class="o">:</span><span class="w"> </span><span class="s">puypuy</span>
-<span class="na">pass</span><span class="o">:</span><span class="w"> </span><span class="s">Very-Long-Pa$$w0rd</span>
+<span class="na">host</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1</span>
+<span class="na">user</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">puypuy</span>
+<span class="na">pass</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">Very-Long-Pa$$w0rd</span>
 </code></pre></div>
 
 <h3 id="provides"><strong>Provides</strong></h3>
@@ -1162,13 +1175,13 @@ ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_my
           </a>
         
         
-          <a href="../rabbitmq/" title="RabbitMQ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../postgres/" title="PostgreSQL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                RabbitMQ
+                PostgreSQL
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1185,7 +1198,7 @@ ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_my
     
       <script src="../../assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.4.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.6.1",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/jquery.min.js"></script>
       

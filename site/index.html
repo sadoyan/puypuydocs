@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/assets/images/home_white.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-4.4.3">
     
     
       
@@ -648,6 +648,18 @@
 
 
   <li class="md-nav__item">
+    <a href="agent/postgres/" title="PostgreSQL" class="md-nav__link">
+      PostgreSQL
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="agent/rabbitmq/" title="RabbitMQ" class="md-nav__link">
       RabbitMQ
     </a>
@@ -1052,14 +1064,14 @@ ln -s ../checks_available/check_cpustats.py ./
 </code></pre></div>
 
 <p>Some checks depend on non-standard python modules, like check_mysql.py depends on MySQL-python , so be sure to install all dependent modules before running checks. information about modules that should be installed before using checks are inside module files as comments. </p>
-<div class="codehilite"><pre><span></span><code><span class="nv">head</span><span class="w">  </span><span class="nv">checks</span><span class="o">-</span><span class="nv">available</span><span class="o">/</span><span class="nv">check_mysql</span>.<span class="nv">py</span>
+<div class="codehilite"><pre><span></span><code>head  checks-available/check_mysql.py
 
-<span class="s1">&#39;&#39;</span><span class="err">&#39;</span>
-<span class="err">This check required Python MySQLDB, On Debian like systems do</span>
-<span class="err">apt-get install python3-mysqldb</span>
-<span class="err">or</span>
-<span class="err">pip3 install MySQL-python</span>
-<span class="s1">&#39;&#39;</span><span class="err">&#39;</span>
+&#39;&#39;&#39;
+This check required Python MySQLDB, On Debian like systems do
+apt-get install python3-mysqldb
+or
+pip3 install MySQL-python
+&#39;&#39;&#39;
 </code></pre></div>
 
 <h3 id="create-own-python-module">Create own python module</h3>
@@ -1208,7 +1220,7 @@ All is needed from custom is to system out values in right order, Below is sampl
     
       <script src="assets/javascripts/application.718059d6.js"></script>
       
-      <script>app.initialize({version:"1.4.2",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.6.1",url:{base:"."}})</script>
       
         <script src="javascripts/jquery.min.js"></script>
       

@@ -62,6 +62,7 @@ nav:
   - 'Mesos': 'agent/mesos.md'
   - 'Marathon': 'agent/marathon.md'
   - 'MySQL': 'agent/mysql.md'
+  - 'PostgreSQL': 'agent/postgres.md'
   - 'RabbitMQ': 'agent/rabbitmq.md'
   - 'ActiveMQ': 'agent/activemq.md'
   - 'Redis, Memcached': 'agent/rrs.md'
