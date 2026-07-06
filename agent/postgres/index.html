@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#install-postresq-python-client" tabindex="1" class="md-skip">
+      <a href="#install-postresql-python-client" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -671,8 +671,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-postresq-python-client" class="md-nav__link">
-    Install PostreSQ Python client
+  <a href="#install-postresql-python-client" class="md-nav__link">
+    Install PostreSQL Python client
   </a>
   
 </li>
@@ -884,8 +884,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-postresq-python-client" class="md-nav__link">
-    Install PostreSQ Python client
+  <a href="#install-postresql-python-client" class="md-nav__link">
+    Install PostreSQL Python client
   </a>
   
 </li>
@@ -932,13 +932,13 @@
     
      <h1></h1>
          
-<p>To monitor PostreSQL server you need :</p>
+<p><strong>To monitor PostreSQL server you need :</strong></p>
 <ol>
-<li>Install PostreSQLdb or pymysql module.</li>
-<li>Create PostreSQL user with privileges to run <code>SHOW GLOBAL STATUS</code>.</li>
-<li>Configure Agent with User/Pass/Host, for connecting to Mysql server.</li>
+<li>Install psycopg2 module.</li>
+<li>Create PostreSQL user with privileges <code>pg_monitor</code>.</li>
+<li>Configure Agent with User/Pass/Host, for connecting to Postgres server.</li>
 </ol>
-<h3 id="install-postresq-python-client"><strong>Install PostreSQ Python client</strong></h3>
+<h3 id="install-postresql-python-client"><strong>Install PostreSQL Python client</strong></h3>
 <p><strong>For Debian or Ubuntu</strong></p>
 <div class="codehilite"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>python3-psycopg2
 </code></pre></div>
