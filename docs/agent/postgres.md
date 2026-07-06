@@ -1,4 +1,4 @@
-**To monitor PostreSQL server you need :**
+### **To monitor PostreSQL server you need :**
 
 1. Install psycopg2 module.
 2. Create PostreSQL user with privileges `pg_monitor`.
