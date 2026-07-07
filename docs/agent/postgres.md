@@ -52,7 +52,7 @@ ln -s ../checks_available/check_postgres.py ./
 Edit conf`conf/sql_cache.ini` and put right parameters at **PostreSQL** section:
 
 ```ini
-[PostreSQL]
+[Postgres]
 host : 127.0.0.1
 user : monitor
 pass : your_secure_password

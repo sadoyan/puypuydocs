@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#install-postresql-python-client" tabindex="1" class="md-skip">
+      <a href="#to-monitor-postresql-server-you-need" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -671,6 +671,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#to-monitor-postresql-server-you-need" class="md-nav__link">
+    To monitor PostreSQL server you need :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install-postresql-python-client" class="md-nav__link">
     Install PostreSQL Python client
   </a>
@@ -884,6 +891,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#to-monitor-postresql-server-you-need" class="md-nav__link">
+    To monitor PostreSQL server you need :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install-postresql-python-client" class="md-nav__link">
     Install PostreSQL Python client
   </a>
@@ -932,7 +946,7 @@
     
      <h1></h1>
          
-<p><strong>To monitor PostreSQL server you need :</strong></p>
+<h3 id="to-monitor-postresql-server-you-need"><strong>To monitor PostreSQL server you need :</strong></h3>
 <ol>
 <li>Install psycopg2 module.</li>
 <li>Create PostreSQL user with privileges <code>pg_monitor</code>.</li>
@@ -969,7 +983,7 @@ ln<span class="w"> </span>-s<span class="w"> </span>../checks_available/check_po
 </code></pre></div>
 
 <p>Edit conf<code>conf/sql_cache.ini</code> and put right parameters at <strong>PostreSQL</strong> section:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[PostreSQL]</span>
+<div class="codehilite"><pre><span></span><code><span class="k">[Postgres]</span>
 <span class="na">host</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">127.0.0.1</span>
 <span class="na">user</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">monitor</span>
 <span class="na">pass</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">your_secure_password</span>
